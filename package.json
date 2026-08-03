@@ -10,7 +10,7 @@
     "serve:ssr:arapov-education": "node dist/arapov-education/server/server.mjs"
   },
   "private": true,
-  "packageManager": "npm@10.8.2",
+  
   "dependencies": {
     "@angular/common": "^21.2.0",
     "@angular/compiler": "^21.2.0",
