@@ -1,0 +1,9 @@
+name = "education"
+compatibility_date = "2026-08-01"
+
+[assets]
+directory = "./dist/education/browser"
+not_found_handling = "single-page-application"
+
+workers_dev = false
+preview_urls = false

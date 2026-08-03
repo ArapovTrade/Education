@@ -1,0 +1,766 @@
+ 
+
+<div class="body">
+  <div class="header">
+    <div class="wrap nav">
+      <div class="logo">
+        <img
+          src="/assets/images/ui-kit-arapov-trade-2.png"
+          srcset="
+            /assets/images/ui-kit-arapov-trade-2-300x138.png 300w,
+            /assets/images/ui-kit-arapov-trade-2-768x353.png 768w,
+            /assets/images/ui-kit-arapov-trade-2.png         782w
+          "
+          sizes="174px"
+          width="174"
+          height="80"
+          alt="Курс по трейдингу с наставником"
+          fetchpriority="high"
+          loading="lazy"
+        />
+      </div>
+
+      <nav class="nav-links" [class.open]="isMenuOpen">
+        <a href="#for-whom" (click)="scrollTo($event, 'for-whom')">Для кого</a>
+        <a href="#about" (click)="scrollTo($event, 'about')">Подход</a>
+        <a href="#program" (click)="scrollTo($event, 'program')">Программа</a>
+        <a href="#join" (click)="scrollTo($event, 'join')">Тарифы</a>
+        <a href="#author" (click)="scrollTo($event, 'author')">Об авторе</a>
+      </nav>
+      <div class="nav-right">
+        <app-language-switcher />
+
+        <button id="burgerBtn" class="burger" (click)="toggleMenu()" [class.open]="isMenuOpen">
+          <!-- иконка бургера -->
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow on-dark">Онлайн-курс с наставником</div>
+        <h1>
+          <span class="accent-gold">Быстрый старт</span>
+          <span style="color: #fff">в трейдинге</span>
+        </h1>
+        <p style="padding-top: 20px">
+          Интенсивный курс из 10 занятий: освоите торговую систему, изучите основы анализа рынка и
+          совершите первые сделки под руководством наставника.
+        </p>
+        <p>
+          Курс с чёткой структурой: 5 занятий теории + 5 занятий практики. От основ биржи до
+          торговой системы на основе объёмного анализа.
+        </p>
+        <div class="hero-cta">
+          <a href="#for-whom" (click)="scrollTo($event, 'for-whom')" class="btn btn-outline"
+            >Узнать подробнее</a
+          >
+          <a href="#join" (click)="scrollTo($event, 'join')" class="btn btn-primary pulse-button"
+            >Зарегистрироваться</a
+          >
+        </div>
+      </div>
+      <div style="padding: 50px">
+        <div class="hero-photo">
+          <img
+            src="/assets/images/igor-arapov-first.jpg"
+            srcset="
+              /assets/images/igor-arapov-first-192x300.jpg  192w,
+              /assets/images/igor-arapov-first-656x1024.jpg 656w,
+              /assets/images/igor-arapov-first-768x1199.jpg 768w
+            "
+            sizes="(max-width: 656px) 100vw, 656px"
+            width="656"
+            height="1024"
+            alt="Игорь Арапов"
+            class="hero-photo__img"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="for-whom" class="for-whom">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Поговорим о практике</div>
+        <h2>Этот курс <br /><span class="accent-teal">подойдёт, </span>если вы:</h2>
+      </div>
+      <div class="whom-grid">
+        <div class="whom-card">
+          <h3>Хотите начать с нуля, но правильно</h3>
+          <p>
+            Хотите начать с чёткой структурой и пошаговой системой. Курс даст фундамент: от
+            устройства биржи до торговой системы на основе объёмного анализа.
+          </p>
+        </div>
+        <div class="whom-card">
+          <h3>Уже пробовали, но не видите результата</h3>
+          <p>
+            Вы уже пробовали торговать, но не хватает системности. Курс поможет структурировать
+            знания и освоить торговую систему на основе объёмного анализа.
+          </p>
+        </div>
+        <div class="whom-card">
+          <h3>Готовы перейти к системной торговле</h3>
+          <p>
+            Вы хотите понимать логику рынка, анализировать действия крупного капитала и торговать по
+            системе. Курс даст инструменты для системного подхода.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach" id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Наш подход к обучению:</div>
+        <h2>Глубина, практика и <span class="accent-teal">персональное внимание</span></h2>
+      </div>
+      <div class="approach-list">
+        <div class="approach-item">
+          <div class="approach-num">01</div>
+          <div>
+            <h3>Курс состоит из 10 глубоких уроков</h3>
+            <p>
+              5 занятий – это концентрированная теория, которая закладывает прочный фундамент.
+              Следующие 5 занятий – это 100% практики, где вы работаете на рынке бок о бок с
+              наставником. Мы не просто рассказываем, мы показываем и делаем вместе.
+            </p>
+          </div>
+        </div>
+        <div class="approach-item">
+          <div class="approach-num">02</div>
+          <div>
+            <h3>Вы не просто учитесь – вы доказываете свой навык</h3>
+            <p>
+              После теории вы сдаёте экзамен на знание, а после практики — торговый экзамен на
+              демо-счёте, совершая 40 сделок по правилам системы. Вы заканчиваете курс с
+              практическим навыком и пониманием торговой системы.
+            </p>
+          </div>
+        </div>
+        <div class="approach-item">
+          <div class="approach-num">03</div>
+          <div>
+            <h3>Персональная работа с Игорем Араповым</h3>
+            <p>
+              Обучение проходит в мини-группах до 6 человек. Это не «поток» на сотни участников.
+              Игорь Арапов лично ведёт каждую группу, отвечает на все вопросы и разбирает ваши
+              сделки.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="program" class="program">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">А что в курсе?</div>
+        <h2>Программа <span class="accent-teal">курса</span></h2>
+        <p class="lead">
+          После каждого теоретического блока вы выполняете практические домашние задания по поиску
+          точек входа на реальных графиках
+        </p>
+      </div>
+
+      <div class="badges">
+        <div class="badge">
+          <div class="block-1">
+            <svg
+              class="badge-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#f3c53c"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="4" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </div>
+          <div class="block-2"><span class="badge-text">10 часов обучения</span></div>
+        </div>
+
+        <div class="badge">
+          <div class="block-1">
+            <svg
+              class="badge-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#f3c53c"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="4" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </div>
+
+          <div class="block-2"><span class="badge-text">Практика на реальных сделках</span></div>
+        </div>
+
+        <div class="badge">
+          <div class="block-1">
+            <svg
+              class="badge-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#f3c53c"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="4" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </div>
+
+          <div class="block-2"><span class="badge-text">Чат участников с наставником</span></div>
+        </div>
+
+        <div class="badge">
+          <div class="block-1">
+            <svg
+              class="badge-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#f3c53c"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="4" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </div>
+          <div class="block-2"><span class="badge-text">Онлайн уроки в Zoom</span></div>
+        </div>
+
+        <div class="badge">
+          <div class="block-1">
+            <svg
+              class="badge-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#f3c53c"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="4" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </div>
+          <div class="block-2"><span class="badge-text">Домашние задания</span></div>
+        </div>
+      </div>
+
+      <div class="module-grid">
+        <div class="module-card">
+          <div class="module-label">Модуль 1</div>
+          <h3>Фундамент: Как устроены рынки</h3>
+          <p>Изучаем структуру биржи, ее основных участников и ключевые методы анализа рынка.</p>
+        </div>
+        <div class="module-card">
+          <div class="module-label">Модуль 2</div>
+          <h3>Технический анализ: «Чтение» графика</h3>
+          <p>
+            Вы научитесь определять тренды, строить уровни поддержки/сопротивления и работать с
+            ключевыми техническими фигурами.
+          </p>
+        </div>
+        <div class="module-card">
+          <div class="module-label">Модуль 3</div>
+          <h3>Объёмный анализ: Механика рынка</h3>
+          <p>
+            Погружаемся в механику сведения ордеров и учимся анализировать объёмы, чтобы понимать
+            действия крупного капитала на графике.
+          </p>
+        </div>
+        <div class="module-card">
+          <div class="module-label">Модуль 4</div>
+          <h3>Торговая система: Единый план действий</h3>
+          <p>
+            Объединяем все знания в готовую торговую систему с четким алгоритмом для входа в сделку,
+            ее сопровождения и выхода.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="approach" id="join">
+    <div class="wrap">
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-head">
+            <h3>Групповой тариф</h3>
+            <p>Для тех, кто хочет освоить систему в группе единомышленников</p>
+            <div class="price">$500</div>
+          </div>
+          <div class="price-body">
+            <div class="whats-in">Что входит:</div>
+            <div class="feature-row">
+              <span class="check">✓</span>
+              <div>
+                <strong>10 онлайн-уроков</strong
+                ><span>5 уроков теории + 5 практики в мини-группе до 6 человек</span>
+              </div>
+            </div>
+            <div class="feature-row">
+              <span class="check">✓</span>
+              <div>
+                <strong>Обратная связь</strong
+                ><span>Проверка домашних заданий и 2 финальных экзамена: теория + практика</span>
+              </div>
+            </div>
+            <div class="feature-row">
+              <span class="check">✓</span>
+              <div>
+                <strong>Торговая система</strong
+                ><span>Готовая торговая система основанная на объемном анализе</span>
+              </div>
+            </div>
+            <div class="feature-row">
+              <span class="check">✓</span>
+              <div>
+                <strong>Закрытый чат</strong
+                ><span>Доступ в закрытый чат группы для общения и поддержки</span>
+              </div>
+            </div>
+            <a
+              href="https://secure.wayforpay.com/button/b6c196ab80aaa"
+              class="btn btn-primary pulse-button"
+              >Выбрать групповой формат</a
+            >
+          </div>
+        </div>
+
+        <div class="price-card featured">
+          <span class="badge-hot">Выгодно</span>
+          <div class="price-head">
+            <h3>Индивидуальный тариф</h3>
+            <p>Для тех, кто хочет индивидуальный разбор сделок и работать с наставником лично</p>
+            <div class="price">$1500</div>
+          </div>
+          <div class="price-body">
+            <div class="whats-in">Что входит:</div>
+            <div class="feature-row">
+              <span class="check">✓</span>
+              <div><strong>Все, что входит в групповой тариф</strong></div>
+            </div>
+            <div class="plus-label">Плюс:</div>
+            <div class="feature-row plus">
+              <span class="check">+</span>
+              <div>
+                <strong>Персональная связь</strong
+                ><span
+                  >5 персональных консультаций с Игорем Араповым (по 1 часу) для глубокого разбора
+                  вашей торговли</span
+                >
+              </div>
+            </div>
+            <div class="feature-row plus">
+              <span class="check">+</span>
+              <div>
+                <strong>Индивидуальная помощь</strong
+                ><span>Личная поддержка и ответы на ваши вопросы напрямую от наставника</span>
+              </div>
+            </div>
+            <div class="feature-row plus">
+              <span class="check">+</span>
+              <div>
+                <strong>Отладка торговой системы</strong
+                ><span
+                  >Помощь в адаптации торговой системы под ваш стиль и удобство пользования</span
+                >
+              </div>
+            </div>
+            <a
+              href="https://secure.wayforpay.com/button/bcd6a985d0c30"
+              class="btn btn-primary pulse-button"
+              >Выбрать персональный формат</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="author">
+    <div class="wrap author-grid author">
+      <div class="image-wrapper">
+        <div class="author-photo">
+          <img
+            src="/assets/images/fajl-38.jpg"
+            srcset="
+             /assets/images/fajl-38-200x300.jpg   200w,
+             /assets/images/fajl-38-681x1024.jpg  681w,
+              /assets/images/fajl-38-768x1154.jpg  768w,
+             /assets/images/fajl-38.jpg          1000w
+            "
+            sizes="(max-width: 1000px) 100vw, 1000px"
+            fetchpriority="high"
+             loading="eager"
+  fetchpriority="high"
+            alt="Игорь Арапов"
+            style="width: 100%; height: 100%; object-fit: cover; object-position: center top"
+          />
+        </div>
+      </div>
+
+      <div>
+        <div class="eyebrow">Об наставнике и авторе курса</div>
+        <h2>Игорь <span class="black">Арапов</span></h2>
+        <p>
+          Игорь Арапов — независимый исследователь в области психологии инвестиционных решений и
+          поведенческих финансов, практикующий трейдер с 2013 года. Кандидат в мастера спорта по
+          шахматам.
+        </p>
+
+        <p>
+          Автор серии книг «<a href="https://arapov.trade/ru/books" target="_blank" rel="noopener"
+            >Основы трейдинга</a
+          >» (на 3-х языках) с международными ISBN (<a
+            href="https://bookwire.bowker.com/books/author/Igor-Arapov/Books-By?authorId=40225801"
+            target="_blank"
+            rel="noopener"
+            >Bowker USA</a
+          >), исследования «<a
+            href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254718"
+            target="_blank"
+            rel="noopener"
+            >From Tilt to System</a
+          >» на SSRN и рецензированной
+          <a href="https://doi.org/10.32702/2306-6814.2026.4.96" target="_blank" rel="noopener"
+            >статьи</a
+          >
+          в журнале категории «Б» МОН Украины «Инвестиции: практика и опыт» (№4, 2026). Приглашённый
+          лектор
+          <a
+            href="https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi"
+            target="_blank"
+            rel="noopener"
+            >НУХТ</a
+          >
+          (Киев, 2026). Публикуется на
+          <a href="https://www.tradingview.com/u/Igor_Arapov/" target="_blank" rel="noopener"
+            >TradingView</a
+          >
+          с 2021 года.
+        </p>
+
+        <p>
+          Торговля по его системе ведётся вручную, обеспечивая гибкость и постоянный человеческий
+          контроль.
+        </p>
+
+        <br />
+        <div class="stats-row">
+          <div class="stat">
+            <div class="icon-boxx">
+              <span>
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-fas-check-square"
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="stat-text"><strong>9 книг</strong><span>С международным ISBN</span></div>
+          </div>
+          <div class="stat">
+            <div class="icon-boxx">
+              <span>
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-fas-check-square"
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="stat-text">
+              <strong>с 2021 г.</strong><span>Аналитика на TRADINGVIEW</span>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="icon-boxx">
+              <span>
+                <svg
+                  aria-hidden="true"
+                  class="e-font-icon-svg e-fas-check-square"
+                  viewBox="0 0 448 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+            <div class="stat-text"><strong>с 2013г.</strong><span>В трейдинге</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">F.A.Q.</div>
+        <h2>Ответы на <span class="accent-teal">ваши вопросы</span></h2>
+      </div>
+
+      <div class="faq-list">
+        @for (item of faqItems; track $index; let i = $index) {
+          <div class="faq-item" [class.active]="activeFaqIndex === i">
+            <button class="faq-q" type="button" (click)="toggleFaq(i)">
+              {{ item.question }}
+              <span class="chev">▾</span>
+            </button>
+
+            <div class="faq-a" [style.max-height]="activeFaqIndex === i ? '400px' : '0px'">
+              <p>{{ item.answer }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-outer">
+    <div class="cta">
+      <div class="eyebrow on-dark">Хотите больше?</div>
+      <h2>Ваш путь в <span class="accent-gold">системный трейдинг</span> начинается здесь</h2>
+      <p>
+        Торговая система, поддержка наставника и практика на реальных графиках. Всё что нужно для
+        системного старта в трейдинге.
+      </p>
+      <div class="cta-highlight">
+        Торговая система с положительным математическим ожиданием — основа системного трейдинга.
+      </div>
+      <a href="#join" (click)="scrollTo($event, 'join')" class="btn btn-primary pulse-button"
+        >Записаться на курс</a
+      >
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img
+              src="/assets/images/ui-kit-arapov-trade-1-1.png"
+              srcset="
+                /assets/images/ui-kit-arapov-trade-1-1-300x129.png 300w,
+               /assets/images/ui-kit-arapov-trade-1-1-768x329.png 768w,
+               /assets/images/ui-kit-arapov-trade-1-1.png         782w
+              "
+              sizes="(max-width: 782px) 100vw, 782px"
+              width="782"
+              height="335"
+              loading="lazy"
+              decoding="async"
+              alt="ARAPOV EDUCATION"
+              style="
+                width: 100%;
+                height: auto;
+                max-width: 240px;
+                object-fit: contain;
+                object-position: left center;
+              "
+            />
+          </div>
+          <p>
+            Игорь Арапов — независимый исследователь в области психологии инвестиционных решений и
+            поведенческих финансов, практикующий трейдер с 2013 года, автор 9 книг по трейдингу с
+            ISBN (Bowker USA).
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Ссылки</h4>
+          <ul>
+            <li>
+              <a
+                href="/ru/public-agreement"
+                (click)="$event.preventDefault(); navigateTo('ru/public-agreement')"
+                >Договор публичной оферты</a
+              >
+            </li>
+            <li>
+              <a
+                href="/ru/privacy-policy"
+                (click)="$event.preventDefault(); navigateTo('ru/privacy-policy')"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li>
+              <a
+                href="/ru/disclaimer-ru"
+                (click)="$event.preventDefault(); navigateTo('ru/disclaimer-ru')"
+                >Отказ от ответственности</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Наши проекты</h4>
+          <ul>
+            <li>
+              <a href="https://arapov.trade/ru/freestudying">Бесплатное обучение трейдингу</a>
+            </li>
+            <li><a href="https://arapov.trade/ru/studying">Профессиональные курсы</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Контакты</h4>
+          <ul>
+            <li>
+              <!-- <a href="mailto:info@arapov.education">info@arapov.education</a>
+                -->
+         <a href="mailto:arapov.trade@gmail.com" class="mail-link" aria-label="Email">
+  <svg aria-hidden="true" viewBox="0 0 512 512" width="16" height="16" fill="#55C2C3">
+    <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.5 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74 131.6-96.1 154-113.5zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
+  </svg>
+  <span>arapov.trade@gmail.com</span>
+</a>
+            </li>
+          </ul>
+          <div class="socials">
+            <!-- YouTube -->
+            <a
+              href="https://www.youtube.com/@ArapovTrade"
+              aria-label="Youtube"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                aria-hidden="true"
+                class="e-font-icon-svg e-fab-youtube"
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- Telegram -->
+            <a
+              href="https://telegram.me/ArapovTrader"
+              aria-label="Telegram"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                aria-hidden="true"
+                class="e-font-icon-svg e-fab-telegram-plane"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <!-- WhatsApp -->
+            <a
+              href="https://wa.me/380506308200"
+              aria-label="WhatsApp"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <!-- Зелёный круг -->
+                <circle cx="12" cy="12" r="12" />
+
+                <!-- Белая трубка -->
+                <path
+                  fill="#ffffff"
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/arapovtrade"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                aria-hidden="true"
+                class="e-font-icon-svg e-fab-linkedin-in"
+                viewBox="0 0 448 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                ></path>
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/igor.arapov.75"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg
+                aria-hidden="true"
+                class="e-font-icon-svg e-fab-facebook-f"
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2021-2026 arapov.education. Все права защищены. ФЛП Арапов И. В. ИНН 3314507171
+      </div>
+    </div>
+  </footer>
+</div>
+
+<app-chat-widget></app-chat-widget>

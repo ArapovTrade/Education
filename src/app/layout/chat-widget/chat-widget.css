@@ -1,0 +1,80 @@
+ 
+
+
+.chat-widget {
+  position: fixed;
+  bottom: 34px;
+  right: 34px;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.chat-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+
+  /* Скрыто по умолчанию */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  pointer-events: none;
+
+  transition: 
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    visibility 0.35s;
+}
+
+.chat-options.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.chat-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.chat-icon:hover {
+  transform: scale(1.08);
+}
+
+.chat-icon.whatsapp {
+  background: #55C2C3;
+}
+
+.chat-icon.telegram {
+  background: #55C2C3;
+}
+
+.chat-toggle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #F5C842;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.chat-toggle:hover {
+  transform: scale(1.1);
+}

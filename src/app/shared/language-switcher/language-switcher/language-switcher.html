@@ -1,0 +1,47 @@
+<div
+  class="lang-switcher"
+  [class.lang-switcher--open]="isOpen()"
+  [style.--langs]="languages.length - 1"
+>
+  <button
+    class="lang-switcher__toggle"
+    type="button"
+    [attr.aria-expanded]="isOpen()"
+    aria-haspopup="listbox"
+    (click)="toggle($event)"
+  >
+    <span class="lang-switcher__code">{{ currentLang.label }}</span>
+    <svg
+      class="lang-switcher__icon"
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L241.03 381.476c-9.373 9.372-24.568 9.372-33.941 0z"
+      />
+    </svg>
+  </button>
+
+  <ul
+    #listRef
+    class="lang-switcher__list"
+    role="listbox"
+    [style.max-height.px]="isOpen() ? listHeight() : 0"
+  >
+    @for (lang of languages; track lang.code) {
+      @if (lang.code !== currentLang.code) {
+        <li role="option" [attr.aria-selected]="false">
+          <a
+            [href]="lang.route"
+            [lang]="lang.code"
+            [hreflang]="lang.code"
+            (click)="$event.preventDefault(); select(lang)"
+          >
+            {{ lang.label }}
+          </a>
+        </li>
+      }
+    }
+  </ul>
+</div>
