@@ -9,9 +9,9 @@
 
 import { SeoConfig } from '../services/seoserv';
 
-export const BASE_URL = 'https://arapov-education.com'; // поменяй на свой домен
+export const BASE_URL = 'https://arapov.education'; // поменяй на свой домен
 const OG_IMAGE = `${BASE_URL}/assets/images/course-og.png`; // перезалей картинку к себе, не тяни с чужого домена
-const SITE_NAME = 'Arapov CopyTrade';
+const SITE_NAME = 'Arapov Education';
 
 // ---------- Курс (лендинг) ----------
 
@@ -19,7 +19,7 @@ const courseRu: SeoConfig = {
   title: 'Курс по трейдингу с наставником | Arapov Trade - Arapov Education',
   description:
     'Интенсивный курс из 10 занятий: освоите торговую систему, изучите основы анализа рынка и совершите первые сделки под руководством наставника.',
-  canonical: `${BASE_URL}/ru/course/`,
+  canonical: `${BASE_URL}/ru/course`,
   ogImage: OG_IMAGE,
   ogImageWidth: 782,
   ogImageHeight: 359,
@@ -30,12 +30,12 @@ const courseRu: SeoConfig = {
   modifiedTime: '2026-04-24T14:27:37+00:00',
   readingTime: '4 минуты',
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/course/` },
-    { hreflang: 'en', href: `${BASE_URL}/en/course-en/` },
-    { hreflang: 'uk', href: `${BASE_URL}/course-ua/` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/course` },
+    { hreflang: 'en', href: `${BASE_URL}/en/course-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/course-ua` },
   ],
   jsonLd: buildArticleJsonLd({
-    url: `${BASE_URL}/ru/course/`,
+    url: `${BASE_URL}/ru/course`,
     headline: 'Курс по трейдингу с наставником | Arapov Trade - Arapov Education',
     description:
       'Интенсивный курс из 10 занятий: освоите торговую систему, изучите основы анализа рынка и совершите первые сделки под руководством наставника.',
@@ -49,7 +49,7 @@ const courseEn: SeoConfig = {
   title: 'Professional Trading Course With A Mentor | Arapov Trade - Arapov Education',
   description:
     'Comprehensive Trading Course by Igor Arapov. Get a ready-to-use trading system and start your professional journey',
-  canonical: `${BASE_URL}/en/course-en/`,
+  canonical: `${BASE_URL}/en/course-en`,
   ogImage: OG_IMAGE,
   ogImageWidth: 782,
   ogImageHeight: 359,
@@ -60,12 +60,12 @@ const courseEn: SeoConfig = {
   modifiedTime: '2026-04-24T14:31:34+00:00',
   readingTime: '5 minutes',
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/course/` },
-    { hreflang: 'en', href: `${BASE_URL}/en/course-en/` },
-    { hreflang: 'uk', href: `${BASE_URL}/course-ua/` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/course` },
+    { hreflang: 'en', href: `${BASE_URL}/en/course-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/course-ua` },
   ],
   jsonLd: buildArticleJsonLd({
-    url: `${BASE_URL}/en/course-en/`,
+    url: `${BASE_URL}/en/course-en`,
     headline: 'Professional Trading Course With A Mentor | Arapov Trade - Arapov Education',
     description:
       'Comprehensive Trading Course by Igor Arapov. Get a ready-to-use trading system and start your professional journey',
@@ -79,7 +79,7 @@ const courseUa: SeoConfig = {
   title: 'Професійний курс з трейдингу з наставником | Arapov Trade - Arapov Education',
   description:
     'Інтенсивний курс із 10 занять: опануєте торгову систему, вивчите основи аналізу ринку та зробите перші угоди під керівництвом наставника.',
-  canonical: `${BASE_URL}/course-ua/`,
+  canonical: `${BASE_URL}/course-ua`,
   ogImage: OG_IMAGE,
   ogImageWidth: 782,
   ogImageHeight: 359,
@@ -90,12 +90,12 @@ const courseUa: SeoConfig = {
   modifiedTime: '2026-04-24T14:32:49+00:00',
   readingTime: '4 хвилини',
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/course/` },
-    { hreflang: 'en', href: `${BASE_URL}/en/course-en/` },
-    { hreflang: 'uk', href: `${BASE_URL}/course-ua/` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/course` },
+    { hreflang: 'en', href: `${BASE_URL}/en/course-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/course-ua` },
   ],
   jsonLd: buildArticleJsonLd({
-    url: `${BASE_URL}/course-ua/`,
+    url: `${BASE_URL}/course-ua`,
     headline: 'Професійний курс з трейдингу з наставником | Arapov Trade - Arapov Education',
     description:
       'Інтенсивний курс із 10 занять: опануєте торгову систему, вивчите основи аналізу ринку та зробите перші угоди під керівництвом наставника.',
@@ -111,47 +111,47 @@ const courseUa: SeoConfig = {
 // Ниже — заготовка со структурой, чтобы не забыть ни одно поле.
 
 const privacyPolicyRu: SeoConfig = {
-  title: 'TODO: точный title со страницы /privacy-policy/',
-  description: 'TODO: точный description со страницы /privacy-policy/',
-  canonical: `${BASE_URL}/ru/privacy-policy/`,
+  title: 'TODO: точный title со страницы /privacy-policy',
+  description: 'TODO: точный description со страницы /privacy-policy',
+  canonical: `${BASE_URL}/ru/privacy-policy`,
   ogImage: OG_IMAGE,
   locale: 'ru_RU',
   htmlLang: 'ru-RU',
   siteName: SITE_NAME,
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/privacy-policy/` },
-    { hreflang: 'en', href: `${BASE_URL}/en/privacy-policy-en/` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/privacy-policy-ua/` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/privacy-policy` },
+    { hreflang: 'en', href: `${BASE_URL}/en/privacy-policy-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/privacy-policy-ua` },
   ],
 };
 
 const privacyPolicyEn: SeoConfig = {
-  title: 'TODO: точный title со страницы /en/privacy-policy-en/',
-  description: 'TODO: точный description со страницы /en/privacy-policy-en/',
-  canonical: `${BASE_URL}/en/privacy-policy/`,
+  title: 'TODO: точный title со страницы /en/privacy-policy-en',
+  description: 'TODO: точный description со страницы /en/privacy-policy-en',
+  canonical: `${BASE_URL}/en/privacy-policy`,
   ogImage: OG_IMAGE,
   locale: 'en_US',
   htmlLang: 'en-US',
   siteName: SITE_NAME,
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/privacy-policy/` },
-    { hreflang: 'en', href: `${BASE_URL}/en/privacy-policy-en/` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/privacy-policy-ua/` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/privacy-policy` },
+    { hreflang: 'en', href: `${BASE_URL}/en/privacy-policy-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/privacy-policy-ua` },
   ],
 };
 
 const privacyPolicyUa: SeoConfig = {
-  title: 'TODO: точный title со страницы /ua/privacy-policy-ua/',
-  description: 'TODO: точный description со страницы /ua/privacy-policy-ua/',
-  canonical: `${BASE_URL}/ua/privacy-policy/`,
+  title: 'TODO: точный title со страницы /ua/privacy-policy-ua',
+  description: 'TODO: точный description со страницы /ua/privacy-policy-ua',
+  canonical: `${BASE_URL}/ua/privacy-policy`,
   ogImage: OG_IMAGE,
   locale: 'uk_UA',
   htmlLang: 'uk-UA',
   siteName: SITE_NAME,
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/privacy-policy/` },
-    { hreflang: 'en', href: `${BASE_URL}/en/privacy-policy-en/` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/privacy-policy-ua/` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/privacy-policy` },
+    { hreflang: 'en', href: `${BASE_URL}/en/privacy-policy-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/privacy-policy-ua` },
   ],
 };
 
@@ -160,47 +160,47 @@ const privacyPolicyUa: SeoConfig = {
 // /disclaimer-ru/, /en/disclaimer-en/, /ua/disclaimer-ua/
 
 const disclaimerRu: SeoConfig = {
-  title: 'TODO: точный title со страницы /disclaimer-ru/',
-  description: 'TODO: точный description со страницы /disclaimer-ru/',
-  canonical: `${BASE_URL}/ru/disclaimer/`,
+  title: 'TODO: точный title со страницы /disclaimer-ru',
+  description: 'TODO: точный description со страницы /disclaimer-ru',
+  canonical: `${BASE_URL}/ru/disclaimer`,
   ogImage: OG_IMAGE,
   locale: 'ru_RU',
   htmlLang: 'ru-RU',
   siteName: SITE_NAME,
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer/` },
-    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer/` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer/` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
+    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
   ],
 };
 
 const disclaimerEn: SeoConfig = {
-  title: 'TODO: точный title со страницы /en/disclaimer-en/',
-  description: 'TODO: точный description со страницы /en/disclaimer-en/',
-  canonical: `${BASE_URL}/en/disclaimer/`,
+  title: 'TODO: точный title со страницы /en/disclaimer-en',
+  description: 'TODO: точный description со страницы /en/disclaimer-en',
+  canonical: `${BASE_URL}/en/disclaimer`,
   ogImage: OG_IMAGE,
   locale: 'en_US',
   htmlLang: 'en-US',
   siteName: SITE_NAME,
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer/` },
-    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer/` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer/` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
+    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
   ],
 };
 
 const disclaimerUa: SeoConfig = {
-  title: 'TODO: точный title со страницы /ua/disclaimer-ua/',
-  description: 'TODO: точный description со страницы /ua/disclaimer-ua/',
-  canonical: `${BASE_URL}/ua/disclaimer/`,
+  title: 'TODO: точный title со страницы /ua/disclaimer-ua',
+  description: 'TODO: точный description со страницы /ua/disclaimer-ua',
+  canonical: `${BASE_URL}/ua/disclaimer`,
   ogImage: OG_IMAGE,
   locale: 'uk_UA',
   htmlLang: 'uk-UA',
   siteName: SITE_NAME,
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer/` },
-    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer/` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer/` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
+    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
   ],
 };
 
@@ -247,7 +247,7 @@ function buildArticleJsonLd(params: {
         logo: {
           '@type': 'ImageObject',
           '@id': `${BASE_URL}/#logo`,
-          url: `${BASE_URL}/assets/images/logo.png`,
+          url: `${BASE_URL}/assets/images/favicon.ico`,
           caption: SITE_NAME,
           inLanguage: params.inLanguage,
         },
