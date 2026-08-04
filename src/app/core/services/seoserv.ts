@@ -67,7 +67,7 @@ export class Seoserv {
     this.meta.updateTag({ name: 'twitter:description', content: config.description });
     this.meta.updateTag({ name: 'twitter:image', content: config.ogImage });
     if (config.readingTime) {
-      this.meta.updateTag({ name: 'twitter:label1', content: 'Время чтения' });
+      this.meta.updateTag({ name: 'twitter:label1', content: 'Reading Time' });
       this.meta.updateTag({ name: 'twitter:data1', content: config.readingTime });
     }
 

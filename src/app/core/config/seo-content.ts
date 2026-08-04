@@ -33,6 +33,7 @@ const courseRu: SeoConfig = {
     { hreflang: 'ru', href: `${BASE_URL}/ru/course` },
     { hreflang: 'en', href: `${BASE_URL}/en/course-en` },
     { hreflang: 'uk', href: `${BASE_URL}/course-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/course-ua` },
   ],
   jsonLd: buildArticleJsonLd({
     url: `${BASE_URL}/ru/course`,
@@ -63,6 +64,7 @@ const courseEn: SeoConfig = {
     { hreflang: 'ru', href: `${BASE_URL}/ru/course` },
     { hreflang: 'en', href: `${BASE_URL}/en/course-en` },
     { hreflang: 'uk', href: `${BASE_URL}/course-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/course-ua` },
   ],
   jsonLd: buildArticleJsonLd({
     url: `${BASE_URL}/en/course-en`,
@@ -74,6 +76,7 @@ const courseEn: SeoConfig = {
     modified: '2026-04-24T14:31:34+00:00',
   }),
 };
+
 
 const courseUa: SeoConfig = {
   title: 'Професійний курс з трейдингу з наставником | Arapov Trade - Arapov Education',
@@ -93,6 +96,7 @@ const courseUa: SeoConfig = {
     { hreflang: 'ru', href: `${BASE_URL}/ru/course` },
     { hreflang: 'en', href: `${BASE_URL}/en/course-en` },
     { hreflang: 'uk', href: `${BASE_URL}/course-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/course-ua` },
   ],
   jsonLd: buildArticleJsonLd({
     url: `${BASE_URL}/course-ua`,
@@ -111,47 +115,66 @@ const courseUa: SeoConfig = {
 // Ниже — заготовка со структурой, чтобы не забыть ни одно поле.
 
 const privacyPolicyRu: SeoConfig = {
-  title: 'TODO: точный title со страницы /privacy-policy',
-  description: 'TODO: точный description со страницы /privacy-policy',
+  title: 'Политика Конфиденциальности - Arapov Education',
+  description:
+    'Политика конфиденциальности описывает порядок сбора, хранения и защиты персональных данных пользователей. Узнайте, как мы обеспечиваем вашу безопасность.',
   canonical: `${BASE_URL}/ru/privacy-policy`,
-  ogImage: OG_IMAGE,
+  ogImage: OG_IMAGE, // на оригинале для RU-версии og:image не задан вообще, используем дефолтную
   locale: 'ru_RU',
   htmlLang: 'ru-RU',
   siteName: SITE_NAME,
+  publishedTime: '2025-09-06T17:01:05+00:00',
+  modifiedTime: '2026-02-14T18:37:24+00:00',
+  readingTime: '5 минут',
   alternates: [
     { hreflang: 'ru', href: `${BASE_URL}/ru/privacy-policy` },
     { hreflang: 'en', href: `${BASE_URL}/en/privacy-policy-en` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/privacy-policy-ua` },
+    { hreflang: 'uk', href: `${BASE_URL}/privacy-policy-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/privacy-policy-ua` },
   ],
 };
 
+
 const privacyPolicyEn: SeoConfig = {
-  title: 'TODO: точный title со страницы /en/privacy-policy-en',
-  description: 'TODO: точный description со страницы /en/privacy-policy-en',
-  canonical: `${BASE_URL}/en/privacy-policy`,
-  ogImage: OG_IMAGE,
+  title: 'Privacy Policy EN - Arapov Education',
+  description:
+    "The Privacy Policy describes the procedure for collecting, storing, and protecting users' personal data. Learn how we ensure your security.",
+  canonical: `${BASE_URL}/en/privacy-policy-en`,
+  ogImage: `${BASE_URL}/wp-content/uploads/2025/09/privacy-policy.jpg`, // TODO: перезалить к себе в assets
+  ogImageWidth: 1920,
+  ogImageHeight: 1080,
   locale: 'en_US',
   htmlLang: 'en-US',
   siteName: SITE_NAME,
+  publishedTime: '2025-09-10T18:09:00+00:00',
+  modifiedTime: '2026-02-14T18:34:33+00:00',
+  readingTime: '6 minutes',
   alternates: [
     { hreflang: 'ru', href: `${BASE_URL}/ru/privacy-policy` },
     { hreflang: 'en', href: `${BASE_URL}/en/privacy-policy-en` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/privacy-policy-ua` },
+    { hreflang: 'uk', href: `${BASE_URL}/privacy-policy-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/privacy-policy-ua` },
   ],
 };
 
+
 const privacyPolicyUa: SeoConfig = {
-  title: 'TODO: точный title со страницы /ua/privacy-policy-ua',
-  description: 'TODO: точный description со страницы /ua/privacy-policy-ua',
-  canonical: `${BASE_URL}/ua/privacy-policy`,
-  ogImage: OG_IMAGE,
+  title: 'Політика конфіденційності - Arapov Education',
+  description:
+    'Політика конфіденційності описує порядок збору, зберігання та захисту персональних даних користувачів. Дізнайтеся, як ми забезпечуємо вашу безпеку.',
+  canonical: `${BASE_URL}/privacy-policy-ua`,
+  ogImage: OG_IMAGE, // на оригинале og:locale для UA-версии тоже стоит en_US (тот же баг), og:image не задан
   locale: 'uk_UA',
   htmlLang: 'uk-UA',
   siteName: SITE_NAME,
+  publishedTime: '2025-10-16T15:18:52+00:00',
+  modifiedTime: '2026-02-14T18:34:59+00:00',
+  readingTime: '5 хвилин',
   alternates: [
     { hreflang: 'ru', href: `${BASE_URL}/ru/privacy-policy` },
     { hreflang: 'en', href: `${BASE_URL}/en/privacy-policy-en` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/privacy-policy-ua` },
+    { hreflang: 'uk', href: `${BASE_URL}/privacy-policy-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/privacy-policy-ua` },
   ],
 };
 
@@ -160,91 +183,133 @@ const privacyPolicyUa: SeoConfig = {
 // /disclaimer-ru/, /en/disclaimer-en/, /ua/disclaimer-ua/
 
 const disclaimerRu: SeoConfig = {
-  title: 'TODO: точный title со страницы /disclaimer-ru',
-  description: 'TODO: точный description со страницы /disclaimer-ru',
-  canonical: `${BASE_URL}/ru/disclaimer`,
-  ogImage: OG_IMAGE,
+  title: 'Отказ от ответственности - Arapov Education',
+  description:
+    'Отказ от ответственности содержит правовую информацию и ограничения по использованию материалов сайта. Пожалуйста, внимательно ознакомьтесь с условиями.',
+  canonical: `${BASE_URL}/ru/disclaimer-ru`,
+  ogImage: OG_IMAGE, // на оригинале og:image не задан
   locale: 'ru_RU',
   htmlLang: 'ru-RU',
   siteName: SITE_NAME,
+  publishedTime: '2025-09-06T17:32:11+00:00',
+  modifiedTime: '2026-02-14T18:37:54+00:00',
+  readingTime: '1 минута',
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
-    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer-ru` },
+    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/disclaimer-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/disclaimer-ua` },
   ],
 };
 
+
 const disclaimerEn: SeoConfig = {
-  title: 'TODO: точный title со страницы /en/disclaimer-en',
-  description: 'TODO: точный description со страницы /en/disclaimer-en',
-  canonical: `${BASE_URL}/en/disclaimer`,
-  ogImage: OG_IMAGE,
+  title: 'Disclaimer - Arapov Education',
+  description:
+    "The Disclaimer contains legal information and limitations on the use of the site's materials. Please read the terms carefully.",
+  canonical: `${BASE_URL}/en/disclaimer-en`,
+  ogImage: `${BASE_URL}/wp-content/uploads/2025/09/disclaimer.jpg`, // TODO: перезалить к себе в assets
+  ogImageWidth: 1920,
+  ogImageHeight: 1080,
   locale: 'en_US',
   htmlLang: 'en-US',
   siteName: SITE_NAME,
+  publishedTime: '2025-09-10T18:21:46+00:00',
+  modifiedTime: '2026-02-14T18:35:40+00:00',
+  readingTime: '1 minute',
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
-    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
+     { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer-ru` },
+    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/disclaimer-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/disclaimer-ua` },
   ],
 };
 
+
 const disclaimerUa: SeoConfig = {
-  title: 'TODO: точный title со страницы /ua/disclaimer-ua',
-  description: 'TODO: точный description со страницы /ua/disclaimer-ua',
-  canonical: `${BASE_URL}/ua/disclaimer`,
-  ogImage: OG_IMAGE,
+  title: 'Відмова від відповідальності — Arapov Education',
+  description:
+    'Відмова від відповідальності містить правову інформацію та обмеження щодо використання матеріалів сайту. Будь ласка, уважно ознайомтеся з умовами.',
+  canonical: `${BASE_URL}/disclaimer-ua`,
+  ogImage: OG_IMAGE, // на оригинале og:locale стоит en_US (тот же баг плагина), og:image не задан
   locale: 'uk_UA',
   htmlLang: 'uk-UA',
   siteName: SITE_NAME,
+  publishedTime: '2025-10-16T14:27:26+00:00',
+  modifiedTime: '2026-02-14T18:36:04+00:00',
+  readingTime: '1 хвилина',
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
-    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
+     { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer-ru` },
+    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/disclaimer-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/disclaimer-ua` },
   ],
 };
 // public agreement
 
-const agreementUa: SeoConfig = {
-  title: 'TODO: точный title со страницы /ua/disclaimer-ua',
-  description: 'TODO: точный description со страницы /ua/disclaimer-ua',
-  canonical: `${BASE_URL}/ua/disclaimer`,
-  ogImage: OG_IMAGE,
-  locale: 'uk_UA',
-  htmlLang: 'uk-UA',
-  siteName: SITE_NAME,
-  alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
-    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
-  ],
-};
-const agreementEN: SeoConfig = {
-  title: 'TODO: точный title со страницы /en/disclaimer-en',
-  description: 'TODO: точный description со страницы /en/disclaimer-en',
-  canonical: `${BASE_URL}/en/disclaimer`,
-  ogImage: OG_IMAGE,
-  locale: 'en_US',
-  htmlLang: 'en-US',
-  siteName: SITE_NAME,
-  alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
-    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
-  ],
-};
 const agreementRu: SeoConfig = {
-  title: 'TODO: точный title со страницы /disclaimer-ru',
-  description: 'TODO: точный description со страницы /disclaimer-ru',
-  canonical: `${BASE_URL}/ru/disclaimer`,
+  title: 'Договор публичной офферты сайта Arapov Education',
+  description:
+    'Договор публичной офферты определяет условия предоставления услуг и права пользователей. Ознакомьтесь с официальным документом перед использованием сайта.',
+  canonical: `${BASE_URL}/ru/public-agreement`,
   ogImage: OG_IMAGE,
   locale: 'ru_RU',
   htmlLang: 'ru-RU',
   siteName: SITE_NAME,
+  publishedTime: '2025-09-06T16:49:59+00:00',
+  modifiedTime: '2026-02-15T04:17:21+00:00',
+  readingTime: '9 минут',
   alternates: [
-    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
-    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
+    { hreflang: 'ru', href: `${BASE_URL}/ru/public-agreement` },
+    { hreflang: 'en', href: `${BASE_URL}/en/public-agreement-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/public-agreement-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/public-agreement-ua` },
+  ],
+};
+
+
+const agreementEN: SeoConfig = {
+  title: 'Public Offer Agreement - Arapov Education',
+  description:
+    'The Public Offer Agreement defines the terms of service provision and user rights. Please review the official document before using the website.',
+  canonical: `${BASE_URL}/en/public-agreement-en`,
+  ogImage: `${BASE_URL}/wp-content/uploads/2025/09/public-offer.jpg`, // TODO: перезалить к себе в assets
+  ogImageWidth: 1920,
+  ogImageHeight: 1080,
+  locale: 'en_US',
+  htmlLang: 'en-US',
+  siteName: SITE_NAME,
+  publishedTime: '2025-09-10T17:19:30+00:00',
+  modifiedTime: '2026-02-15T04:35:32+00:00',
+  readingTime: '11 minutes',
+  alternates: [
+    { hreflang: 'ru', href: `${BASE_URL}/ru/public-agreement` },
+    { hreflang: 'en', href: `${BASE_URL}/en/public-agreement-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/public-agreement-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/ua/public-agreement-ua` },
+  ],
+};
+
+
+const agreementUa: SeoConfig = {
+  // TODO: на оригинале нет отдельного украинского перевода этого документа —
+  // текст и title/description ниже дублируют русскую версию, как и на сайте.
+  title: 'Договор публичной офферты сайта Arapov Education',
+  description:
+    'Договор публичной офферты определяет условия предоставления услуг и права пользователей. Ознакомьтесь с официальным документом перед использованием сайта.',
+  canonical: `${BASE_URL}/ua/public-agreement-ua`,
+  ogImage: OG_IMAGE,
+  locale: 'uk_UA',
+  htmlLang: 'uk-UA',
+  siteName: SITE_NAME,
+  publishedTime: '2026-02-15T04:21:34+00:00',
+  modifiedTime: '2026-02-15T04:22:13+00:00',
+  readingTime: '9 minutes',
+  alternates: [
+    { hreflang: 'ru', href: `${BASE_URL}/ru/public-agreement` },
+    { hreflang: 'en', href: `${BASE_URL}/en/public-agreement-en` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/public-agreement-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/ua/public-agreement-ua` },
   ],
 };
 // ---------- Экспорт единой структуры ----------
@@ -285,6 +350,7 @@ function buildArticleJsonLd(params: {
   const personId = `${BASE_URL}/#person`;
   const websiteId = `${BASE_URL}/#website`;
 
+
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -321,7 +387,7 @@ function buildArticleJsonLd(params: {
       {
         '@type': 'Article',
         headline: params.headline,
-        description: params.description,
+        description: params.description, 
         datePublished: params.published,
         dateModified: params.modified,
         publisher: { '@id': personId },

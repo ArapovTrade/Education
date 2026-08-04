@@ -17,7 +17,7 @@ constructor(private router: Router) {}
   private seo = inject(Seoserv);
 
   ngOnInit(): void {
-    this.seo.set(SEO_CONTENT.disclaimer.en);
+    this.seo.set(SEO_CONTENT.disclaimer.ua);
   }
 
   navigateTo(path: string) {

@@ -18,7 +18,7 @@ export class App {
         if (event instanceof NavigationEnd) {
           if (typeof window !== 'undefined') {
             window.scrollTo(0, 0);
-              console.log(1)
+              
           }
         }
       });
