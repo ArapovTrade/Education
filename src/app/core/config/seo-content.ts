@@ -10,7 +10,7 @@
 import { SeoConfig } from '../services/seoserv';
 
 export const BASE_URL = 'https://arapov.education'; // поменяй на свой домен
-const OG_IMAGE = `${BASE_URL}/assets/images/course-og.png`; // перезалей картинку к себе, не тяни с чужого домена
+const OG_IMAGE = `${BASE_URL}/assets/images/igor-arapov-first-192x300.jpg`; // перезалей картинку к себе, не тяни с чужого домена
 const SITE_NAME = 'Arapov Education';
 
 // ---------- Курс (лендинг) ----------
