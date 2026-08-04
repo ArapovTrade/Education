@@ -956,14 +956,14 @@ margin:0 0 20px;
 .stat {
   display: flex;
   align-items: center;
-  gap: 12px;
+   
    
   border-radius: 4px;
    
 
    
     text-align: start;
-    gap: 10px;
+    gap: 10px !important;
  
 }
 .icon-boxx{
