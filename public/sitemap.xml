@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Курс (лендинг) -->
+  <url>
+    <loc>https://arapov.education/ru/course</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/course" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/course-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/course-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/course-ua" />
+  </url>
+  <url>
+    <loc>https://arapov.education/en/course-en</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/course" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/course-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/course-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/course-ua" />
+  </url>
+  <url>
+    <loc>https://arapov.education/course-ua</loc>
+    <lastmod>2026-04-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/course" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/course-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/course-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/course-ua" />
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://arapov.education/ru/privacy-policy</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/privacy-policy-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/privacy-policy-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/privacy-policy-ua" />
+  </url>
+  <url>
+    <loc>https://arapov.education/en/privacy-policy-en</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/privacy-policy-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/privacy-policy-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/privacy-policy-ua" />
+  </url>
+  <url>
+    <loc>https://arapov.education/privacy-policy-ua</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/privacy-policy-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/privacy-policy-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/privacy-policy-ua" />
+  </url>
+
+  <!-- Disclaimer -->
+  <url>
+    <loc>https://arapov.education/ru/disclaimer-ru</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/disclaimer-ru" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/disclaimer-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/disclaimer-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/disclaimer-ua" />
+  </url>
+  <url>
+    <loc>https://arapov.education/en/disclaimer-en</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/disclaimer-ru" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/disclaimer-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/disclaimer-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/disclaimer-ua" />
+  </url>
+  <url>
+    <loc>https://arapov.education/disclaimer-ua</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/disclaimer-ru" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/disclaimer-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/disclaimer-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/disclaimer-ua" />
+  </url>
+
+  <!-- Public Offer Agreement -->
+  <url>
+    <loc>https://arapov.education/ru/public-agreement</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/public-agreement" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/public-agreement-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/public-agreement-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/public-agreement-ua" />
+  </url>
+  <url>
+    <loc>https://arapov.education/en/public-agreement-en</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/public-agreement" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/public-agreement-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/public-agreement-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/public-agreement-ua" />
+  </url>
+  <url>
+    <loc>https://arapov.education/public-agreement-ua</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://arapov.education/ru/public-agreement" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://arapov.education/en/public-agreement-en" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://arapov.education/public-agreement-ua" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arapov.education/public-agreement-ua" />
+  </url>
+
+</urlset>
