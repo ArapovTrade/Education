@@ -455,8 +455,11 @@ h1, h2, h3, h4 {
 /* ========== MOBILE ========== */
 @media (max-width: 768px) {
     .section-head h2{
-        font-size: 29px;
+        font-size: 24px;
     }
+    .wrap{
+    max-width: 768px
+  }
   .legal-section {
     padding:  0;
   }
