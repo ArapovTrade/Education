@@ -34,7 +34,7 @@ export const routes: Routes = [
   { path: 'en/public-agreement-en', component: PublicAgrimentEn },
   { path: 'public-agreement-ua', component: PublicAgrimentUk },
   
-  { path: '', redirectTo: 'ru/course', pathMatch: 'full' },
+  { path: '', redirectTo: 'course-ua', pathMatch: 'full' },
 
    
 ];
