@@ -203,7 +203,50 @@ const disclaimerUa: SeoConfig = {
     { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
   ],
 };
+// public agreement
 
+const agreementUa: SeoConfig = {
+  title: 'TODO: точный title со страницы /ua/disclaimer-ua',
+  description: 'TODO: точный description со страницы /ua/disclaimer-ua',
+  canonical: `${BASE_URL}/ua/disclaimer`,
+  ogImage: OG_IMAGE,
+  locale: 'uk_UA',
+  htmlLang: 'uk-UA',
+  siteName: SITE_NAME,
+  alternates: [
+    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
+    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
+  ],
+};
+const agreementEN: SeoConfig = {
+  title: 'TODO: точный title со страницы /en/disclaimer-en',
+  description: 'TODO: точный description со страницы /en/disclaimer-en',
+  canonical: `${BASE_URL}/en/disclaimer`,
+  ogImage: OG_IMAGE,
+  locale: 'en_US',
+  htmlLang: 'en-US',
+  siteName: SITE_NAME,
+  alternates: [
+    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
+    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
+  ],
+};
+const agreementRu: SeoConfig = {
+  title: 'TODO: точный title со страницы /disclaimer-ru',
+  description: 'TODO: точный description со страницы /disclaimer-ru',
+  canonical: `${BASE_URL}/ru/disclaimer`,
+  ogImage: OG_IMAGE,
+  locale: 'ru_RU',
+  htmlLang: 'ru-RU',
+  siteName: SITE_NAME,
+  alternates: [
+    { hreflang: 'ru', href: `${BASE_URL}/ru/disclaimer` },
+    { hreflang: 'en', href: `${BASE_URL}/en/disclaimer` },
+    { hreflang: 'uk', href: `${BASE_URL}/ua/disclaimer` },
+  ],
+};
 // ---------- Экспорт единой структуры ----------
 
 export const SEO_CONTENT = {
@@ -221,6 +264,11 @@ export const SEO_CONTENT = {
     ru: disclaimerRu,
     en: disclaimerEn,
     ua: disclaimerUa,
+  },
+  agreement: {
+    ru: agreementRu,
+    en: agreementEN,
+    ua: agreementUa,
   },
 } as const;
 

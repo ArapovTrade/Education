@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, inject } from '@angular/core';
+import { Component, HostListener, OnInit, OnDestroy, inject } from '@angular/core';
 import { Seoserv } from '../../../../core/services/seoserv';
 import { SEO_CONTENT } from '../../../../core/config/seo-content';
 import { Router, NavigationEnd } from '@angular/router';
@@ -10,13 +10,19 @@ import { Router, NavigationEnd } from '@angular/router';
   templateUrl: './public-agriment-ru.html',
   styleUrl: './public-agriment-ru.css',
 })
-export class PublicAgrimentRu {
+export class PublicAgrimentRu implements OnInit {
 constructor(private router: Router) {}
-
+  
   private seo = inject(Seoserv);
+  
 
+  
   ngOnInit(): void {
-    this.seo.set(SEO_CONTENT.privacyPolicy.ru);
+     
+
+
+
+    this.seo.set(SEO_CONTENT.agreement.ru);
   }
 
   navigateTo(path: string) {
