@@ -1,0 +1,492 @@
+ section {
+  padding: 30px 0 0 ;
+}
+
+.section-head {
+  max-width: 800px;
+  margin-bottom: 48px;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-head h2 {
+ font-family: "Russo One", Sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    letter-spacing: 2.5px;
+    color: #0C243C;
+        text-align: center;
+        margin:0;
+}
+
+.section-head p {
+  font-family: 'Inter', sans-serif;
+  text-transform: none;
+  color: #6b7280;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.nav-links.open {
+  display: flex;
+  position: absolute;
+  top: 88px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  flex-direction: column;
+  padding: 20px 24px;
+  gap: 18px;
+  border-bottom: 1px solid #ecedf1;
+  z-index: 100;
+}
+.faq-a {
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+/* ========== TYPOGRAPHY & UTILS ========== */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Russo One', sans-serif;
+    
+   
+  color: #131f38;
+  border-left: 4px solid #f3c53c;
+  padding-left: 12px;
+  margin-bottom: 18px;
+
+
+  font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+}
+
+.eyebrow.on-dark {
+  color: #fff;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.accent-teal { color: #57c2ba; }
+.accent-gold { color: rgb(255, 209, 15); }
+/* ========== HEADER ========== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 1px solid #ecedf1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Russo One', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}
+
+.logo svg {
+  width: 34px;
+  height: 34px;
+}
+
+.logo  {
+  color: #131f38;
+}
+
+.logo small {
+  display: block;
+  font-family: 'Russo One', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: #3fa8a0;
+  margin-top: -2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 38px;
+}
+
+.nav-links a {
+  font-family: 'Russo One', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #323232;;
+  position: relative;
+  /* padding: 4px 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  padding:0 10px !important;
+    height: 40px !important;
+    text-decoration: none;
+}
+
+ 
+
+.nav-links a:hover {
+  /* width: 100%; */
+  color:#fff !important;
+  padding: 0 10px !important;
+  background: #55C1C2;
+  border-radius: 5px;
+  transition-duration: 0.7s;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.lang {
+  position: relative;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Russo One', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #131f38;
+}
+
+.lang-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  background: #fff;
+  border: 1px solid #ecedf1;
+  border-radius: 4px;
+  box-shadow: 0 12px 24px rgba(19, 31, 56, 0.12);
+  min-width: 80px;
+  display: none;
+  overflow: hidden;
+}
+
+.lang.open .lang-menu {
+  display: block;
+}
+
+.lang-menu a {
+  display: block;
+  padding: 10px 16px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.lang-menu a:hover {
+  background: #f4f6f9;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 26px;
+  height: 2px;
+  background: #131f38;
+}
+
+
+.for-whom .wrap {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.whom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.whom-card {
+  border: 1px solid #e6e9ef;
+  border-radius: 16px;
+  padding: 34px 30px;
+  background: #fff;
+   box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.45);
+       margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+ 
+
+.whom-card h3 { 
+  text-transform: none;
+  color: #323232;
+  margin-bottom: 14px; 
+      padding: 0; 
+    font-family: "Russo One", Sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+}
+
+.whom-card p {
+  color: #000000;
+    font-family:  "Nunito Sans", Sans-serif;
+    font-size: 18px;
+    line-height:  1.5em;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ========== LEGAL / DISCLAIMER ========== */
+.legal-section {
+  padding:  0;
+  background: #fff;
+}
+
+.legal-section .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #131f38;
+  text-decoration: none;
+  margin-bottom: 28px;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.legal-section .back-link:hover {
+  opacity: 1;
+  color: #55c2c3;
+}
+
+.legal-grid {
+  display: grid;
+  gap: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.legal-card {
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  border-radius: 16px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.legal-head {
+  padding: 32px 32px 20px;
+  border-bottom: 1px solid #ecedf1;
+}
+
+.legal-head h2 {
+  margin: 0 0 10px;
+  font-family: "Russo One", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0c243c;
+  line-height: 1.15;
+}
+
+.legal-head p {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5a6577;
+  line-height: 1.5;
+}
+
+.legal-body {
+  padding: 8px 32px 28px;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.legal-item {
+  display: flex;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid #ecedf1;
+}
+
+.legal-item:last-child {
+  border-bottom: none;
+}
+
+.legal-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(255, 209, 15, 0.2);
+  color: #0c243c;
+  font-family: "Russo One", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.legal-item p {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #323232;
+}
+
+.legal-item a {
+  color: #55c2c3;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.legal-item a:hover {
+  color: #f3c53c;
+}
+
+/* ===== Контакты ===== */
+.contact-card .legal-head {
+  background: #0c243c;
+  border-bottom: none;
+}
+
+.contact-card .legal-head h2 {
+  color: #fff;
+}
+
+.contact-card .legal-head p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-card .legal-body {
+  padding: 24px 32px 28px;
+  background: #0c243c;
+}
+
+.contact-card .legal-body p {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-card .legal-body a {
+  color: #ffd10f;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-card .legal-body a:hover {
+  color: #fff;
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 768px) {
+    .section-head h2{
+        font-size: 29px;
+    }
+  .legal-section {
+    padding:  0;
+  }
+
+  .legal-head {
+    padding: 24px 20px 16px;
+  }
+
+  .legal-body,
+  .contact-card .legal-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .legal-head h2 {
+    font-size: 22px;
+  }
+
+  .legal-item {
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .legal-num {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .legal-item p {
+    font-size: 15px;
+  }
+}

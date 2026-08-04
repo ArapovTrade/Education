@@ -1,1 +1,133 @@
-<p>disclaimer-en works!</p>
+<div class="body">
+  <div class="header">
+    <div class="wrap nav">
+      <div class="logo">
+        <img
+          src="/assets/images/ui-kit-arapov-trade-2.png"
+          srcset="
+            /assets/images/ui-kit-arapov-trade-2-300x138.png 300w,
+            /assets/images/ui-kit-arapov-trade-2-768x353.png 768w,
+            /assets/images/ui-kit-arapov-trade-2.png         782w
+          "
+          sizes="174px"
+          width="174"
+          height="80"
+          alt="Курс по трейдингу с наставником"
+          fetchpriority="high"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="nav-right">
+        <app-language-switcher />
+
+        <button id="burgerBtn" class="burger" (click)="toggleMenu()" [class.open]="isMenuOpen">
+          <!-- иконка бургера -->
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <section id="for-whom" class="for-whom">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Legal document</div>
+        <h2>  <span class="accent-teal">Disclaimer</span></h2>
+        <p>
+          Legal information and limitations on the use of materials from the arapov.education web resource
+        </p>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <section class="legal-section" id="disclaimer">
+    <div class="wrap">
+      <a
+        href="/en/course-en"
+        (click)="$event.preventDefault(); navigateTo('en/course-en')"
+        class="back-link"
+        >← Back to the course page</a
+      >
+
+      <div class="legal-grid">
+        <div class="legal-card">
+          <div class="legal-head">
+            <h2>Disclaimer</h2>
+          </div>
+
+          <div class="legal-body">
+            <div class="legal-item">
+              <span class="legal-num">01</span>
+              <div>
+                <p>
+                  Under no circumstances do we provide any representations or guarantees of earnings in the financial markets and disclaim any liability for the use of the content of the Website
+                  <a href="https://arapov.education/">https://arapov.education</a>
+                  and other Websites.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">02</span>
+              <div>
+                <p>
+                 Any information posted on this Website or provided during training is general information and may be used solely for educational or informational purposes.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">03</span>
+              <div>
+                <p>
+                 The information provided may also be changed at any time without notice. Under no circumstances shall we be liable to any party for any losses or damages of any kind, including lost profits, incurred as a result of using the information obtained during training, from our Websites, or from any other Websites, hyperlinks to which may be present on our Websites.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">04</span>
+              <div>
+                <p>
+                  The right to interpret the information provided in any form belongs exclusively to the authors who provided it. We do not provide referral or advertising links to third-party Websites. We are not responsible for the relevance, accuracy, validity, reliability, availability, or completeness of content owned by third parties and posted on their Websites.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">05</span>
+              <div>
+                <p>
+                 We will not be a party to or bear any responsibility for any agreements between you and third-party product or service providers.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">06</span>
+              <div>
+                <p>
+                  By using our Websites, you agree to this Disclaimer, Privacy Policy, and the Public Offer Agreement for using the services, and accept all responsibility that may be imposed on you.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="legal-card contact-card" id="contacts">
+          <div class="legal-body">
+            <p>
+              Igor Arapov is a professional trader active since 2013 and the author of "Editor's Pick" articles on TradingView.
+            </p>
+
+            <div  >
+              <p>All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

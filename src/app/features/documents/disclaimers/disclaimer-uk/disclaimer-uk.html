@@ -1,1 +1,142 @@
-<p>disclaimer-uk works!</p>
+<div class="body">
+  <div class="header">
+    <div class="wrap nav">
+      <div class="logo">
+        <img
+          src="/assets/images/ui-kit-arapov-trade-2.png"
+          srcset="
+            /assets/images/ui-kit-arapov-trade-2-300x138.png 300w,
+            /assets/images/ui-kit-arapov-trade-2-768x353.png 768w,
+            /assets/images/ui-kit-arapov-trade-2.png         782w
+          "
+          sizes="174px"
+          width="174"
+          height="80"
+          alt="Курс по трейдингу с наставником"
+          fetchpriority="high"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="nav-right">
+        <app-language-switcher />
+
+        <button id="burgerBtn" class="burger" (click)="toggleMenu()" [class.open]="isMenuOpen">
+          <!-- иконка бургера -->
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <section id="for-whom" class="for-whom">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Юридичний документ</div>
+        <h2>Відмова від <span class="accent-teal">відповідальності</span></h2>
+        <p>
+         Правова інформація та обмеження щодо використання матеріалів Веб-ресурсу arapov.education
+        </p>
+      </div>
+    </div>
+  </section>
+ 
+
+  <section class="legal-section" id="disclaimer">
+    <div class="wrap">
+      <a
+        href="/course-ua"
+        (click)="$event.preventDefault(); navigateTo('course-ua')"
+        class="back-link"
+        >← Повернутися на сторінку курсу</a
+      >
+
+      <div class="legal-grid">
+        <div class="legal-card">
+          <div class="legal-head">
+            <h2>Відмова від відповідальності</h2>
+          </div>
+
+          <div class="legal-body">
+            <div class="legal-item">
+              <span class="legal-num">01</span>
+              <div>
+                <p>
+                  За жодних обставин ми не надаємо жодних запевнень і гарантій заробітку на фінансових ринках і відмовляємося
+            від відповідальності за використання вмісту Веб-ресурсу
+                  <a href="https://arapov.education/">https://arapov.education</a>
+                 та інших Веб-ресурсів.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">02</span>
+              <div>
+                <p>
+                  Будь-яка інформація, що розміщується на цьому Веб-ресурсі або надається у процесі навчання, є інформацією
+            загального характеру і може використовуватися лише як освітня чи пізнавальна.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">03</span>
+              <div>
+                <p>
+                  Надана інформація також може бути змінена в будь-який час без повідомлення. За жодних обставин ми не несемо
+            відповідальності перед жодною стороною за будь-які втрати чи збитки будь-якого роду, у тому числі упущену
+            вигоду, понесену внаслідок використання інформації, отриманої під час навчання, отриманої з наших
+            Веб-ресурсів або будь-яких інших Веб-ресурсів, гіперпосилання на які можуть міститися на наших Веб-ресурсах.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">04</span>
+              <div>
+                <p>
+                 Право тлумачення наданої інформації в будь-якому вигляді належить виключно авторам, які її надали. Ми не
+            надаємо реферальних чи рекламних посилань на сторонні Веб-ресурси. Ми не несемо відповідальності за
+            актуальність, точність, дійсність, надійність, доступність або повноту контенту, що належить третім особам і
+            розміщується на їхніх Веб-ресурсах.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">05</span>
+              <div>
+                <p>
+                 Ми не будемо стороною або будь-яким чином нести відповідальність за будь-які угоди між вами та сторонніми
+            постачальниками продуктів чи послуг.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">06</span>
+              <div>
+                <p>
+                  Використовуючи наші Веб-ресурси, Ви висловлюєте свою згоду з цим Відмовленням від відповідальності, Політикою конфіденційності та Договором публічної оферти з користування послугами й приймаєте на себе всю відповідальність, яка може бути на вас покладена.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="legal-card contact-card" id="contacts">
+          <div class="legal-body">
+            <p>
+              Ігор Арапов – професійний трейдер з 2013 року, автор статей у номінації "Вибір
+              редакції" на TradingView
+            </p>
+
+            <div  >
+              <p>All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,1 +1,150 @@
-<p>disclaimer-ru works!</p>
+<div class="body">
+  <div class="header">
+    <div class="wrap nav">
+      <div class="logo">
+        <img
+          src="/assets/images/ui-kit-arapov-trade-2.png"
+          srcset="
+            /assets/images/ui-kit-arapov-trade-2-300x138.png 300w,
+            /assets/images/ui-kit-arapov-trade-2-768x353.png 768w,
+            /assets/images/ui-kit-arapov-trade-2.png         782w
+          "
+          sizes="174px"
+          width="174"
+          height="80"
+          alt="Курс по трейдингу с наставником"
+          fetchpriority="high"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="nav-right">
+        <app-language-switcher />
+
+        <button id="burgerBtn" class="burger" (click)="toggleMenu()" [class.open]="isMenuOpen">
+          <!-- иконка бургера -->
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <section id="for-whom" class="for-whom">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Юридический документ</div>
+        <h2>Отказ от <span class="accent-teal">ответственности</span></h2>
+        <p>
+          Правовая информация и ограничения по использованию материалов Веб-ресурса arapov.education
+        </p>
+      </div>
+    </div>
+  </section>
+ 
+
+  <section class="legal-section" id="disclaimer">
+    <div class="wrap">
+      <a
+        href="/ru/course"
+        (click)="$event.preventDefault(); navigateTo('ru/course')"
+        class="back-link"
+        >← Вернуться на страницу курса</a
+      >
+
+      <div class="legal-grid">
+        <div class="legal-card">
+          <div class="legal-head">
+            <h2>Отказ от ответственности</h2>
+          </div>
+
+          <div class="legal-body">
+            <div class="legal-item">
+              <span class="legal-num">01</span>
+              <div>
+                <p>
+                  Ни при каких обстоятельствах мы не предоставляем никаких заверений и гарантий
+                  заработка на финансовых рынках и отказываемся от ответственности за использование
+                  содержимого Веб-ресурса
+                  <a href="https://arapov.education/">https://arapov.education</a>
+                  и других Веб-ресурсов.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">02</span>
+              <div>
+                <p>
+                  Любая информация, размещаемая на данном Веб-ресурсе или предоставляемая в процессе
+                  обучения, является информацией общего характера и может использоваться только как
+                  образовательная или познавательная.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">03</span>
+              <div>
+                <p>
+                  Предоставляемая информация также может быть изменена в любое время без
+                  уведомления. Ни при каких обстоятельствах мы не несем ответственности ни перед
+                  какой стороной за любые потери или убытки любого рода, в том числе упущенную
+                  выгоду, понесенную в результате использования информации, полученной во время
+                  обучения, полученной из наших Веб-ресурсов или любых других Веб-ресурсов,
+                  гиперссылки на которые могут содержатся на наших Веб-ресурсах.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">04</span>
+              <div>
+                <p>
+                  Право трактования предоставленной информации в любом виде принадлежит
+                  исключительно авторам, предоставившим ее. Мы не предоставляем реферальные или
+                  рекламные ссылки на сторонние Веб-ресурсы. Мы не несем ответственности за
+                  актуальность, точность, действительность, надежность, доступность или полноту
+                  контента, принадлежащего третьим лицам и размещаемого на их Веб-ресурсах.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">05</span>
+              <div>
+                <p>
+                  Мы не будем стороной или каким-либо образом нести ответственность за какие-либо
+                  соглашения между вами и сторонними поставщиками продуктов или услуг.
+                </p>
+              </div>
+            </div>
+
+            <div class="legal-item">
+              <span class="legal-num">06</span>
+              <div>
+                <p>
+                  Используя наши Веб-ресурсы, Вы выражаете свое согласие с настоящим Отказом от
+                  ответственности, Политикой конфиденциальности и Договором публичной оферты по
+                  пользованию услугами и принимаете всю ответственность, которая может быть
+                  возложена на Вас.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="legal-card contact-card" id="contacts">
+          <div class="legal-body">
+            <p>
+              Игорь Арапов — профессиональный трейдер с 2013 года, автор статей в номинации "Выбор
+              редакции" на TradingView
+            </p>
+
+            <div  >
+              <p>All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -10,7 +10,7 @@
 import { SeoConfig } from '../services/seoserv';
 
 export const BASE_URL = 'https://arapov.education'; // поменяй на свой домен
-const OG_IMAGE = `${BASE_URL}/assets/images/igor-arapov-first-192x300.jpg`; // перезалей картинку к себе, не тяни с чужого домена
+const OG_IMAGE = `${BASE_URL}/assets/images/arapov-copytrade-3-300x195.jpg`; // перезалей картинку к себе, не тяни с чужого домена
 const SITE_NAME = 'Arapov Education';
 
 // ---------- Курс (лендинг) ----------
@@ -247,7 +247,7 @@ function buildArticleJsonLd(params: {
         logo: {
           '@type': 'ImageObject',
           '@id': `${BASE_URL}/#logo`,
-          url: `${BASE_URL}/assets/images/favicon.ico`,
+          url: `${BASE_URL}/assets/images/favicon.png`,
           caption: SITE_NAME,
           inLanguage: params.inLanguage,
         },
