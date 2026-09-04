@@ -1,5 +1,4 @@
-
-<div class="body">
+ <div class="body">
   <div class="header">
     <div class="wrap nav">
       <div class="logo">
@@ -30,9 +29,12 @@
       <div class="nav-right">
         <app-language-switcher />
 
-        <button id="burgerBtn" class="burger" (click)="toggleMenu()" [class.open]="isMenuOpen">
-          <!-- иконка бургера -->
-        </button>
+        <button
+          id="burgerBtn"
+          class="burger"
+          (click)="toggleMenu()"
+          [class.open]="isMenuOpen"
+        ></button>
       </div>
     </div>
   </div>
@@ -46,19 +48,19 @@
           <span style="color: #fff">in trading</span>
         </h1>
         <p style="padding-top: 20px">
-          An intensive 10-lesson course: master a trading system, learn the basics of market
-          analysis, and make your first trades under a mentor's guidance.
+          An intensive 10-session course: master a trading system, learn the fundamentals of
+          market analysis, and place your first trades under a mentor's guidance.
         </p>
         <p>
-          A course with a clear structure: 5 theory lessons + 5 practice lessons. From exchange
-          fundamentals to a trading system based on volume analysis.
+          A clearly structured course: 5 theory sessions + 5 practice sessions. From exchange
+          basics to a trading system built on volume analysis.
         </p>
         <div class="hero-cta">
           <a href="#for-whom" (click)="scrollTo($event, 'for-whom')" class="btn btn-outline"
             >Learn more</a
           >
           <a href="#join" (click)="scrollTo($event, 'join')" class="btn btn-primary pulse-button"
-            >Register now</a
+            >Sign up</a
           >
         </div>
       </div>
@@ -81,94 +83,86 @@
       </div>
     </div>
   </section>
+
   <section id="ecosystem" class="ecosystem">
-   <div class="wrap">
-     <div class="section-head ecosystem-head">
-       <div class="eyebrow">Open Ecosystem</div>
-       <h2>ARAPOV <span class="accent-teal">TRADE</span></h2>
-       <p class="lead">
-         The course is part of a large public ecosystem. Explore books, research, public
-         analytics, and educational materials before and after the course.
-       </p>
-     </div>
+    <div class="wrap">
+      <div class="section-head ecosystem-head">
+        <div class="eyebrow">Open ecosystem</div>
+        <h2>ARAPOV <span class="accent-teal">TRADE</span></h2>
+        <p class="lead">
+          The course is part of a large public ecosystem. Explore books, research, public
+          analytics, and educational materials before and after the course.
+        </p>
+      </div>
 
-
-     <div class="ecosystem-grid">
-       
-        <a class="eco-card"
-         href="https://www.youtube.com/@ArapovTrade"
-         target="_blank"
-         rel="noopener"
-       >
-         <!-- <span class="eco-icon">▶</span>
-          -->
-         <span class="eco-icon">
-          <svg viewBox="0 0 24 24">
+      <div class="ecosystem-grid">
+        
+         <a  class="eco-card"
+          href="https://www.youtube.com/@ArapovTrade"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="eco-icon" sryle>
+            <svg viewBox="0 0 24 24">
               <path
                 fill="red"
                 d="M22 8.5c0-1.9-1.4-3.4-3.2-3.6C16 4.6 12 4.6 12 4.6s-4 0-6.8.3C3.4 5.1 2 6.6 2 8.5v7c0 1.9 1.4 3.4 3.2 3.6 2.8.3 6.8.3 6.8.3s4 0 6.8-.3c1.8-.2 3.2-1.7 3.2-3.6v-7Z"
               />
               <path d="M10 9.5v5l4.5-2.5L10 9.5Z" fill="#fff" stroke="none" />
             </svg>
-         </span>
-         <div>
-           <h3>YouTube</h3>
-           <p>Educational videos, market breakdowns, and real student stories.</p>
-           <span class="eco-link">Watch →</span>
-         </div>
-       </a>
+          </span>
+          <div>
+            <h3>YouTube</h3>
+            <p>Educational videos, market breakdowns, and real student stories.</p>
+            <span class="eco-link">Watch →</span>
+          </div>
+        </a>
 
+        
+        <a   class="eco-card"
+          href="https://arapov.trade/ru/freestudying"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="eco-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 6c-1.6-1.2-3.9-1.8-6.5-1.5C4.7 4.6 4 5.4 4 6.3v11.4c0 .7.7 1.2 1.5 1.1 2.4-.3 4.6.2 6.5 1.5"
+              />
+              <path
+                d="M12 6c1.6-1.2 3.9-1.8 6.5-1.5.8.1 1.5.9 1.5 1.8v11.4c0 .7-.7 1.2-1.5 1.1-2.4-.3-4.6.2-6.5 1.5V6Z"
+              />
+            </svg>
+          </span>
+          <div>
+            <h3>Library</h3>
+            <p>Free educational materials, articles, and trading resources.</p>
+            <span class="eco-link">Go to →</span>
+          </div>
+        </a>
 
-       
-       <a  class="eco-card"
-         href="https://arapov.trade/ru/freestudying"
-         target="_blank"
-         rel="noopener"
-       >
-         <!-- <span class="eco-icon">▯</span> -->
-         <span class="eco-icon">
-           <svg viewBox="0 0 24 24">
-             <path
-               d="M12 6c-1.6-1.2-3.9-1.8-6.5-1.5C4.7 4.6 4 5.4 4 6.3v11.4c0 .7.7 1.2 1.5 1.1 2.4-.3 4.6.2 6.5 1.5"
-             />
-             <path
-               d="M12 6c1.6-1.2 3.9-1.8 6.5-1.5.8.1 1.5.9 1.5 1.8v11.4c0 .7-.7 1.2-1.5 1.1-2.4-.3-4.6.2-6.5 1.5V6Z"
-             />
-           </svg>
-         </span>
-         <div>
-           <h3>Library</h3>
-           <p>Free educational materials, articles, and trading resources.</p>
-           <span class="eco-link">Go to →</span>
-         </div>
-       </a>
-
-
-       
-       <a  class="eco-card"
-         href="https://www.tradingview.com/u/Igor_Arapov/"
-         target="_blank"
-         rel="noopener"
-       >
-         <!-- <span class="eco-icon">↗</span> -->
-        <span class="eco-icon">
- <svg width="42" height="34" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+        
+         <a  class="eco-card"
+          href="https://www.tradingview.com/u/Igor_Arapov/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="eco-icon">
+            <svg width="42" height="34" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
               <path d="M14 22H7V11H0V4h14v18zM28 22h-8l7.5-18h8L28 22z" fill="currentColor"></path>
               <circle cx="20" cy="8" r="4" fill="currentColor"></circle>
             </svg>
-</span>
-         <div>
-           <h3>TradingView</h3>
-           <p>Public analytics, trade ideas, and market overviews.</p>
-           <span class="eco-link">Watch →</span>
-         </div>
-       </a>
+          </span>
+          <div>
+            <h3>TradingView</h3>
+            <p>Public analytics, trade ideas, and market overviews.</p>
+            <span class="eco-link">Watch →</span>
+          </div>
+        </a>
 
-
-       <a class="eco-card" href="https://telegram.me/ArapovTrader" target="_blank" rel="noopener">
-         <!-- <span class="eco-icon">✈</span> -->
-         <span class="eco-icon" style="padding-right: 5px;">
- <svg viewBox="0 0 24 24" width="44" height="44">
+        <a class="eco-card" href="https://telegram.me/ArapovTrader" target="_blank" rel="noopener">
+          <span class="eco-icon" style="padding-right: 5px">
+            <svg viewBox="0 0 24 24" width="44" height="44">
               <path
                 d="M21.5 3.5 2.7 10.9c-1 .4-1 1.9.1 2.2l4.6 1.5 1.8 5.6c.3.9 1.4 1.1 2 .4l2.6-2.9 4.7 3.5c.9.6 2.1.1 2.3-.9l3-16.4c.2-1-.9-1.8-1.8-1.4Z"
                 style="fill: #0088cc; stroke: none"
@@ -178,24 +172,22 @@
                 style="stroke: #fff; stroke-width: 1.3; stroke-linecap: round; fill: none"
               />
             </svg>
-</span>
-         <div>
-           <h3>Telegram</h3>
-           <p>Groups and channels for discussion, news, and project materials.</p>
-           <span class="eco-link">Go to →</span>
-         </div>
-       </a>
+          </span>
+          <div>
+            <h3>Telegram</h3>
+            <p>Groups and channels for discussion, news, and project materials.</p>
+            <span class="eco-link">Go to →</span>
+          </div>
+        </a>
 
-
-       
-       <a  class="eco-card"
-         href="https://www.instagram.com/arapovtrade/"
-         target="_blank"
-         rel="noopener"
-       >
-         <!-- <span class="eco-icon">◎</span> -->
-         <span class="eco-icon">
-           <svg
+        
+         <a  class="eco-card"
+          href="https://www.instagram.com/arapovtrade/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="eco-icon">
+            <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -204,7 +196,6 @@
               stroke-linejoin="round"
             >
               <defs>
-                <!-- Градиент для заливки внутренней части -->
                 <radialGradient id="insta-bkg" cx="0.2" cy="0.8" r="0.9">
                   <stop offset="0%" stop-color="#FFDD55" />
                   <stop offset="30%" stop-color="#FF543E" />
@@ -213,7 +204,6 @@
                 </radialGradient>
               </defs>
 
-              <!-- Внутренняя цветная форма (аналог вашего path с fill) -->
               <rect
                 x="2"
                 y="2"
@@ -224,46 +214,40 @@
                 stroke="none"
               />
 
-              <!-- Белые контуры поверх градиента (глазок и вспышка) -->
               <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" fill="none" />
               <circle cx="12" cy="12" r="4" stroke="white" fill="none" />
               <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none" />
             </svg>
-         </span>
-         <div>
-           <h3>Instagram</h3>
-           <p>Short ideas, project news, and behind-the-scenes snippets.</p>
-           <span class="eco-link">Go to →</span>
-         </div>
-       </a>
+          </span>
+          <div>
+            <h3>Instagram</h3>
+            <p>Short ideas, project news, and behind-the-scenes snippets.</p>
+            <span class="eco-link">Go to →</span>
+          </div>
+        </a>
 
-
-       <a class="eco-card" href="https://arapov.trade/ru/books" target="_blank" rel="noopener">
-         <!-- <span class="eco-icon">▰</span> -->
-         <span class="eco-icon">
-          <svg viewBox="0 0 24 24">
+        <a class="eco-card" href="https://arapov.trade/ru/books" target="_blank" rel="noopener">
+          <span class="eco-icon">
+            <svg viewBox="0 0 24 24">
               <path d="M4 4.5h5.5c1.1 0 2 .9 2 2V20c0-1.1-.9-2-2-2H4V4.5Z" fill="#B35C1E" />
               <path d="M20 4.5h-5.5c-1.1 0-2 .9-2 2V20c0-1.1.9-2 2-2H20V4.5Z" fill="#B35C1E" />
             </svg>
-         </span>
-         <div>
-           <h3>Books</h3>
-           <p>Original books and educational materials with international ISBNs.</p>
-           <span class="eco-link">Learn more →</span>
-         </div>
-       </a>
+          </span>
+          <div>
+            <h3>Books</h3>
+            <p>Original books and educational materials with international ISBNs.</p>
+            <span class="eco-link">Learn more →</span>
+          </div>
+        </a>
 
-
-       
-        <a class="eco-card"
-         href="https://scholar.google.com/citations?user=N440tWQAAAAJ&hl=ru"
-         target="_blank"
-         rel="noopener"
-       >
-         <!-- <span class="eco-icon">⌁</span> -->
-         <!-- Исследования -->
-         <span class="eco-icon">
-           <svg viewBox="0 0 24 24">
+        
+         <a  class="eco-card"
+          href="https://scholar.google.com/citations?user=N440tWQAAAAJ&hl=ru"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="eco-icon">
+            <svg viewBox="0 0 24 24">
               <path d="M9 3h6" />
               <path
                 fill="#FF007F"
@@ -271,18 +255,16 @@
               />
               <path d="M7.5 15h9" />
             </svg>
-         </span>
-         <div>
-           <h3>Research</h3>
-           <p>Academic work in finance and investor behavior.</p>
-           <span class="eco-link">Watch →</span>
-         </div>
-       </a>
+          </span>
+          <div>
+            <h3>Research</h3>
+            <p>Academic work in finance and investor behavior.</p>
+            <span class="eco-link">Watch →</span>
+          </div>
+        </a>
 
-
-       <div class="eco-card eco-card--media">
-         <!-- <span class="eco-icon">▤</span> -->
-         <span class="eco-icon">
+        <div class="eco-card eco-card--media">
+          <span class="eco-icon">
             <svg viewBox="0 0 24 24">
               <path
                 d="M4 5h13a2 2 0 0 1 2 2v11a1.5 1.5 0 0 1-1.5 1.5H6a2 2 0 0 1-2-2V5Z"
@@ -291,86 +273,89 @@
               <path d="M19 8.5V17a1.5 1.5 0 0 0 3 0V9.5a1 1 0 0 0-1-1h-2Z" fill="green" />
               <path d="M7 9h7M7 12h7M7 15h4" />
             </svg>
-         </span>
-         <div>
-           <h3>Featured In</h3>
-           <p>Publications and interviews about Igor Arapov and ARAPOV TRADE.</p>
-           <div class="eco-media-links">
-             
-             <a style="padding-bottom: 5px"
-               href="https://ua.news/ru/money/nezvazhaiuchi-na-viinu-ta-krizi-igor-arapov-poiasniuie-khto-zavzhdi-zarobliaie-na-fondovikh-rinkakh"
-               target="_blank"
-               rel="noopener"
-               >UA.NEWS Feature →</a
-             >
-             <br />
-             
-            <a   href="https://ua.news/ru/all-news/bezkoshtovna-biblioteka-z-treidingu-interviu-z-avtorom-kursu-na-50-statei"
-               target="_blank"
-               rel="noopener"
-               >UA.NEWS Interview →</a
-             >
-           </div>
-         </div>
-       </div>
-     </div>
+          </span>
+          <div>
+            <h3>Featured in</h3>
+            <p>Publications and interviews about Igor Arapov and ARAPOV TRADE.</p>
+            <div class="eco-media-links">
+              
+                style="padding-bottom: 5px"
+               <a  href="https://ua.news/ru/money/nezvazhaiuchi-na-viinu-ta-krizi-igor-arapov-poiasniuie-khto-zavzhdi-zarobliaie-na-fondovikh-rinkakh"
+                target="_blank"
+                rel="noopener"
+                >UA.NEWS feature →</a
+              >
+              <br />
+              
+               <a  href="https://ua.news/ru/all-news/bezkoshtovna-biblioteka-z-treidingu-interviu-z-avtorom-kursu-na-50-statei"
+                target="_blank"
+                rel="noopener"
+                >UA.NEWS interview →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
 
-
-     <div class="numbers-panel">
-       <div class="numbers-title">ARAPOV TRADE <span>BY THE NUMBERS</span></div>
-       <div class="numbers-grid">
-         <div class="number-item">
-           <b>2013</b><span>in trading</span
-           ><small>over 10 years of hands-on experience in live markets</small>
-         </div>
-         <div class="number-item">
-           <b>9</b><span>books with ISBN</span><small>published on trading and finance topics</small>
-         </div>
-         <div class="number-item">
-           <b>2021</b><span>TradingView</span
-           ><small>public analytics, ideas, and market reviews</small>
-         </div>
-         <div class="number-item">
-           <b>ACADEMIC<br />RESEARCH</b><span>in the field of finance</span
-           ><small>psychology of investment decisions and behavioral finance</small>
-         </div>
-         <div class="number-item">
-           <b>LECTURES &<br />TALKS</b><span>public engagement</span
-           ><small>universities and industry events</small>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
-
+      <div class="numbers-panel">
+        <div class="numbers-title">ARAPOV TRADE <span>BY THE NUMBERS</span></div>
+        <div class="numbers-grid">
+          <div class="number-item">
+            <b>2013</b><span>in trading</span
+            ><small>over 10 years of hands-on experience in live markets</small>
+          </div>
+          <div class="number-item">
+            <b>9</b><span>books with ISBN</span><small>published on trading and finance topics</small>
+          </div>
+          <div class="number-item">
+            <b>2021</b><span>TradingView</span
+            ><small>public analytics, ideas, and market reviews</small>
+          </div>
+          <div class="number-item">
+            <b>ACADEMIC<br />RESEARCH</b><span>in the field of finance</span
+            ><small>psychology of investment decisions and behavioral finance</small>
+          </div>
+          <div class="number-item">
+            <b>LECTURES &<br />TALKS</b><span>public engagement</span
+            ><small>universities and industry events</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="for-whom" class="for-whom">
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Let's talk practice</div>
-        <h2>This course <br /><span class="accent-teal">is right for you </span>if you:</h2>
+        <h2>This course <br /><span class="accent-teal">is right for you </span>if:</h2>
       </div>
       <div class="whom-grid">
         <div class="whom-card">
-          <h3>Want to start from scratch, the right way</h3>
+          <h3>You want to start from scratch — the right way</h3>
           <p>
-            You want to start with a clear structure and a step-by-step system. The course gives
-            you the foundation: from how the exchange works to a trading system based on volume
-            analysis.
+            Most beginners lose money not because of the market, but because of a chaotic start:
+            scattered videos, conflicting advice, and trading "by feel." The course gives you a
+            clear structure — from how the exchange works to a complete trading system, step by
+            step, with no gaps in your knowledge.
           </p>
         </div>
         <div class="whom-card">
-          <h3>Have already tried, but see no results</h3>
+          <h3>You've tried before but aren't seeing results</h3>
           <p>
-            You've already tried trading, but lack consistency. The course will help you
-            structure your knowledge and master a trading system based on volume analysis.
+            If you've already placed trades, studied indicators and strategies, but still don't
+            have consistent results — the issue is almost never a lack of knowledge, it's a lack
+            of a system. On the course we'll break down your own approach and rebuild it around
+            volume analysis and the logic of large capital.
           </p>
         </div>
         <div class="whom-card">
-          <h3>Are ready to move to systematic trading</h3>
+          <h3>You're ready to move to systematic trading</h3>
           <p>
-            You want to understand market logic, analyze the actions of large capital, and trade
-            by a system. The course gives you the tools for a systematic approach.
+            You want to stop guessing and start understanding: why price moves the way it does,
+            and what the market's major players are doing. The course gives you a ready-made
+            trading system with a positive mathematical expectation — plus practice on real
+            charts to make it stick.
           </p>
         </div>
       </div>
@@ -380,29 +365,33 @@
   <section class="approach" id="about">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">Our approach to learning:</div>
+        <div class="eyebrow">Our teaching approach:</div>
         <h2>Depth, practice, and <span class="accent-teal">personal attention</span></h2>
       </div>
       <div class="approach-list">
         <div class="approach-item">
           <div class="approach-num">01</div>
           <div>
-            <h3>The course consists of 10 in-depth lessons</h3>
+            <h3>The course is made up of 10 in-depth lessons</h3>
             <p>
-              5 lessons are concentrated theory that builds a solid foundation. The next 5
-              lessons are 100% practice, where you work in the market side by side with a mentor.
-              We don't just tell you — we show you and do it together.
+              5 sessions are concentrated theory that lays a solid foundation — no filler, no
+              generic advice, only what you actually need for trading. The next 5 sessions are
+              100% practice, where you work the live market side by side with a mentor: finding
+              entry points, tracking trades, and reviewing them in real time. We don't just
+              explain — we show and do it together, until the system clicks for you personally.
             </p>
           </div>
         </div>
         <div class="approach-item">
           <div class="approach-num">02</div>
           <div>
-            <h3>You don't just learn — you prove your skill</h3>
+            <h3>You don't just learn — you prove the skill</h3>
             <p>
-              After the theory you take a knowledge exam, and after the practice — a trading
-              exam on a demo account, making 40 trades by the system's rules. You finish the
-              course with a practical skill and an understanding of the trading system.
+              Knowledge that's never tested is quickly forgotten, so after the theory block you
+              take an exam on the material, and after the practice block a trading exam on a demo
+              account: 40 trades, strictly by the system's rules. This isn't a formality — it's how
+              we confirm you can actually apply the system, not just sit through the lessons. The
+              course ends not with knowledge in your head, but a working skill in your hands.
             </p>
           </div>
         </div>
@@ -411,9 +400,11 @@
           <div>
             <h3>Personal work with Igor Arapov</h3>
             <p>
-              Training takes place in mini-groups of up to 6 people. This is not a "flow" for
-              hundreds of participants. Igor Arapov personally leads each group, answers all
-              questions, and reviews your trades.
+              Training runs in mini-groups of up to 6 people — a deliberate limit, not a marketing
+              trick. That group size is exactly what lets me personally lead every cohort: review
+              each participant's actual trades, answer questions without delay, and make sure no
+              one is left behind on a topic. There's no "one of a thousand" feeling here — just a
+              mentor who sees your trading and helps you build it.
             </p>
           </div>
         </div>
@@ -424,7 +415,7 @@
   <section id="program" class="program">
     <div class="wrap">
       <div class="section-head">
-        <div class="eyebrow">So what's in the course?</div>
+        <div class="eyebrow">What's in the course?</div>
         <h2>Course <span class="accent-teal">program</span></h2>
         <p class="lead">
           After each theory block you complete practical homework assignments finding entry
@@ -534,31 +525,42 @@
       <div class="module-grid">
         <div class="module-card">
           <div class="module-label">Module 1</div>
-          <h3>Foundation: How markets work</h3>
-          <p>We study the structure of the exchange, its key participants, and core market analysis methods.</p>
+          <h3>Foundations: How markets work</h3>
+          <p>
+            We break down how the exchange works from the inside: who the market participants are
+            (market makers, institutional and retail traders), how price is formed, and why price
+            movement isn't random — it's the result of orders colliding with one another. You'll
+            get the base without which any technical or volume analysis is done blind.
+          </p>
         </div>
         <div class="module-card">
           <div class="module-label">Module 2</div>
-          <h3>Technical analysis: "Reading" the chart</h3>
+          <h3>Technical analysis: reading the chart</h3>
           <p>
-            You'll learn to identify trends, build support/resistance levels, and work with key
-            technical patterns.
+            You'll learn to identify trend direction, build strong support and resistance levels,
+            and recognize reversal and continuation patterns. This is the market's language —
+            after this module you'll stop seeing the chart as a random pile of candles.
           </p>
         </div>
         <div class="module-card">
           <div class="module-label">Module 3</div>
-          <h3>Volume analysis: Market mechanics</h3>
+          <h3>Volume analysis: market mechanics</h3>
           <p>
-            We dive into the mechanics of order matching and learn to analyze volume to
-            understand the actions of large capital on the chart.
+            This is where the difference between a systematic trader and a beginner begins. We
+            dig into order-matching mechanics and cluster volume analysis to understand how large
+            market participants operate. You'll learn to see the real balance of supply and
+            demand on the chart — and spot where large capital is actually positioned.
           </p>
         </div>
         <div class="module-card">
           <div class="module-label">Module 4</div>
-          <h3>Trading system: A unified plan of action</h3>
+          <h3>Trading system: one unified plan of action</h3>
           <p>
-            We combine all the knowledge into a ready trading system with a clear algorithm for
-            entering a trade, managing it, and exiting.
+            We bring everything together into a single trading system with clear rules: when to
+            enter a trade, how to manage it, and exactly when to exit — with no second-guessing
+            and no emotional decisions. This isn't a collection of indicators — it's an algorithm
+            with a positive mathematical expectation that you'll be able to apply on your own
+            after the course.
           </p>
         </div>
       </div>
@@ -571,7 +573,7 @@
         <div class="price-card">
           <div class="price-head">
             <h3>Group plan</h3>
-            <p>For those who want to master the system in a group of like-minded people</p>
+            <p>For those who want to master the system alongside like-minded traders</p>
             <div class="price">$500</div>
           </div>
           <div class="price-body">
@@ -594,18 +596,18 @@
               <span class="check">✓</span>
               <div>
                 <strong>Trading system</strong
-                ><span>A ready trading system based on volume analysis</span>
+                ><span>A complete trading system built on volume analysis</span>
               </div>
             </div>
             <div class="feature-row">
               <span class="check">✓</span>
               <div>
                 <strong>Private chat</strong
-                ><span>Access to a private group chat for communication and support</span>
+                ><span>Access to the group's private chat for discussion and support</span>
               </div>
             </div>
-            <a
-              href="https://secure.wayforpay.com/button/b6c196ab80aaa"
+            
+             <a  href="https://secure.wayforpay.com/button/b6c196ab80aaa"
               class="btn btn-primary pulse-button"
               >Choose the group plan</a
             >
@@ -616,44 +618,45 @@
           <span class="badge-hot">Best value</span>
           <div class="price-head">
             <h3>Individual plan</h3>
-            <p>For those who want a personal trade review and to work with the mentor one-on-one</p>
+            <p>For those who want to work with the mentor one-on-one and review their own trades</p>
             <div class="price">$1500</div>
           </div>
           <div class="price-body">
             <div class="whats-in">What's included:</div>
             <div class="feature-row">
               <span class="check">✓</span>
-              <div><strong>Everything included in the group plan</strong></div>
+              <div><strong>Everything in the group plan</strong></div>
             </div>
             <div class="plus-label">Plus:</div>
             <div class="feature-row plus">
               <span class="check">+</span>
               <div>
-                <strong>Personal contact</strong
-                ><span
-                  >5 one-hour personal consultations with Igor Arapov for an in-depth review of
-                  your trading</span
-                >
-              </div>
-            </div>
-            <div class="feature-row plus">
-              <span class="check">+</span>
-              <div>
                 <strong>Individual support</strong
-                ><span>Personal support and direct answers to your questions from the mentor</span>
+                ><span>Personal support and answers to your questions directly from the mentor</span>
               </div>
             </div>
             <div class="feature-row plus">
               <span class="check">+</span>
               <div>
-                <strong>Trading system tuning</strong
+                <strong>Trading system fine-tuning</strong
                 ><span
-                  >Help adapting the trading system to your style and preferences</span
+                  >Help adapting the trading system to your own style and preferences</span
                 >
               </div>
             </div>
-            <a
-              href="https://secure.wayforpay.com/button/bcd6a985d0c30"
+            <div class="feature-row plus">
+              <span class="check">+</span>
+              <div>
+                <strong>A year of support after the course</strong
+                ><span
+                  >The course doesn't end on the last lesson — for a full year afterward I stay
+                  personally in touch with you: reviewing your trades, pointing out mistakes, and
+                  helping you adapt the system as the market changes</span
+                >
+              </div>
+            </div>
+            
+             <a  href="https://secure.wayforpay.com/button/bcd6a985d0c30"
               class="btn btn-primary pulse-button"
               >Choose the individual plan</a
             >
@@ -670,15 +673,15 @@
           <img
             src="/assets/images/fajl-38.jpg"
             srcset="
-             /assets/images/fajl-38-200x300.jpg   200w,
-             /assets/images/fajl-38-681x1024.jpg  681w,
+              /assets/images/fajl-38-200x300.jpg   200w,
+              /assets/images/fajl-38-681x1024.jpg  681w,
               /assets/images/fajl-38-768x1154.jpg  768w,
-             /assets/images/fajl-38.jpg          1000w
+              /assets/images/fajl-38.jpg          1000w
             "
             sizes="(max-width: 1000px) 100vw, 1000px"
             fetchpriority="high"
-             loading="eager"
-  fetchpriority="high"
+            loading="eager"
+            fetchpriority="high"
             alt="Igor Arapov"
             style="width: 100%; height: 100%; object-fit: cover; object-position: center top"
           />
@@ -690,31 +693,31 @@
         <h2>Igor <span class="black">Arapov</span></h2>
         <p>
           Igor Arapov is an independent researcher in the psychology of investment decisions and
-          behavioral finance, a practicing trader since 2013, and a Candidate Master of Sport in
+          behavioral finance, and a practicing trader since 2013. Candidate Master of Sport in
           chess.
         </p>
 
         <p>
-          Author of the book series «<a href="https://arapov.trade/en/books" target="_blank" rel="noopener"
+          Author of the "<a href="https://arapov.trade/ru/books" target="_blank" rel="noopener"
             >Trading Fundamentals</a
-          >» (in 3 languages) with international ISBNs (<a
-            href="https://bookwire.bowker.com/books/author/Igor-Arapov/Books-By?authorId=40225801"
+          >" book series (in 3 languages) with international ISBNs (
+           <a  href="https://bookwire.bowker.com/books/author/Igor-Arapov/Books-By?authorId=40225801"
             target="_blank"
             rel="noopener"
             >Bowker USA</a
-          >), the research paper «<a
-            href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254718"
+          >), the research paper "
+           <a  href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254718"
             target="_blank"
             rel="noopener"
             >From Tilt to System</a
-          >» on SSRN, and a peer-reviewed
+          >" on SSRN, and a peer-reviewed
           <a href="https://doi.org/10.32702/2306-6814.2026.4.96" target="_blank" rel="noopener"
             >article</a
           >
-          in a category "B" journal of Ukraine's Ministry of Education and Science, "Investments:
-          Practice and Experience" (No. 4, 2026). Guest lecturer at
-          <a
-            href="https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi"
+          in the Ukrainian Ministry of Education category-B journal "Investments: Practice and
+          Experience" (No. 4, 2026). Guest lecturer at
+          
+           <a  href="https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi"
             target="_blank"
             rel="noopener"
             >NUFT</a
@@ -748,7 +751,7 @@
                 </svg>
               </span>
             </div>
-            <div class="stat-text"><strong>9 books</strong><span>With international ISBN</span></div>
+            <div class="stat-text"><strong>9 books</strong><span>with international ISBN</span></div>
           </div>
           <div class="stat">
             <div class="icon-boxx">
@@ -766,7 +769,7 @@
               </span>
             </div>
             <div class="stat-text">
-              <strong>Since 2021</strong><span>Analytics on TRADINGVIEW</span>
+              <strong>since 2021</strong><span>Analytics on TRADINGVIEW</span>
             </div>
           </div>
           <div class="stat">
@@ -784,85 +787,147 @@
                 </svg>
               </span>
             </div>
-            <div class="stat-text"><strong>Since 2013</strong><span>In trading</span></div>
+            <div class="stat-text"><strong>since 2013</strong><span>In trading</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <section id="youtube" class="youtube-section">
-   <div class="wrap">
-     <div class="section-head youtube-head">
-       <div class="eyebrow">Public Practice</div>
-       <h2>Popular on <span class="accent-gold">YouTube</span></h2>
-       <p class="lead">
-         Four selected videos to introduce the ARAPOV TRADE approach: a real student's story,
-         a first trade, how the exchange works, and technical analysis.
-       </p>
-     </div>
+    <div class="wrap">
+      <div class="section-head youtube-head">
+        <div class="eyebrow">Public practice</div>
+        <h2>Popular on <span class="accent-gold">YouTube</span></h2>
+        <p class="lead">
+          Four hand-picked videos to introduce the ARAPOV TRADE approach: a real student's story,
+          a first trade, how the exchange works, and technical analysis.
+        </p>
+      </div>
 
+      <div class="youtube-grid youtube-grid--featured">
+        <a class="video-card" href="https://youtu.be/fcRKxFr-EW4" target="_blank" rel="noopener">
+          <div class="video-thumb video-thumb--1">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/fcRKxFr-EW4?si=G8_BaHgjkv7nou__"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
 
-     <div class="youtube-grid youtube-grid--featured">
-       <a class="video-card" href="https://youtu.be/fcRKxFr-EW4" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--1">
-           <!-- <span class="play">▶</span><span class="video-number">01</span> -->
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/fcRKxFr-EW4?si=G8_BaHgjkv7nou__" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         </div>
+          <div class="video-meta">
+            <span>A REAL STUDENT'S STORY</span>
+            <h3>73 years old — started trading from scratch! A real story — interview with my student</h3>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://youtu.be/tmiHem6NOZs" target="_blank" rel="noopener">
+          <div class="video-thumb video-thumb--2">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/tmiHem6NOZs?si=qutp77YHhyLwOpZp"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <span>FIRST STEP IN TRADING</span>
+            <h3>First trade in trading: from TradingView to a demo account in 45 minutes</h3>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://youtu.be/Y4WZAl34jbc" target="_blank" rel="noopener">
+          <div class="video-thumb video-thumb--3">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Y4WZAl34jbc?si=K55HcQmHtW8fu9x-"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <span>MARKET BASICS</span>
+            <h3>How the exchange works: orders, futures, shorting, and trading sessions</h3>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://youtu.be/hch9D_3hVrg" target="_blank" rel="noopener">
+          <div class="video-thumb video-thumb--4">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/hch9D_3hVrg?si=VZHw41EvDH21hMIX"
+              title="YouTube video player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-meta">
+            <span>TECHNICAL ANALYSIS</span>
+            <h3>Technical analysis from scratch: levels, patterns, and false breakouts</h3>
+          </div>
+        </a>
+      </div>
+      <br />
+      <br />
+      <div class="youtube-channel-cta">
         
-         <div class="video-meta">
-           <span>A REAL STUDENT'S STORY</span>
-           <h3>73 years old — started trading from scratch! A real story — interview with my student</h3>
-         </div>
-       </a>
-
-
-       <a class="video-card" href="https://youtu.be/tmiHem6NOZs" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--2">
-           <!-- <span class="play">▶</span><span class="video-number">02</span> -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/tmiHem6NOZs?si=qutp77YHhyLwOpZp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         </div>
-         <div class="video-meta">
-           <span>FIRST STEP IN TRADING</span>
-           <h3>First trade in trading: from TradingView to a demo account in 45 minutes</h3>
-         </div>
-       </a>
-
-
-       <a class="video-card" href="https://youtu.be/Y4WZAl34jbc" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--3">
-           <!-- <span class="play">▶</span><span class="video-number">03</span> -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y4WZAl34jbc?si=K55HcQmHtW8fu9x-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         </div>
-         <div class="video-meta">
-           <span>MARKET BASICS</span>
-           <h3>How the exchange works: orders, futures, shorting, and trading sessions</h3>
-         </div>
-       </a>
-
-
-       <a class="video-card" href="https://youtu.be/hch9D_3hVrg" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--4">
-           <!-- <span class="play">▶</span><span class="video-number">04</span> -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hch9D_3hVrg?si=VZHw41EvDH21hMIX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         </div>
-         <div class="video-meta">
-           <span>TECHNICAL ANALYSIS</span>
-           <h3>Technical analysis from scratch: levels, patterns, and false breakouts</h3>
-         </div>
-       </a>
-     </div> <br/> <br />
-     <div class="youtube-channel-cta">
-       
-        <a class="btn btn-outline"
-         href="https://www.youtube.com/@ArapovTrade"
-         target="_blank"
-         rel="noopener"
-         >All videos on YouTube →</a
-       >
-     </div>
-   </div>
- </section>
-
+         <a  class="btn btn-outline"
+          href="https://www.youtube.com/@ArapovTrade"
+          target="_blank"
+          rel="noopener"
+          >All videos on YouTube →</a
+        >
+      </div>
+    </div>
+  </section>
 
   <section class="faq">
     <div class="wrap">
@@ -897,11 +962,11 @@
         systematic start in trading.
       </p>
       <div class="cta-highlight">
-        A trading system with positive mathematical expectancy is the foundation of systematic
-        trading.
+        A trading system with a positive mathematical expectation is the foundation of
+        systematic trading.
       </div>
       <a href="#join" (click)="scrollTo($event, 'join')" class="btn btn-primary pulse-button"
-        >Enroll in the course</a
+        >Sign up for the course</a
       >
     </div>
   </div>
@@ -915,8 +980,8 @@
               src="/assets/images/ui-kit-arapov-trade-1-1.png"
               srcset="
                 /assets/images/ui-kit-arapov-trade-1-1-300x129.png 300w,
-               /assets/images/ui-kit-arapov-trade-1-1-768x329.png 768w,
-               /assets/images/ui-kit-arapov-trade-1-1.png         782w
+                /assets/images/ui-kit-arapov-trade-1-1-768x329.png 768w,
+                /assets/images/ui-kit-arapov-trade-1-1.png         782w
               "
               sizes="(max-width: 782px) 100vw, 782px"
               width="782"
@@ -934,32 +999,32 @@
             />
           </div>
           <p>
-            Igor Arapov is an independent researcher in the psychology of investment decisions
-            and behavioral finance, a practicing trader since 2013, and the author of 9 trading
-            books with ISBN (Bowker USA).
+            Igor Arapov is an independent researcher in the psychology of investment decisions and
+            behavioral finance, a practicing trader since 2013, and author of 9 trading books with
+            ISBN (Bowker USA).
           </p>
         </div>
         <div class="footer-col">
           <h4>Links</h4>
           <ul>
             <li>
-              <a
-                href="/en/public-agreement-en"
-                (click)="$event.preventDefault(); navigateTo('en/public-agreement-en')"
+              
+              <a   href="/ru/public-agreement"
+                (click)="$event.preventDefault(); navigateTo('ru/public-agreement')"
                 >Public offer agreement</a
               >
             </li>
             <li>
-              <a
-                href="/en/privacy-policy-en"
-                (click)="$event.preventDefault(); navigateTo('en/privacy-policy-en')"
+              
+               <a  href="/ru/privacy-policy"
+                (click)="$event.preventDefault(); navigateTo('ru/privacy-policy')"
                 >Privacy policy</a
               >
             </li>
             <li>
-              <a
-                href="/en/disclaimer-en"
-                (click)="$event.preventDefault(); navigateTo('en/disclaimer-en')"
+              
+               <a  href="/ru/disclaimer-ru"
+                (click)="$event.preventDefault(); navigateTo('ru/disclaimer-ru')"
                 >Disclaimer</a
               >
             </li>
@@ -969,29 +1034,28 @@
           <h4>Our projects</h4>
           <ul>
             <li>
-              <a href="https://arapov.trade/en/freestudying">Free trading education</a>
+              <a href="https://arapov.trade/ru/freestudying">Free trading education</a>
             </li>
-            <li><a href="https://arapov.trade/en/studying">Professional courses</a></li>
+            <li><a href="https://arapov.trade/ru/studying">Professional courses</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contacts</h4>
+          <h4>Contact</h4>
           <ul>
             <li>
-              <!-- <a href="mailto:info@arapov.education">info@arapov.education</a>
-                -->
-         <a href="mailto:arapov.trade@gmail.com" class="mail-link" aria-label="Email">
-  <svg aria-hidden="true" viewBox="0 0 512 512" width="16" height="16" fill="#55C2C3">
-    <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.5 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74 131.6-96.1 154-113.5zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
-  </svg>
-  <span>arapov.trade@gmail.com</span>
- </a>
+              <a href="mailto:arapov.trade@gmail.com" class="mail-link" aria-label="Email">
+                <svg aria-hidden="true" viewBox="0 0 512 512" width="16" height="16" fill="#55C2C3">
+                  <path
+                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.5 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74 131.6-96.1 154-113.5zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                  />
+                </svg>
+                <span>arapov.trade@gmail.com</span>
+              </a>
             </li>
           </ul>
           <div class="socials">
-            <!-- YouTube -->
-            <a
-              href="https://www.youtube.com/@ArapovTrade"
+            
+            <a  href="https://www.youtube.com/@ArapovTrade"
               aria-label="Youtube"
               target="_blank"
               rel="noopener"
@@ -1008,9 +1072,8 @@
               </svg>
             </a>
 
-            <!-- Telegram -->
-            <a
-              href="https://telegram.me/ArapovTrader"
+            
+              <a href="https://telegram.me/ArapovTrader"
               aria-label="Telegram"
               target="_blank"
               rel="noopener"
@@ -1027,9 +1090,8 @@
               </svg>
             </a>
 
-            <!-- WhatsApp -->
-            <a
-              href="https://wa.me/380506308200"
+            
+             <a  href="https://wa.me/380506308200"
               aria-label="WhatsApp"
               target="_blank"
               rel="noopener"
@@ -1041,10 +1103,8 @@
                 height="20"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <!-- Зелёный круг -->
                 <circle cx="12" cy="12" r="12" />
 
-                <!-- Белая трубка -->
                 <path
                   fill="#ffffff"
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
@@ -1052,9 +1112,8 @@
               </svg>
             </a>
 
-            <!-- LinkedIn -->
-            <a
-              href="https://www.linkedin.com/in/arapovtrade"
+            
+             <a  href="https://www.linkedin.com/in/arapovtrade"
               aria-label="LinkedIn"
               target="_blank"
               rel="noopener"
@@ -1071,9 +1130,8 @@
               </svg>
             </a>
 
-            <!-- Facebook -->
-            <a
-              href="https://www.facebook.com/igor.arapov.75"
+            
+             <a href="https://www.facebook.com/igor.arapov.75"
               aria-label="Facebook"
               target="_blank"
               rel="noopener"
@@ -1093,10 +1151,11 @@
         </div>
       </div>
       <div class="footer-bottom">
-        © 2021-2026 arapov.education. All rights reserved. FLP Arapov I. V. Tax ID 3314507171
+        © 2021-2026 arapov.education. All rights reserved. FLP Arapov I.V. TIN 3314507171
       </div>
     </div>
   </footer>
 </div>
 
 <app-chat-widget></app-chat-widget>
+
