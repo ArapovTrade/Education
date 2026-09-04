@@ -21,6 +21,7 @@
 
       <nav class="nav-links" [class.open]="isMenuOpen">
         <a href="#for-whom" (click)="scrollTo($event, 'for-whom')">Для кого</a>
+        <a href="#ecosystem" (click)="scrollTo($event, 'ecosystem')">Екосистема</a>
         <a href="#about" (click)="scrollTo($event, 'about')">Підхід</a>
         <a href="#program" (click)="scrollTo($event, 'program')">Програма</a>
         <a href="#join" (click)="scrollTo($event, 'join')">Тарифи</a>
@@ -30,7 +31,7 @@
         <app-language-switcher />
 
         <button id="burgerBtn" class="burger" (click)="toggleMenu()" [class.open]="isMenuOpen">
-          <!-- иконка бургера -->
+        
         </button>
       </div>
     </div>
