@@ -4,9 +4,10 @@ import { SEO_CONTENT } from '../../../core/config/seo-content';
 import { Router, NavigationEnd } from '@angular/router';
  import { LanguageSwitcher } from '../../../shared/language-switcher/language-switcher/language-switcher';
 import { ChatWidget } from '../../../layout/chat-widget/chat-widget';
+import { NgClass, NgStyle } from "../../../../../node_modules/@angular/common/types/_common_module-chunk";
 @Component({
   selector: 'app-ru-course',
-  imports: [ LanguageSwitcher, ChatWidget],
+  imports: [LanguageSwitcher, ChatWidget],
   templateUrl: './ru-course.html',
   styleUrl: './ru-course.css',
 })

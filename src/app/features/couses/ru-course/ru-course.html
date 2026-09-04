@@ -1,5 +1,3 @@
- 
-
 <div class="body">
   <div class="header">
     <div class="wrap nav">
@@ -22,6 +20,7 @@
 
       <nav class="nav-links" [class.open]="isMenuOpen">
         <a href="#for-whom" (click)="scrollTo($event, 'for-whom')">Для кого</a>
+        <a href="#ecosystem" (click)="scrollTo($event, 'ecosystem')">Экосистема</a>
         <a href="#about" (click)="scrollTo($event, 'about')">Подход</a>
         <a href="#program" (click)="scrollTo($event, 'program')">Программа</a>
         <a href="#join" (click)="scrollTo($event, 'join')">Тарифы</a>
@@ -30,9 +29,12 @@
       <div class="nav-right">
         <app-language-switcher />
 
-        <button id="burgerBtn" class="burger" (click)="toggleMenu()" [class.open]="isMenuOpen">
-          <!-- иконка бургера -->
-        </button>
+        <button
+          id="burgerBtn"
+          class="burger"
+          (click)="toggleMenu()"
+          [class.open]="isMenuOpen"
+        ></button>
       </div>
     </div>
   </div>
@@ -77,6 +79,229 @@
             alt="Игорь Арапов"
             class="hero-photo__img"
           />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosystem" class="ecosystem">
+    <div class="wrap">
+      <div class="section-head ecosystem-head">
+        <div class="eyebrow">Открытая экосистема</div>
+        <h2>ARAPOV <span class="accent-teal">TRADE</span></h2>
+        <p class="lead">
+          Курс — часть большой публичной экосистемы. Изучайте книги, исследования, публичную
+          аналитику и образовательные материалы до и после обучения.
+        </p>
+      </div>
+
+      <div class="ecosystem-grid">
+        <a
+          class="eco-card"
+          href="https://www.youtube.com/@ArapovTrade"
+          target="_blank"
+          rel="noopener"
+        >
+          <!-- <span class="eco-icon">▶</span>
+           -->
+          <span class="eco-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M22 8.5c0-1.9-1.4-3.4-3.2-3.6C16 4.6 12 4.6 12 4.6s-4 0-6.8.3C3.4 5.1 2 6.6 2 8.5v7c0 1.9 1.4 3.4 3.2 3.6 2.8.3 6.8.3 6.8.3s4 0 6.8-.3c1.8-.2 3.2-1.7 3.2-3.6v-7Z"
+              />
+              <path d="M10 9.5v5l4.5-2.5L10 9.5Z" fill="#fff" stroke="none" />
+            </svg>
+          </span>
+          <div>
+            <h3>YouTube</h3>
+            <p>Обучающие видео, разборы рынка и реальные истории учеников.</p>
+            <span class="eco-link">Смотреть →</span>
+          </div>
+        </a>
+
+        <a
+          class="eco-card"
+          href="https://arapov.trade/ru/freestudying"
+          target="_blank"
+          rel="noopener"
+        >
+          <!-- <span class="eco-icon">▯</span> -->
+          <span class="eco-icon">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 6c-1.6-1.2-3.9-1.8-6.5-1.5C4.7 4.6 4 5.4 4 6.3v11.4c0 .7.7 1.2 1.5 1.1 2.4-.3 4.6.2 6.5 1.5"
+              />
+              <path
+                d="M12 6c1.6-1.2 3.9-1.8 6.5-1.5.8.1 1.5.9 1.5 1.8v11.4c0 .7-.7 1.2-1.5 1.1-2.4-.3-4.6.2-6.5 1.5V6Z"
+              />
+            </svg>
+          </span>
+          <div>
+            <h3>Библиотека</h3>
+            <p>Бесплатные учебные материалы, статьи и материалы по трейдингу.</p>
+            <span class="eco-link">Перейти →</span>
+          </div>
+        </a>
+
+        <a
+          class="eco-card"
+          href="https://www.tradingview.com/u/Igor_Arapov/"
+          target="_blank"
+          rel="noopener"
+        >
+          <!-- <span class="eco-icon">↗</span> -->
+         <span class="eco-icon">
+  <svg viewBox="0 0 24 24" width="44" height="44">
+    <!-- базовая линия -->
+    <path d="M3 20h18" style="stroke:#fff; stroke-width:1.6; stroke-linecap:round; fill:none;"/>
+    <!-- растущие столбцы -->
+    <rect x="4" y="14" width="4" height="6" rx="1" style="fill:#f3c53c; stroke:none;"/>
+    <rect x="10" y="9" width="4" height="11" rx="1" style="fill:#f3c53c; stroke:none;"/>
+    <rect x="16" y="4" width="4" height="16" rx="1" style="fill:#f3c53c; stroke:none;"/>
+  </svg>
+</span>
+          <div>
+            <h3>TradingView</h3>
+            <p>Публичная аналитика, торговые идеи и обзоры рынка.</p>
+            <span class="eco-link">Смотреть →</span>
+          </div>
+        </a>
+
+        <a class="eco-card" href="https://telegram.me/ArapovTrader" target="_blank" rel="noopener">
+          <!-- <span class="eco-icon">✈</span> -->
+          <span class="eco-icon" style="padding-right: 5px;">
+  <svg viewBox="0 0 24 24" width="44" height="44">
+    <path
+      d="M21.5 3.5 2.7 10.9c-1 .4-1 1.9.1 2.2l4.6 1.5 1.8 5.6c.3.9 1.4 1.1 2 .4l2.6-2.9 4.7 3.5c.9.6 2.1.1 2.3-.9l3-16.4c.2-1-.9-1.8-1.8-1.4Z"
+      style="fill:#f3c53c; stroke:none;"
+    />
+    <path
+      d="M8.5 15.2 18 7.3"
+      style="stroke:#fff; stroke-width:1.3; stroke-linecap:round; fill:none;"
+    />
+  </svg>
+</span>
+          <div>
+            <h3>Telegram</h3>
+            <p>Группы и каналы для общения, новостей и материалов проекта.</p>
+            <span class="eco-link">Перейти →</span>
+          </div>
+        </a>
+
+        <a
+          class="eco-card"
+          href="https://www.instagram.com/arapovtrade/"
+          target="_blank"
+          rel="noopener"
+        >
+          <!-- <span class="eco-icon">◎</span> -->
+          <span class="eco-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none" />
+            </svg>
+          </span>
+          <div>
+            <h3>Instagram</h3>
+            <p>Короткие идеи, новости проекта и фрагменты работы.</p>
+            <span class="eco-link">Перейти →</span>
+          </div>
+        </a>
+
+        <a class="eco-card" href="https://arapov.trade/ru/books" target="_blank" rel="noopener">
+          <!-- <span class="eco-icon">▰</span> -->
+          <span class="eco-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4.5h5.5c1.1 0 2 .9 2 2V20c0-1.1-.9-2-2-2H4V4.5Z" />
+              <path d="M20 4.5h-5.5c-1.1 0-2 .9-2 2V20c0-1.1.9-2 2-2H20V4.5Z" />
+            </svg>
+          </span>
+          <div>
+            <h3>Книги</h3>
+            <p>Авторские книги и учебные материалы с международными ISBN.</p>
+            <span class="eco-link">Подробнее →</span>
+          </div>
+        </a>
+
+        <a
+          class="eco-card"
+          href="https://scholar.google.com/citations?user=N440tWQAAAAJ&hl=ru"
+          target="_blank"
+          rel="noopener"
+        >
+          <!-- <span class="eco-icon">⌁</span> -->
+          <!-- Исследования -->
+          <span class="eco-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3h6" />
+              <path
+                d="M10 3v6.5L4.8 18c-.6 1.1.2 2.5 1.5 2.5h11.4c1.3 0 2.1-1.4 1.5-2.5L14 9.5V3"
+              />
+              <path d="M7.5 15h9" />
+            </svg>
+          </span>
+          <div>
+            <h3>Исследования</h3>
+            <p>Научные работы в области финансов и поведения инвесторов.</p>
+            <span class="eco-link">Смотреть →</span>
+          </div>
+        </a>
+
+        <div class="eco-card eco-card--media">
+          <!-- <span class="eco-icon">▤</span> -->
+          <span class="eco-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 5h13a2 2 0 0 1 2 2v11a1.5 1.5 0 0 1-1.5 1.5H6a2 2 0 0 1-2-2V5Z" />
+              <path d="M19 8.5V17a1.5 1.5 0 0 0 3 0V9.5a1 1 0 0 0-1-1h-2Z" />
+              <path d="M7 9h7M7 12h7M7 15h4" />
+            </svg>
+          </span>
+          <div>
+            <h3>О нас пишут</h3>
+            <p>Публикации и интервью об Игоре Арапове и ARAPOV TRADE.</p>
+            <div class="eco-media-links">
+              <a
+                style="padding-bottom: 5px"
+                href="https://ua.news/ru/money/nezvazhaiuchi-na-viinu-ta-krizi-igor-arapov-poiasniuie-khto-zavzhdi-zarobliaie-na-fondovikh-rinkakh"
+                target="_blank"
+                rel="noopener"
+                >Публикация UA.NEWS →</a
+              >
+              <br />
+              <a
+                href="https://ua.news/ru/all-news/bezkoshtovna-biblioteka-z-treidingu-interviu-z-avtorom-kursu-na-50-statei"
+                target="_blank"
+                rel="noopener"
+                >Интервью UA.NEWS →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="numbers-panel">
+        <div class="numbers-title">ARAPOV TRADE <span>В ЦИФРАХ</span></div>
+        <div class="numbers-grid">
+          <div class="number-item">
+            <b>2013</b><span>в трейдинге</span
+            ><small>практика на реальных рынках более 10 лет</small>
+          </div>
+          <div class="number-item">
+            <b>9</b><span>книг с ISBN</span><small>изданных на темы трейдинга и финансов</small>
+          </div>
+          <div class="number-item">
+            <b>2021</b><span>TradingView</span
+            ><small>публичная аналитика, идеи и обзоры рынка</small>
+          </div>
+          <div class="number-item">
+            <b>НАУЧНЫЕ<br />ИССЛЕДОВАНИЯ</b><span>в области финансов</span
+            ><small>психология инвестиционных решений и поведенческие финансы</small>
+          </div>
+          <div class="number-item">
+            <b>ЛЕКЦИИ И <br />ВЫСТУПЛЕНИЯ</b><span>публичная работа</span
+            ><small>университеты и профильные мероприятия</small>
+          </div>
         </div>
       </div>
     </div>
@@ -407,15 +632,15 @@
           <img
             src="/assets/images/fajl-38.jpg"
             srcset="
-             /assets/images/fajl-38-200x300.jpg   200w,
-             /assets/images/fajl-38-681x1024.jpg  681w,
+              /assets/images/fajl-38-200x300.jpg   200w,
+              /assets/images/fajl-38-681x1024.jpg  681w,
               /assets/images/fajl-38-768x1154.jpg  768w,
-             /assets/images/fajl-38.jpg          1000w
+              /assets/images/fajl-38.jpg          1000w
             "
             sizes="(max-width: 1000px) 100vw, 1000px"
             fetchpriority="high"
-             loading="eager"
-  fetchpriority="high"
+            loading="eager"
+            fetchpriority="high"
             alt="Игорь Арапов"
             style="width: 100%; height: 100%; object-fit: cover; object-position: center top"
           />
@@ -528,6 +753,75 @@
     </div>
   </section>
 
+  <section id="youtube" class="youtube-section">
+    <div class="wrap">
+      <div class="section-head youtube-head">
+        <div class="eyebrow">Публичная практика</div>
+        <h2>Популярное на <span class="accent-gold">YouTube</span></h2>
+        <p class="lead">
+          Четыре выбранных видео для знакомства с подходом ARAPOV TRADE: реальная история ученика,
+          первая сделка, устройство биржи и технический анализ.
+        </p>
+      </div>
+
+      <div class="youtube-grid youtube-grid--featured">
+        <a class="video-card" href="https://youtu.be/fcRKxFr-EW4" target="_blank" rel="noopener">
+          <div class="video-thumb video-thumb--1">
+            <!-- <span class="play">▶</span><span class="video-number">01</span> -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fcRKxFr-EW4?si=G8_BaHgjkv7nou__" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          
+          <div class="video-meta">
+            <span>РЕАЛЬНАЯ ИСТОРИЯ УЧЕНИКА</span>
+            <h3>73 года — начал трейдинг с нуля! Реальная история — интервью с моим учеником</h3>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://youtu.be/tmiHem6NOZs" target="_blank" rel="noopener">
+          <div class="video-thumb video-thumb--2">
+            <!-- <span class="play">▶</span><span class="video-number">02</span> -->
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/tmiHem6NOZs?si=qutp77YHhyLwOpZp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-meta">
+            <span>ПЕРВЫЙ ШАГ В ТРЕЙДИНГЕ</span>
+            <h3>Первая сделка в трейдинге: от TradingView до демосчёта за 45 минут</h3>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://youtu.be/Y4WZAl34jbc" target="_blank" rel="noopener">
+          <div class="video-thumb video-thumb--3">
+            <!-- <span class="play">▶</span><span class="video-number">03</span> -->
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/Y4WZAl34jbc?si=K55HcQmHtW8fu9x-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-meta">
+            <span>ОСНОВЫ РЫНКА</span>
+            <h3>Как устроена биржа: ордера, фьючерсы, шорт и торговые сессии</h3>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://youtu.be/hch9D_3hVrg" target="_blank" rel="noopener">
+          <div class="video-thumb video-thumb--4">
+            <!-- <span class="play">▶</span><span class="video-number">04</span> -->
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/hch9D_3hVrg?si=VZHw41EvDH21hMIX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video-meta">
+            <span>ТЕХНИЧЕСКИЙ АНАЛИЗ</span>
+            <h3>Технический анализ с нуля: уровни, паттерны и ложный пробой</h3>
+          </div>
+        </a>
+      </div> <br/> <br />
+      <div class="youtube-channel-cta">
+        <a
+          class="btn btn-outline"
+          href="https://www.youtube.com/@ArapovTrade"
+          target="_blank"
+          rel="noopener"
+          >Все видео на YouTube →</a
+        >
+      </div>
+    </div>
+  </section>
+
   <section class="faq">
     <div class="wrap">
       <div class="section-head">
@@ -578,8 +872,8 @@
               src="/assets/images/ui-kit-arapov-trade-1-1.png"
               srcset="
                 /assets/images/ui-kit-arapov-trade-1-1-300x129.png 300w,
-               /assets/images/ui-kit-arapov-trade-1-1-768x329.png 768w,
-               /assets/images/ui-kit-arapov-trade-1-1.png         782w
+                /assets/images/ui-kit-arapov-trade-1-1-768x329.png 768w,
+                /assets/images/ui-kit-arapov-trade-1-1.png         782w
               "
               sizes="(max-width: 782px) 100vw, 782px"
               width="782"
@@ -590,7 +884,7 @@
               style="
                 width: 100%;
                 height: auto;
-                max-width: 240px; 
+                max-width: 240px;
                 object-fit: contain;
                 object-position: left center;
               "
@@ -641,18 +935,17 @@
           <h4>Контакты</h4>
           <ul>
             <li>
-              <!-- <a href="mailto:info@arapov.education">info@arapov.education</a>
-                -->
-         <a href="mailto:arapov.trade@gmail.com" class="mail-link" aria-label="Email">
-  <svg aria-hidden="true" viewBox="0 0 512 512" width="16" height="16" fill="#55C2C3">
-    <path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.5 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74 131.6-96.1 154-113.5zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/>
-  </svg>
-  <span>arapov.trade@gmail.com</span>
-</a>
+              <a href="mailto:arapov.trade@gmail.com" class="mail-link" aria-label="Email">
+                <svg aria-hidden="true" viewBox="0 0 512 512" width="16" height="16" fill="#55C2C3">
+                  <path
+                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.5 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74 131.6-96.1 154-113.5zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                  />
+                </svg>
+                <span>arapov.trade@gmail.com</span>
+              </a>
             </li>
           </ul>
           <div class="socials">
-            <!-- YouTube -->
             <a
               href="https://www.youtube.com/@ArapovTrade"
               aria-label="Youtube"
@@ -671,7 +964,6 @@
               </svg>
             </a>
 
-            <!-- Telegram -->
             <a
               href="https://telegram.me/ArapovTrader"
               aria-label="Telegram"
@@ -690,8 +982,6 @@
               </svg>
             </a>
 
-            <!-- WhatsApp -->
-            <!-- WhatsApp -->
             <a
               href="https://wa.me/380506308200"
               aria-label="WhatsApp"
@@ -705,10 +995,8 @@
                 height="20"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <!-- Зелёный круг -->
                 <circle cx="12" cy="12" r="12" />
 
-                <!-- Белая трубка -->
                 <path
                   fill="#ffffff"
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
@@ -716,7 +1004,6 @@
               </svg>
             </a>
 
-            <!-- LinkedIn -->
             <a
               href="https://www.linkedin.com/in/arapovtrade"
               aria-label="LinkedIn"
@@ -735,7 +1022,6 @@
               </svg>
             </a>
 
-            <!-- Facebook -->
             <a
               href="https://www.facebook.com/igor.arapov.75"
               aria-label="Facebook"
