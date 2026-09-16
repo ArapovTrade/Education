@@ -5,5 +5,5 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://arapov.trade/sitemap.xml
+Sitemap: https://arapov.education/sitemap.xml
 
