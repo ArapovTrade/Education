@@ -707,8 +707,9 @@ margin: 0;
  
 .pricing-grid {
   display: grid;
-  grid-template-columns: 0.75fr 0.75fr;
-  gap: 40px;
+  /* grid-template-columns: 0.75fr 0.75fr; */
+   grid-template-columns: 0.75fr 0.75fr 0.85fr;
+  gap: 20px;
   align-items: stretch;
 }
 
@@ -870,7 +871,7 @@ margin: 0;
 }
 
 .price-card .btn {
-  width: 75%;
+  width: 80%;
   text-align: center;
   margin-top: 8px;
   align-self: center;

@@ -709,8 +709,10 @@ margin: 0;
 /* ========== PRICING ========== */
 .pricing-grid {
   display: grid;
-  grid-template-columns: 0.75fr 0.75fr;
-  gap: 40px;
+  /* grid-template-columns: 0.75fr 0.75fr;
+   */
+    grid-template-columns: 0.75fr 0.75fr 0.85fr;
+  gap: 15px;
   align-items: stretch;
 }
 

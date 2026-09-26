@@ -49,7 +49,7 @@ faqItems = [
   },
   {
     question: 'What will I get in the end, besides knowledge?',
-    answer: 'You\'ll get a ready trading system based on reading volume, and — most importantly — confidence and practical experience to work independently in the market.'
+    answer: 'You will gain a structured approach to market analysis, rules for working with trading scenarios, and practical experience applying them on a demo account.'
   },
   {
     question: 'Can I get a consultation before purchasing?',

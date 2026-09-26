@@ -16,9 +16,9 @@ const SITE_NAME = 'Arapov Education';
 // ---------- Курс (лендинг) ----------
 
 const courseRu: SeoConfig = {
-  title: 'Курс по трейдингу с наставником | Arapov Trade - Arapov Education',
+  title: 'Курсы трейдинга онлайн | Arapov Education',
   description:
-    'Интенсивный курс из 10 занятий: освоите торговую систему, изучите основы анализа рынка и совершите первые сделки под руководством наставника.',
+    'Курс в записи, групповые занятия и индивидуальное обучение с наставником. Теория, объёмный анализ и практика на демо-счёте.',
   canonical: `${BASE_URL}/ru/course`,
   ogImage: OG_IMAGE,
   ogImageWidth: 782,
@@ -47,9 +47,9 @@ const courseRu: SeoConfig = {
 };
 
 const courseEn: SeoConfig = {
-  title: 'Professional Trading Course With A Mentor | Arapov Trade - Arapov Education',
+  title: 'Online Trading Courses | Arapov Education',
   description:
-    'Comprehensive Trading Course by Igor Arapov. Get a ready-to-use trading system and start your professional journey',
+    'Self-paced course, group training and one-to-one mentoring. Market analysis, volume analysis and demo-account practice.',
   canonical: `${BASE_URL}/en/course-en`,
   ogImage: OG_IMAGE,
   ogImageWidth: 782,
@@ -79,9 +79,9 @@ const courseEn: SeoConfig = {
 
 
 const courseUa: SeoConfig = {
-  title: 'Професійний курс з трейдингу з наставником | Arapov Trade - Arapov Education',
+  title: 'Курси трейдингу онлайн | Arapov Education',
   description:
-    'Інтенсивний курс із 10 занять: опануєте торгову систему, вивчите основи аналізу ринку та зробите перші угоди під керівництвом наставника.',
+    'Самостійний курс у записі, групові заняття та індивідуальне навчання з наставником. Теорія, об’ємний аналіз і практика на демо-рахунку.',
   canonical: `${BASE_URL}/course-ua`,
   ogImage: OG_IMAGE,
   ogImageWidth: 782,
