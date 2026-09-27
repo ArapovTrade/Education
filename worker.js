@@ -1,5 +1,12 @@
 export default {
   async fetch(request, env) {
+    const url = new URL(request.url);
+
+    if (url.pathname === '/') {
+      url.pathname = '/course-ua';
+      return Response.redirect(url.toString(), 301);
+    }
+
     const assetResponse = await env.ASSETS.fetch(request);
 
     if (assetResponse.status !== 404) {
@@ -7,7 +14,9 @@ export default {
     }
 
     const indexUrl = new URL('/index.html', request.url);
-    const indexResponse = await env.ASSETS.fetch(new Request(indexUrl, request));
+    const indexResponse = await env.ASSETS.fetch(
+      new Request(indexUrl, request)
+    );
 
     return new Response(indexResponse.body, {
       status: 404,

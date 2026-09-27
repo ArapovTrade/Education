@@ -8,3 +8,4 @@ preview_urls = false
 directory = "./dist/arapov-education/browser"
 binding = "ASSETS"
 html_handling = "drop-trailing-slash"
+run_worker_first = ["/"]
