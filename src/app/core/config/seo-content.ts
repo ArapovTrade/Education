@@ -285,8 +285,8 @@ const agreementEN: SeoConfig = {
   alternates: [
     { hreflang: 'ru', href: `${BASE_URL}/ru/public-agreement` },
     { hreflang: 'en', href: `${BASE_URL}/en/public-agreement-en` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/public-agreement-ua` },
-    { hreflang: 'x-default', href: `${BASE_URL}/ua/public-agreement-ua` },
+    { hreflang: 'uk', href: `${BASE_URL}/public-agreement-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/public-agreement-ua` },
   ],
 };
 
@@ -297,7 +297,7 @@ const agreementUa: SeoConfig = {
   title: 'Договор публичной офферты сайта Arapov Education',
   description:
     'Договор публичной офферты определяет условия предоставления услуг и права пользователей. Ознакомьтесь с официальным документом перед использованием сайта.',
-  canonical: `${BASE_URL}/ua/public-agreement-ua`,
+  canonical: `${BASE_URL}/public-agreement-ua`,
   ogImage: OG_IMAGE,
   locale: 'uk_UA',
   htmlLang: 'uk-UA',
@@ -308,8 +308,8 @@ const agreementUa: SeoConfig = {
   alternates: [
     { hreflang: 'ru', href: `${BASE_URL}/ru/public-agreement` },
     { hreflang: 'en', href: `${BASE_URL}/en/public-agreement-en` },
-    { hreflang: 'uk', href: `${BASE_URL}/ua/public-agreement-ua` },
-    { hreflang: 'x-default', href: `${BASE_URL}/ua/public-agreement-ua` },
+    { hreflang: 'uk', href: `${BASE_URL}/public-agreement-ua` },
+    { hreflang: 'x-default', href: `${BASE_URL}/public-agreement-ua` },
   ],
 };
 // ---------- Экспорт единой структуры ----------
