@@ -7,3 +7,4 @@ preview_urls = false
 [assets]
 directory = "./dist/arapov-education/browser"
 binding = "ASSETS"
+html_handling = "drop-trailing-slash"
