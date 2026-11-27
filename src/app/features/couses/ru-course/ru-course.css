@@ -2395,6 +2395,11 @@ iframe{
   box-shadow: 0 2px 9px #0007;
 }
 
+:host .body #youtube .video-cover--center-play .video-play-icon {
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
 :host .body #youtube .video-play-icon::before {
   margin-left: 2px;
   border: 6px solid transparent;
