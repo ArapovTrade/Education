@@ -1,4 +1,5 @@
-  <div class="body">
+
+<div class="body">
  <div class="header">
    <div class="wrap nav">
      <div class="logo">
@@ -12,20 +13,18 @@
          sizes="174px"
          width="174"
          height="80"
-         alt="Trading course with a mentor"
+         alt="Arapov Education"
          fetchpriority="high"
          loading="lazy"
        />
      </div>
 
 
-     <nav class="nav-links" [class.open]="isMenuOpen">
-       <a href="#for-whom" (click)="scrollTo($event, 'for-whom')">Who it's for</a>
-       <a href="#ecosystem" (click)="scrollTo($event, 'ecosystem')">Ecosystem</a>
-       <a href="#about" (click)="scrollTo($event, 'about')">Approach</a>
-       <a href="#program" (click)="scrollTo($event, 'program')">Program</a>
-       <a href="#join" (click)="scrollTo($event, 'join')">Pricing</a>
-       <a href="#author" (click)="scrollTo($event, 'author')">About the author</a>
+     <nav id="course-navigation" class="nav-links" [class.open]="isMenuOpen">
+       <a href="/en/course-en#about" (click)="scrollTo($event, 'about')">Example</a>
+       <a href="/en/course-en#program" (click)="scrollTo($event, 'program')">Program</a>
+       <a href="/en/course-en#join" (click)="scrollTo($event, 'join')">Pricing</a>
+       <a href="/en/course-en#author" (click)="scrollTo($event, 'author')">About Igor</a>
      </nav>
      <div class="nav-right">
        <app-language-switcher />
@@ -33,6 +32,10 @@
 
        <button
          id="burgerBtn"
+         type="button"
+         aria-label="Menu"
+         aria-controls="course-navigation"
+         [attr.aria-expanded]="isMenuOpen"
          class="burger"
          (click)="toggleMenu()"
          [class.open]="isMenuOpen"
@@ -44,679 +47,392 @@
 
  <section class="hero">
    <div class="wrap">
-     <div>
-       <div class="eyebrow on-dark">Online course with a mentor</div>
+     <div class="hero-copy">
+       <div class="eyebrow">Igor Arapov’s course on price structure and volume</div>
        <h1>
-         <span class="accent-gold">Fast start</span>
-         <span style="color: #fff">in trading</span>
+         <span>Get started</span>
+         <span>with trading</span>
        </h1>
-       <p style="padding-top: 20px">
-        An intensive 10-session course: you will learn the fundamentals of market analysis and the principles of building a trading system, and practice them on a demo account under the guidance of a mentor.
+       <p>
+         Learn to spot trends, ranges, and key levels on a chart. Compare price moves with volume
+         to decide where to enter, where to place a stop, and when to skip a trade.
        </p>
        <p>
-         A clearly structured course: 5 theory sessions + 5 practice sessions. From exchange
-         basics to a trading system built on volume analysis.
+         Learn at your own pace, join a small group with feedback on assignments, or study one-to-one.
        </p>
        <div class="hero-cta">
-         <a href="#for-whom" (click)="scrollTo($event, 'for-whom')" class="btn btn-outline"
-           >Learn more</a
+         <a href="/en/course-en#join" (click)="scrollTo($event, 'join')" class="btn btn-primary"
+           >Compare plans</a
          >
-         <a href="#join" (click)="scrollTo($event, 'join')" class="btn btn-primary pulse-button"
-           >Sign up</a
+         <a href="/en/course-en#program" (click)="scrollTo($event, 'program')" class="btn btn-outline"
+           >View program</a
          >
        </div>
      </div>
-     <div style="padding: 50px">
-       <div class="hero-photo">
-         <img
-           src="/assets/images/igor-arapov-first.jpg"
-           srcset="
-             /assets/images/igor-arapov-first-192x300.jpg  192w,
-             /assets/images/igor-arapov-first-656x1024.jpg 656w,
-             /assets/images/igor-arapov-first-768x1199.jpg 768w
-           "
-           sizes="(max-width: 656px) 100vw, 656px"
-           width="656"
-           height="1024"
-           alt="Igor Arapov"
-           class="hero-photo__img"
-         />
+     <div class="hero-visual">
+       <div class="course-portrait">
+         <img src="/assets/images/course/igor-at-laptop-retouched.jpg" width="1536" height="1022"
+           alt="Igor Arapov working on a laptop" fetchpriority="high" />
        </div>
      </div>
    </div>
  </section>
 
 
- <section id="ecosystem" class="ecosystem">
+ <section id="about" class="course-workshop" aria-labelledby="course-workshop-title">
    <div class="wrap">
-     <div class="section-head ecosystem-head">
-       <div class="eyebrow">Open ecosystem</div>
-       <h2>ARAPOV <span class="accent-teal">TRADE</span></h2>
-       <p class="lead">
-         The course is part of a large public ecosystem. Explore books, research, public
-         analytics, and educational materials before and after the course.
-       </p>
+     <div class="section-head">
+       <div class="eyebrow">Chart exercise</div>
+       <h2 id="course-workshop-title">Price breaks a level. <span class="accent-teal">What next?</span></h2>
+       <p class="lead">On the left, price breaks above the level. On the right, it breaks below. In both cases, it comes back to the same zone.</p>
+     </div>
+     <div class="workshop-grid">
+       <figure id="course-example" class="course-example">
+         <img src="/assets/images/course/breakout-retest-en.webp" width="2400" height="1200"
+           alt="On the left, price breaks up and returns to support. On the right, price breaks down and returns to resistance."
+           loading="lazy" />
+         <figcaption>
+           The same zone can become support after an upward breakout or resistance after a downward break.
+         </figcaption>
+       </figure>
+
+       <div class="workshop-question">
+         <h3 id="workshop-question-title">What would you check first?</h3>
+         <div class="workshop-options" role="group" aria-labelledby="workshop-question-title">
+           <button type="button" [attr.aria-pressed]="chartChoice === 'breakout'"
+             (click)="chartChoice = 'breakout'">The breakout</button>
+           <button type="button" [attr.aria-pressed]="chartChoice === 'retest'"
+             (click)="chartChoice = 'retest'">The retest</button>
+         </div>
+         <div class="workshop-result" aria-live="polite" aria-atomic="true">
+           @switch (chartChoice) {
+             @case ('breakout') {
+               <p><strong>A breakout takes price outside the zone.</strong> Check whether it stays there. If price falls straight back into the range, the case for a breakout entry weakens.</p>
+             }
+             @case ('retest') {
+               <p><strong>Watch how price reacts when it comes back to the zone.</strong> The level may hold, or price may move back into the range. Compare volume on the breakout with volume on the retest.</p>
+             }
+             @default {
+               <p>Choose where you’d start and see what that step tells you about the setup.</p>
+             }
+           }
+         </div>
+         <a class="workshop-link" href="/en/course-en#program" (click)="scrollTo($event, 'program')">
+           Find this in the program <span aria-hidden="true">↓</span>
+         </a>
+       </div>
+     </div>
+   </div>
+ </section>
+
+ <section id="program" class="program" aria-labelledby="course-curriculum-title">
+   <div class="wrap">
+     <div class="section-head">
+       <h2 id="course-curriculum-title">Recorded course program</h2>
+       <p class="lead">6 key topics in 7 video lessons, from how exchanges work to reviewing chart entries and exits.</p>
+     </div>
+     <div class="curriculum-layout">
+       <ol class="curriculum-list" role="list">
+         @for (lesson of recordedLessons; track lesson.title) {
+           <li>
+             <details class="curriculum-lesson" name="recorded-course-lessons">
+               <summary>
+                 <span class="lesson-number" aria-hidden="true">{{ lesson.number }}</span>
+                 <span>{{ lesson.title }}</span>
+                 <span class="lesson-toggle" aria-hidden="true"></span>
+               </summary>
+               <p>{{ lesson.description }}</p>
+             </details>
+           </li>
+         }
+       </ol>
+       <aside class="course-kit" aria-labelledby="course-kit-title">
+         <img class="course-kit-art" src="/assets/images/course/course-guide-art.webp"
+           width="2048" height="768" alt="" loading="lazy" />
+         <div class="course-kit-content">
+           <h3 id="course-kit-title">Guide with annotated charts</h3>
+           <p>The guide includes annotated charts, exercises, and answers to check your work. Links take you straight to the relevant parts of the lessons.</p>
+           <dl>
+             <div><dt>chapters</dt><dd>32</dd></div>
+             <div><dt>links to lesson clips</dt><dd>34</dd></div>
+             <div><dt>stages with self-checks</dt><dd>7</dd></div>
+           </dl>
+         </div>
+       </aside>
+     </div>
+   </div>
+ </section>
+
+ <section id="youtube" class="youtube-section">
+   <div class="wrap">
+     <div class="section-head youtube-head">
+       <h2>Free videos by Igor Arapov</h2>
      </div>
 
 
-     <div class="ecosystem-grid">
-      
-        <a  class="eco-card"
+     <div class="youtube-grid">
+       <article class="video-card">
+         <div class="video-thumb video-thumb--2">
+           @if (activeVideo === 'tmiHem6NOZs') {
+             <iframe
+             width="560"
+             height="315"
+             src="https://www.youtube.com/embed/tmiHem6NOZs?autoplay=1&si=qutp77YHhyLwOpZp"
+             title="How to place your first demo trade"
+             loading="lazy"
+             frameborder="0"
+             allow="
+               accelerometer;
+               autoplay;
+               clipboard-write;
+               encrypted-media;
+               gyroscope;
+               picture-in-picture;
+               web-share;
+             "
+             referrerpolicy="strict-origin-when-cross-origin"
+             allowfullscreen
+           ></iframe>
+           } @else {
+             <button type="button" class="video-cover" aria-label="Play on YouTube. How to place your first demo trade"
+               (click)="activeVideo = 'tmiHem6NOZs'">
+               <img src="/assets/images/course/video-tmiHem6NOZs.jpg" alt="" loading="lazy" />
+               <span class="video-play-icon" aria-hidden="true"></span>
+             </button>
+           }
+         </div>
+         <div class="video-meta">
+           <h3><a href="https://youtu.be/tmiHem6NOZs" target="_blank" rel="noopener">Your first demo trade</a></h3>
+         </div>
+       </article>
+
+       <article class="video-card">
+         <div class="video-thumb video-thumb--1">
+           @if (activeVideo === 'fcRKxFr-EW4') {
+             <iframe
+             width="560"
+             height="315"
+             src="https://www.youtube.com/embed/fcRKxFr-EW4?autoplay=1&si=G8_BaHgjkv7nou__"
+             title="How a student took up trading at 73"
+             loading="lazy"
+             frameborder="0"
+             allow="
+               accelerometer;
+               autoplay;
+               clipboard-write;
+               encrypted-media;
+               gyroscope;
+               picture-in-picture;
+               web-share;
+             "
+             referrerpolicy="strict-origin-when-cross-origin"
+             allowfullscreen
+           ></iframe>
+           } @else {
+             <button type="button" class="video-cover" aria-label="Play on YouTube. How a student took up trading at 73"
+               (click)="activeVideo = 'fcRKxFr-EW4'">
+               <img src="/assets/images/course/video-fcRKxFr-EW4-hd.jpg" alt="" loading="lazy" />
+               <span class="video-play-icon" aria-hidden="true"></span>
+             </button>
+           }
+         </div>
+
+
+         <div class="video-meta">
+           <h3><a href="https://youtu.be/fcRKxFr-EW4" target="_blank" rel="noopener">Learning to trade at 73</a></h3>
+         </div>
+       </article>
+
+       <article class="video-card">
+         <div class="video-thumb video-thumb--3">
+           @if (activeVideo === 'ZKM7erNi_xA') {
+             <iframe
+             width="560"
+             height="315"
+             src="https://www.youtube.com/embed/ZKM7erNi_xA?autoplay=1&si=hdHfkCk3yP0LJNqe"
+             title="How exchanges work: orders, futures, short selling, and trading sessions"
+             loading="lazy"
+             frameborder="0"
+             allow="
+               accelerometer;
+               autoplay;
+               clipboard-write;
+               encrypted-media;
+               gyroscope;
+               picture-in-picture;
+               web-share;
+             "
+             referrerpolicy="strict-origin-when-cross-origin"
+             allowfullscreen
+           ></iframe>
+           } @else {
+             <button type="button" class="video-cover" aria-label="Play on YouTube. How exchanges work: orders, futures, short selling, and trading sessions"
+               (click)="activeVideo = 'ZKM7erNi_xA'">
+               <img src="/assets/images/course/video-ZKM7erNi_xA-hd.jpg" alt="" loading="lazy" />
+               <span class="video-play-icon" aria-hidden="true"></span>
+             </button>
+           }
+         </div>
+         <div class="video-meta">
+           <h3><a href="https://youtu.be/ZKM7erNi_xA" target="_blank" rel="noopener">How exchanges work</a></h3>
+         </div>
+       </article>
+
+       <article class="video-card">
+         <div class="video-thumb video-thumb--4">
+           @if (activeVideo === 'hch9D_3hVrg') {
+             <iframe
+             width="560"
+             height="315"
+             src="https://www.youtube.com/embed/hch9D_3hVrg?autoplay=1&si=VZHw41EvDH21hMIX"
+             title="Technical analysis basics: levels, patterns, and false breakouts"
+             loading="lazy"
+             frameborder="0"
+             allow="
+               accelerometer;
+               autoplay;
+               clipboard-write;
+               encrypted-media;
+               gyroscope;
+               picture-in-picture;
+               web-share;
+             "
+             referrerpolicy="strict-origin-when-cross-origin"
+             allowfullscreen
+           ></iframe>
+           } @else {
+             <button type="button" class="video-cover" aria-label="Play on YouTube. Technical analysis basics: levels, patterns, and false breakouts"
+               (click)="activeVideo = 'hch9D_3hVrg'">
+               <img src="/assets/images/course/video-hch9D_3hVrg-hd.jpg" alt="" loading="lazy" />
+               <span class="video-play-icon" aria-hidden="true"></span>
+             </button>
+           }
+         </div>
+         <div class="video-meta">
+           <h3><a href="https://youtu.be/hch9D_3hVrg" target="_blank" rel="noopener">Technical analysis basics</a></h3>
+         </div>
+       </article>
+     </div>
+     <div class="youtube-channel-cta">
+
+        <a  class="btn btn-outline"
          href="https://www.youtube.com/@ArapovTrade"
          target="_blank"
          rel="noopener"
+         >Arapov Trade on YouTube →</a
        >
-         <span class="eco-icon" sryle>
-           <svg viewBox="0 0 24 24">
-             <path
-               fill="red"
-               d="M22 8.5c0-1.9-1.4-3.4-3.2-3.6C16 4.6 12 4.6 12 4.6s-4 0-6.8.3C3.4 5.1 2 6.6 2 8.5v7c0 1.9 1.4 3.4 3.2 3.6 2.8.3 6.8.3 6.8.3s4 0 6.8-.3c1.8-.2 3.2-1.7 3.2-3.6v-7Z"
-             />
-             <path d="M10 9.5v5l4.5-2.5L10 9.5Z" fill="#fff" stroke="none" />
-           </svg>
-         </span>
-         <div>
-           <h3>YouTube</h3>
-           <p>Educational videos, market breakdowns, and real student stories.</p>
-           <span class="eco-link">Watch →</span>
-         </div>
-       </a>
-
-
-      
-       <a   class="eco-card"
-         href="https://arapovtrade.com/en/freestudying"
-         target="_blank"
-         rel="noopener"
-       >
-         <span class="eco-icon">
-           <svg viewBox="0 0 24 24">
-             <path
-               d="M12 6c-1.6-1.2-3.9-1.8-6.5-1.5C4.7 4.6 4 5.4 4 6.3v11.4c0 .7.7 1.2 1.5 1.1 2.4-.3 4.6.2 6.5 1.5"
-             />
-             <path
-               d="M12 6c1.6-1.2 3.9-1.8 6.5-1.5.8.1 1.5.9 1.5 1.8v11.4c0 .7-.7 1.2-1.5 1.1-2.4-.3-4.6.2-6.5 1.5V6Z"
-             />
-           </svg>
-         </span>
-         <div>
-           <h3>Library</h3>
-           <p>Free educational materials, articles, and trading resources.</p>
-           <span class="eco-link">Go to →</span>
-         </div>
-       </a>
-
-
-      
-        <a  class="eco-card"
-         href="https://www.tradingview.com/u/Igor_Arapov/"
-         target="_blank"
-         rel="noopener"
-       >
-         <span class="eco-icon">
-           <svg width="42" height="34" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
-             <path d="M14 22H7V11H0V4h14v18zM28 22h-8l7.5-18h8L28 22z" fill="currentColor"></path>
-             <circle cx="20" cy="8" r="4" fill="currentColor"></circle>
-           </svg>
-         </span>
-         <div>
-           <h3>TradingView</h3>
-           <p>Public analytics, trade ideas, and market overviews.</p>
-           <span class="eco-link">Watch →</span>
-         </div>
-       </a>
-
-
-       <a class="eco-card" href="https://telegram.me/ArapovTrader" target="_blank" rel="noopener">
-         <span class="eco-icon" style="padding-right: 5px">
-           <svg viewBox="0 0 24 24" width="44" height="44">
-             <path
-               d="M21.5 3.5 2.7 10.9c-1 .4-1 1.9.1 2.2l4.6 1.5 1.8 5.6c.3.9 1.4 1.1 2 .4l2.6-2.9 4.7 3.5c.9.6 2.1.1 2.3-.9l3-16.4c.2-1-.9-1.8-1.8-1.4Z"
-               style="fill: #0088cc; stroke: none"
-             />
-             <path
-               d="M8.5 15.2 18 7.3"
-               style="stroke: #fff; stroke-width: 1.3; stroke-linecap: round; fill: none"
-             />
-           </svg>
-         </span>
-         <div>
-           <h3>Telegram</h3>
-           <p>Groups and channels for discussion, news, and project materials.</p>
-           <span class="eco-link">Go to →</span>
-         </div>
-       </a>
-
-
-      
-        <a  class="eco-card"
-         href="https://www.instagram.com/arapovtrade/"
-         target="_blank"
-         rel="noopener"
-       >
-         <span class="eco-icon">
-           <svg
-             viewBox="0 0 24 24"
-             fill="none"
-             stroke="currentColor"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <defs>
-               <radialGradient id="insta-bkg" cx="0.2" cy="0.8" r="0.9">
-                 <stop offset="0%" stop-color="#FFDD55" />
-                 <stop offset="30%" stop-color="#FF543E" />
-                 <stop offset="70%" stop-color="#C837AB" />
-                 <stop offset="100%" stop-color="#3770E0" />
-               </radialGradient>
-             </defs>
-
-
-             <rect
-               x="2"
-               y="2"
-               width="20"
-               height="20"
-               rx="5"
-               fill="url(#insta-bkg)"
-               stroke="none"
-             />
-
-
-             <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" fill="none" />
-             <circle cx="12" cy="12" r="4" stroke="white" fill="none" />
-             <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none" />
-           </svg>
-         </span>
-         <div>
-           <h3>Instagram</h3>
-           <p>Short ideas, project news, and behind-the-scenes snippets.</p>
-           <span class="eco-link">Go to →</span>
-         </div>
-       </a>
-
-
-       <a class="eco-card" href="https://arapovtrade.com/en/books" target="_blank" rel="noopener">
-         <span class="eco-icon">
-           <svg viewBox="0 0 24 24">
-             <path d="M4 4.5h5.5c1.1 0 2 .9 2 2V20c0-1.1-.9-2-2-2H4V4.5Z" fill="#B35C1E" />
-             <path d="M20 4.5h-5.5c-1.1 0-2 .9-2 2V20c0-1.1.9-2 2-2H20V4.5Z" fill="#B35C1E" />
-           </svg>
-         </span>
-         <div>
-           <h3>Books</h3>
-           <p>Original books and educational materials with international ISBNs.</p>
-           <span class="eco-link">Learn more →</span>
-         </div>
-       </a>
-
-
-      
-        <a  class="eco-card"
-         href="https://scholar.google.com/citations?user=N440tWQAAAAJ&hl=ru"
-         target="_blank"
-         rel="noopener"
-       >
-         <span class="eco-icon">
-           <svg viewBox="0 0 24 24">
-             <path d="M9 3h6" />
-             <path
-               fill="#FF007F"
-               d="M10 3v6.5L4.8 18c-.6 1.1.2 2.5 1.5 2.5h11.4c1.3 0 2.1-1.4 1.5-2.5L14 9.5V3"
-             />
-             <path d="M7.5 15h9" />
-           </svg>
-         </span>
-         <div>
-           <h3>Research</h3>
-           <p>Academic work in finance and investor behavior.</p>
-           <span class="eco-link">Watch →</span>
-         </div>
-       </a>
-
-
-       <div class="eco-card eco-card--media">
-         <span class="eco-icon">
-           <svg viewBox="0 0 24 24">
-             <path
-               d="M4 5h13a2 2 0 0 1 2 2v11a1.5 1.5 0 0 1-1.5 1.5H6a2 2 0 0 1-2-2V5Z"
-               fill="green"
-             />
-             <path d="M19 8.5V17a1.5 1.5 0 0 0 3 0V9.5a1 1 0 0 0-1-1h-2Z" fill="green" />
-             <path d="M7 9h7M7 12h7M7 15h4" />
-           </svg>
-         </span>
-         <div>
-           <h3>Featured in</h3>
-           <p>Publications and interviews about Igor Arapov and ARAPOV TRADE.</p>
-           <div class="eco-media-links">
-            
-               
-              <a style="padding-bottom: 5px" href="https://ua.news/ru/money/nezvazhaiuchi-na-viinu-ta-krizi-igor-arapov-poiasniuie-khto-zavzhdi-zarobliaie-na-fondovikh-rinkakh"
-               target="_blank"
-               rel="noopener"
-               >UA.NEWS feature →</a
-             >
-             <br />
-            
-              <a  href="https://ua.news/ru/all-news/bezkoshtovna-biblioteka-z-treidingu-interviu-z-avtorom-kursu-na-50-statei"
-               target="_blank"
-               rel="noopener"
-               >UA.NEWS interview →</a
-             >
-           </div>
-         </div>
-       </div>
-     </div>
-
-
-     <div class="numbers-panel">
-       <div class="numbers-title">ARAPOV TRADE <span>BY THE NUMBERS</span></div>
-       <div class="numbers-grid">
-         <div class="number-item">
-           <b>2013</b><span>in trading</span
-           ><small>over 10 years of hands-on experience in live markets</small>
-         </div>
-         <div class="number-item">
-           <b>9</b><span>books with ISBN</span><small>published on trading and finance topics</small>
-         </div>
-         <div class="number-item">
-           <b>2021</b><span>TradingView</span
-           ><small>public analytics, ideas, and market reviews</small>
-         </div>
-         <div class="number-item">
-           <b>ACADEMIC<br />RESEARCH</b><span>in the field of finance</span
-           ><small>psychology of investment decisions and behavioral finance</small>
-         </div>
-         <div class="number-item">
-           <b>LECTURES &<br />TALKS</b><span>public engagement</span
-           ><small>universities and industry events</small>
-         </div>
-       </div>
      </div>
    </div>
  </section>
 
-
- <section id="for-whom" class="for-whom">
+ <section class="approach" id="join" aria-labelledby="course-plans-title">
    <div class="wrap">
      <div class="section-head">
-       <div class="eyebrow">Let's talk practice</div>
-       <h2>This course <br /><span class="accent-teal">is right for you </span>if:</h2>
+       <h2 id="course-plans-title">Compare <span>course plans</span></h2>
      </div>
-     <div class="whom-grid">
-       <div class="whom-card">
-         <h3>You want to start from scratch — the right way</h3>
-         <p>
-           Most beginners lose money not because of the market, but because of a chaotic start:
-           scattered videos, conflicting advice, and trading "by feel." The course gives you a
-           clear structure: from how the exchange works to a complete trading system, step by
-           step, with no gaps in your knowledge.
-         </p>
-       </div>
-       <div class="whom-card">
-         <h3>You've tried before but aren't seeing results</h3>
-         <p>
-           If you've already placed trades, studied indicators and strategies, but still don't
-           have consistent results — the issue is almost never a lack of knowledge, it's a lack
-           of a system. On the course we'll break down your own approach and rebuild it around
-           volume analysis and the logic of large capital.
-         </p>
-       </div>
-       <div class="whom-card">
-         <h3>You're ready to move to systematic trading</h3>
-         <p>
-           You want to understand—not guess—why the price moves the way it does and what major market participants are doing. The course helps structure your trading approach: from understanding market mechanics to establishing clear rules for analysis, entry, trade management, and exit. The practical component takes place on a demo account.
-         </p>
-       </div>
-     </div>
-   </div>
- </section>
-
-
- <section class="approach" id="about">
-   <div class="wrap">
-     <div class="section-head">
-       <div class="eyebrow">Our teaching approach:</div>
-       <h2>Depth, practice, and <span class="accent-teal">personal attention</span></h2>
-     </div>
-     <div class="approach-list">
-       <div class="approach-item">
-         <div class="approach-num">01</div>
-         <div>
-           <h3>The course is made up of 10 in-depth lessons</h3>
-           <p>
-             The first 5 sessions deliver concentrated theory that builds a solid foundation—no fluff or generalities, just what is truly essential for trading. The next 5 sessions are 100% practical: you work with real-time market charts alongside a mentor, practice identifying entry points, and analyze trading scenarios using a demo account.
-           </p>
-         </div>
-       </div>
-       <div class="approach-item">
-         <div class="approach-num">02</div>
-         <div>
-           <h3>You are not just studying the material—you are reinforcing it through practice.</h3>
-           <p>
-             Knowledge is quickly forgotten without verification; therefore, after the theory section, you undergo a comprehension check, and following the practical part, you execute a series of trades on a demo account according to the training system's rules. This is not a mere formality, but a way to ensure you can actually apply the system rather than just having listened to the lessons. The course concludes not merely with knowledge in your head, but with a practical skill at your fingertips.
-           </p>
-         </div>
-       </div>
-       <div class="approach-item">
-         <div class="approach-num">03</div>
-         <div>
-           <h3>Personal work with Igor Arapov</h3>
-           <p>
-             Training runs in mini-groups of up to 6 people — a deliberate limit, not a marketing
-             trick. That group size is exactly what lets me personally lead every cohort: review
-             each participant's actual trades, answer questions without delay, and make sure no
-             one is left behind on a topic. There's no "one of a thousand" feeling here: just a
-             mentor who sees your trading and helps you build it.
-           </p>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
-
-
- <section id="program" class="program">
-   <div class="wrap">
-     <div class="section-head">
-       <div class="eyebrow">What's in the course?</div>
-       <h2>Course <span class="accent-teal">program</span></h2>
-       <p class="lead">
-         After each theory block you complete practical homework assignments finding entry
-         points on real charts
-       </p>
-     </div>
-
-
-     <div class="badges">
-       <div class="badge">
-         <div class="block-1">
-           <svg
-             class="badge-icon"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-             stroke="#f3c53c"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <rect x="3" y="3" width="18" height="18" rx="4" />
-             <path d="m9 12 2 2 4-4" />
-           </svg>
-         </div>
-         <div class="block-2"><span class="badge-text">10 hours of training</span></div>
-       </div>
-
-
-       <div class="badge">
-         <div class="block-1">
-           <svg
-             class="badge-icon"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-             stroke="#f3c53c"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <rect x="3" y="3" width="18" height="18" rx="4" />
-             <path d="m9 12 2 2 4-4" />
-           </svg>
-         </div>
-
-
-         <div class="block-2"><span class="badge-text">Practice on a demo account</span></div>
-       </div>
-
-
-       <div class="badge">
-         <div class="block-1">
-           <svg
-             class="badge-icon"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-             stroke="#f3c53c"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <rect x="3" y="3" width="18" height="18" rx="4" />
-             <path d="m9 12 2 2 4-4" />
-           </svg>
-         </div>
-
-
-         <div class="block-2"><span class="badge-text">Participant chat with the mentor</span></div>
-       </div>
-
-
-       <div class="badge">
-         <div class="block-1">
-           <svg
-             class="badge-icon"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-             stroke="#f3c53c"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <rect x="3" y="3" width="18" height="18" rx="4" />
-             <path d="m9 12 2 2 4-4" />
-           </svg>
-         </div>
-         <div class="block-2"><span class="badge-text">Online lessons on Zoom</span></div>
-       </div>
-
-
-       <div class="badge">
-         <div class="block-1">
-           <svg
-             class="badge-icon"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-             stroke="#f3c53c"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <rect x="3" y="3" width="18" height="18" rx="4" />
-             <path d="m9 12 2 2 4-4" />
-           </svg>
-         </div>
-         <div class="block-2"><span class="badge-text">Homework assignments</span></div>
-       </div>
-     </div>
-
-
-     <div class="module-grid">
-       <div class="module-card">
-         <div class="module-label">Module 1</div>
-         <h3>Foundations: How markets work</h3>
-         <p>
-           We break down how the exchange works from the inside: who the market participants are
-           (market makers, institutional and retail traders), how price is formed, and why price
-           movement isn't random — it's the result of orders colliding with one another. You'll
-           get the base without which any technical or volume analysis is done blind.
-         </p>
-       </div>
-       <div class="module-card">
-         <div class="module-label">Module 2</div>
-         <h3>Technical analysis: reading the chart</h3>
-         <p>
-           You'll learn to identify trend direction, build strong support and resistance levels,
-           and recognize reversal and continuation patterns. This is the market's language —
-           after this module you'll stop seeing the chart as a random pile of candles.
-         </p>
-       </div>
-       <div class="module-card">
-         <div class="module-label">Module 3</div>
-         <h3>Volume analysis: market mechanics</h3>
-         <p>
-           This is where the difference between a systematic trader and a beginner begins. We
-           dig into order-matching mechanics and cluster volume analysis to understand how large
-           market participants operate. You'll learn to see the real balance of supply and
-           demand on the chart — and spot where large capital is actually positioned.
-         </p>
-       </div>
-       <div class="module-card">
-         <div class="module-label">Module 4</div>
-         <h3>Trading system: one unified plan of action</h3>
-         <p>
-           We bring everything together into a single trading system with clear rules: when to
-           enter a trade, how to manage it, and exactly when to exit — with no second-guessing
-           and no emotional decisions. This isn't a collection of indicators — it's a training system with clear rules for entering, managing, and exiting positions.
-         </p>
-       </div>
-     </div>
-   </div>
- </section>
-
-
- <section class="approach" id="join">
-   <div class="wrap">
      <div class="pricing-grid">
        <div class="price-card">
          <div class="price-head">
-           <h3>Self-paced learning</h3>
-           <p>For those who want to go through the program at their own pace without a mentor</p>
+           <h3>Recorded course</h3>
+
            <div class="price">$200</div>
          </div>
          <div class="price-body">
-           <div class="whats-in">What's included:</div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>Full course program</strong
-               ><span>5 theory lessons + 5 practical sessions with real chart analysis</span>
+               <strong>7 video lessons</strong
+               ><span>In English, Ukrainian, or Russian</span>
              </div>
            </div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>Trading system</strong
-               ><span>Step-by-step explanation of the trading system based on volume analysis</span>
+               <strong>32-chapter guide</strong
+               ><span>Charts, exercises, and links to key points in the lessons</span>
              </div>
            </div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>Practical case studies</strong
-               ><span>Real student questions, common mistakes, and the logic behind decision-making</span>
+               <strong>7 stages with self-checks</strong>
+               <span>Exercises with examples and criteria for checking your work</span>
              </div>
            </div>
-           <div class="feature-row">
-             <span class="check">✓</span>
-             <div>
-               <strong>Learn at your own pace</strong
-               ><span>Watch lessons whenever it's convenient  </span>
-             </div>
-           </div>
-           
 
             <a href="https://secure.wayforpay.com/button/b706f5fe9a77b"
              class="btn btn-primary pulse-button"
-             >Choose self-paced learning</a
+             >Choose recorded course</a
            >
          </div>
        </div>
        <div class="price-card">
          <div class="price-head">
-           <h3>Group plan</h3>
-           <p>For those who want to master the system alongside like-minded traders</p>
+           <h3>Group course</h3>
            <div class="price">$750</div>
          </div>
          <div class="price-body">
-           <div class="whats-in">What's included:</div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>10 online lessons</strong
-               ><span>5 theory lessons + 5 practice lessons in a mini-group of up to 6 people</span>
+               <strong>10 Zoom sessions, up to 6 people</strong
+               ><span>5 theory and 5 practice sessions</span>
              </div>
            </div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>Feedback</strong
-               ><span>Homework review and 2 final exams: theory + practice</span>
+               <strong>Homework review</strong>
+               <span>Get feedback on your work from your mentor</span>
              </div>
            </div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>Trading system</strong
-               ><span>Training system based on volume analysis</span>
+               <strong>Chat with your group and mentor</strong>
+               <span>Private chat for questions about lessons and exercises</span>
              </div>
            </div>
-           <div class="feature-row">
-             <span class="check">✓</span>
-             <div>
-               <strong>Private chat</strong
-               ><span>Access to the group's private chat for discussion and support</span>
-             </div>
-           </div>
-          
+
             <a  href="https://secure.wayforpay.com/button/b6c196ab80aaa"
              class="btn btn-primary pulse-button"
-             >Choose the group plan</a
+             >Choose group course</a
            >
          </div>
        </div>
 
 
        <div class="price-card featured">
-         <span class="badge-hot">Best value</span>
          <div class="price-head">
-           <h3>Individual plan</h3>
-           <p>For those who want to work with the mentor one-on-one and review their own trades</p>
+           <h3>One-to-one coaching</h3>
            <div class="price">$1500</div>
          </div>
          <div class="price-body">
-           <div class="whats-in">What's included:</div>
            <div class="feature-row">
              <span class="check">✓</span>
-             <div><strong>Everything in the group plan</strong></div>
+             <div>
+               <strong>Everything in the group course</strong>
+               <span>Zoom sessions, homework review, and private chat</span>
+             </div>
            </div>
-           <div class="plus-label">Plus:</div>
            <div class="feature-row plus">
              <span class="check">+</span>
              <div>
-               <strong>Individual support</strong
-               ><span>Personal support and answers to your questions directly from the mentor</span>
+               <strong>Personal trade reviews with Igor</strong>
+               <span>Discuss your decisions and ask Igor questions directly</span>
              </div>
            </div>
-           <!-- <div class="feature-row plus">
-             <span class="check">+</span>
-             <div>
-               <strong>Trading system fine-tuning</strong
-               ><span
-                 >Help adapting the trading system to your own style and preferences</span
-               >
-             </div>
-           </div> -->
            <div class="feature-row plus">
              <span class="check">+</span>
              <div>
-               <strong>A year of support after the course</strong
-               ><span
-                 >The course doesn't end on the last lesson — for a full year afterward I stay
-                 personally in touch with you: reviewing your trades, pointing out mistakes, and
-                 helping you adapt the system as the market changes</span
-               >
+               <strong>A year of follow-up support</strong>
+               <span>Stay in touch with Igor as you adapt to market changes</span>
              </div>
            </div>
-          
+
             <a  href="https://secure.wayforpay.com/button/bcd6a985d0c30"
              class="btn btn-primary pulse-button"
-             >Choose the individual plan</a
+             >Choose one-to-one coaching</a
            >
          </div>
        </div>
@@ -725,7 +441,7 @@
  </section>
 
 
- <section id="author">
+ <section id="author" aria-labelledby="course-author-title">
    <div class="wrap author-grid author">
      <div class="image-wrapper">
        <div class="author-photo">
@@ -738,9 +454,7 @@
              /assets/images/fajl-38.jpg          1000w
            "
            sizes="(max-width: 1000px) 100vw, 1000px"
-           fetchpriority="high"
            loading="eager"
-           fetchpriority="high"
            alt="Igor Arapov"
            style="width: 100%; height: 100%; object-fit: cover; object-position: center top"
          />
@@ -748,75 +462,76 @@
      </div>
 
 
-     <div>
-       <div class="eyebrow">About the Mentor and Course Author</div>
-<h2>Igor <span class="black">Arapov</span></h2>
+     <div class="author-profile">
+       <div class="author-intro">
+       <div class="eyebrow">Your mentor and course author</div>
+<h2 id="course-author-title">Igor <span class="black">Arapov</span></h2>
 
 <p>
-  Igor Arapov is a financial markets specialist, practicing trader since 2013, and
-  independent researcher in the psychology of investment decisions and behavioral finance.
+  Igor Arapov is a financial markets specialist, a practicing trader since 2013, and an
+  independent researcher in investment decision-making and behavioral finance.
 </p>
+       </div>
 
+<details class="author-credentials">
+  <summary>Education, books, and research</summary>
 <p>
   He completed professional training at the Ukrainian Institute of Stock Market Development
-  in capital markets regulation and institutional investor asset management.
-  The program covers key topics from the NSSMC qualification examination taxonomy for
-  asset management company (AMC) professionals.
+  in capital market regulation and institutional asset management. The program covers key
+  topics on the NSSMC qualification exams for asset management professionals.
   <a
     href="https://www.instagram.com/p/DdLxP1MjEfO/"
     target="_blank"
     rel="noopener"
-  >Certificate ОЗ No. 2026-018-УА</a>,
-  
-  
+  >Certificate OZ No. 2026-018-UA</a>,
+
   <a
     href="https://www.instagram.com/p/DdcLV5IjIAy/"
     target="_blank"
     rel="noopener"
-  >Certificate № 193/УА-3</a>, 
-  
+  >Certificate No. 193/UA-3</a>,
+
   <a
     href="https://www.instagram.com/p/DduVT5jDKhM"
     target="_blank"
     rel="noopener"
-  >Certificate СВК № 2026-030-Р/УА</a>,
-  
+  >Certificate SVK No. 2026-030-R/UA</a>,
+
   <a
     href="https://www.instagram.com/p/Dd6WDiLDIoa/"
     target="_blank"
     rel="noopener"
-  >Certificate № 190/УА-4</a>..
+  >Certificate No. 190/UA-4</a>.
 </p>
 
 <p>
-  Author of the «<a
+  He wrote the <a
     href="https://arapovtrade.com/en/books"
     target="_blank"
     rel="noopener"
-  >Trading Fundamentals</a>» book series (published in three languages) with international ISBNs (
+  >Trading Fundamentals</a> book series, published in three languages with international ISBNs (
   <a
     href="https://bookwire.bowker.com/books/author/Igor-Arapov/Books-By?authorId=40225801"
     target="_blank"
     rel="noopener"
-  >Bowker USA</a>), the «<a
+  >Bowker USA</a>). His publications include <a
     href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6254718"
     target="_blank"
     rel="noopener"
-  >From Tilt to System</a>» research paper on SSRN, and a peer-reviewed
+  >From Tilt to System</a> on SSRN and a peer-reviewed
   <a
     href="https://doi.org/10.32702/2306-6814.2026.4.96"
     target="_blank"
     rel="noopener"
   >article</a>
-  published in the Ukrainian Ministry of Education and Science Category B journal
-  «Investments: Practice and Experience» (No. 4, 2026).
-  Guest lecturer at
+  in the Ukrainian Category B journal <cite>Investments: Practice and Experience</cite> (No. 4, 2026).
+  He was a guest lecturer at
   <a
     href="https://nuft.edu.ua/news/podiyi/pppro-trejding-i-birzhovu-diyalnist-%E2%80%93-zdobuvacham-osvitnoyi-programi"
     target="_blank"
     rel="noopener"
   >NUFT</a>
-  (Kyiv, 2026). Publishing market analysis on
+  (Kyiv, 2026). He has published analysis on
   <a
     href="https://www.tradingview.com/u/Igor_Arapov/"
     target="_blank"
@@ -824,16 +539,13 @@
   >TradingView</a>
   since 2021.
 </p>
+</details>
 
+<div class="author-practice">
 <p>
-  Trading based on his system is performed manually, providing flexibility and continuous
-  human oversight.
+  He trades his system manually to stay flexible and retain control over decisions.
 </p>
 
-
-
-
-       <br />
        <div class="stats-row">
          <div class="stat">
            <div class="icon-boxx">
@@ -850,7 +562,7 @@
                </svg>
              </span>
            </div>
-           <div class="stat-text"><strong>9 books</strong><span>with international ISBN</span></div>
+           <div class="stat-text"><strong>9 books</strong><span>With international ISBNs</span></div>
          </div>
          <div class="stat">
            <div class="icon-boxx">
@@ -868,7 +580,7 @@
              </span>
            </div>
            <div class="stat-text">
-             <strong>since 2021</strong><span>Analytics on TRADINGVIEW</span>
+             <strong>Since 2021</strong><span>Analysis on TradingView</span>
            </div>
          </div>
          <div class="stat">
@@ -886,199 +598,48 @@
                </svg>
              </span>
            </div>
-           <div class="stat-text"><strong>since 2013</strong><span>In trading</span></div>
+           <div class="stat-text"><strong>Since 2013</strong><span>Trading</span></div>
          </div>
+       </div>
        </div>
      </div>
    </div>
  </section>
 
 
- <section id="youtube" class="youtube-section">
-   <div class="wrap">
-     <div class="section-head youtube-head">
-       <div class="eyebrow">Public practice</div>
-       <h2>Popular on <span class="accent-gold">YouTube</span></h2>
-       <p class="lead">
-         Four hand-picked videos to introduce the ARAPOV TRADE approach: a real student's story,
-         a first trade, how the exchange works, and technical analysis.
-       </p>
-     </div>
-
-
-     <div class="youtube-grid youtube-grid--featured">
-       <a class="video-card" href="https://youtu.be/fcRKxFr-EW4" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--1">
-           <iframe
-             width="560"
-             height="315"
-             src="https://www.youtube.com/embed/fcRKxFr-EW4?si=G8_BaHgjkv7nou__"
-             title="YouTube video player"
-             frameborder="0"
-             allow="
-               accelerometer;
-               autoplay;
-               clipboard-write;
-               encrypted-media;
-               gyroscope;
-               picture-in-picture;
-               web-share;
-             "
-             referrerpolicy="strict-origin-when-cross-origin"
-             allowfullscreen
-           ></iframe>
-         </div>
-
-
-         <div class="video-meta">
-           <span>A REAL STUDENT'S STORY</span>
-           <h3>73 years old — started trading from scratch! A real story — interview with my student</h3>
-         </div>
-       </a>
-
-
-       <a class="video-card" href="https://youtu.be/tmiHem6NOZs" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--2">
-           <iframe
-             width="560"
-             height="315"
-             src="https://www.youtube.com/embed/tmiHem6NOZs?si=qutp77YHhyLwOpZp"
-             title="YouTube video player"
-             frameborder="0"
-             allow="
-               accelerometer;
-               autoplay;
-               clipboard-write;
-               encrypted-media;
-               gyroscope;
-               picture-in-picture;
-               web-share;
-             "
-             referrerpolicy="strict-origin-when-cross-origin"
-             allowfullscreen
-           ></iframe>
-         </div>
-         <div class="video-meta">
-           <span>FIRST STEP IN TRADING</span>
-           <h3>First trade in trading: from TradingView to a demo account in 45 minutes</h3>
-         </div>
-       </a>
-
-
-       <a class="video-card" href="https://youtu.be/ZKM7erNi_xA" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--3">
-           <iframe
-             width="560"
-             height="315"
-             src="https://www.youtube.com/embed/ZKM7erNi_xA?si=hdHfkCk3yP0LJNqe"
-             title="YouTube video player"
-             frameborder="0"
-             allow="
-               accelerometer;
-               autoplay;
-               clipboard-write;
-               encrypted-media;
-               gyroscope;
-               picture-in-picture;
-               web-share;
-             "
-             referrerpolicy="strict-origin-when-cross-origin"
-             allowfullscreen
-           ></iframe>
-         </div>
-         <div class="video-meta">
-           <span>MARKET BASICS</span>
-           <h3>How the exchange works: orders, futures, shorting, and trading sessions</h3>
-         </div>
-       </a>
-
-
-       <a class="video-card" href="https://youtu.be/hch9D_3hVrg" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--4">
-           <iframe
-             width="560"
-             height="315"
-             src="https://www.youtube.com/embed/hch9D_3hVrg?si=VZHw41EvDH21hMIX"
-             title="YouTube video player"
-             frameborder="0"
-             allow="
-               accelerometer;
-               autoplay;
-               clipboard-write;
-               encrypted-media;
-               gyroscope;
-               picture-in-picture;
-               web-share;
-             "
-             referrerpolicy="strict-origin-when-cross-origin"
-             allowfullscreen
-           ></iframe>
-         </div>
-         <div class="video-meta">
-           <span>TECHNICAL ANALYSIS</span>
-           <h3>Technical analysis from scratch: levels, patterns, and false breakouts</h3>
-         </div>
-       </a>
-     </div>
-     <br />
-     <br />
-     <div class="youtube-channel-cta">
-      
-        <a  class="btn btn-outline"
-         href="https://www.youtube.com/@ArapovTrade"
-         target="_blank"
-         rel="noopener"
-         >All videos on YouTube →</a
-       >
-     </div>
-   </div>
- </section>
-
-
- <section class="faq">
+ <section id="faq" class="faq" aria-labelledby="course-faq-title">
    <div class="wrap">
      <div class="section-head">
-       <div class="eyebrow">F.A.Q.</div>
-       <h2>Answers to <span class="accent-teal">your questions</span></h2>
+       <h2 id="course-faq-title">Frequently asked <span class="accent-teal">questions</span></h2>
      </div>
-
 
      <div class="faq-list">
        @for (item of faqItems; track $index; let i = $index) {
          <div class="faq-item" [class.active]="activeFaqIndex === i">
-           <button class="faq-q" type="button" (click)="toggleFaq(i)">
-             {{ item.question }}
-             <span class="chev">▾</span>
+           <button class="faq-q" type="button" (click)="toggleFaq(i)"
+             [attr.aria-expanded]="activeFaqIndex === i" [attr.aria-controls]="'course-faq-' + i">
+             <span>{{ item.question }}</span>
+             <span class="chev" aria-hidden="true"></span>
            </button>
 
-
-           <div class="faq-a" [style.max-height]="activeFaqIndex === i ? '400px' : '0px'">
+           <div class="faq-a" [id]="'course-faq-' + i" [hidden]="activeFaqIndex !== i">
              <p>{{ item.answer }}</p>
            </div>
          </div>
        }
      </div>
+
+     <div class="cta-outer">
+       <div class="cta">
+         <h2>Still have questions?</h2>
+         <p>Ask about the schedule, languages, what’s included, or how to get access.</p>
+         <a href="https://t.me/ArapovTrader" target="_blank" rel="noopener" class="btn btn-primary">
+           Message us on Telegram
+         </a>
+       </div>
+     </div>
    </div>
  </section>
-
-
- <div class="cta-outer">
-   <div class="cta">
-     <div class="eyebrow on-dark">Want more?</div>
-     <h2>Your path to <span class="accent-gold">systematic trading</span> starts here</h2>
-     <p>
-       A trading system, mentor support, and practice on real charts. Everything you need for a
-       systematic start in trading.
-     </p>
-     <div class="cta-highlight">
-       A systematic approach, clear rules, and practice on a demo account form the foundation of responsible trading education.
-     </div>
-     <a href="#join" (click)="scrollTo($event, 'join')" class="btn btn-primary pulse-button"
-       >Sign up for the course</a
-     >
-   </div>
- </div>
-
 
  <footer>
    <div class="wrap">
@@ -1108,31 +669,30 @@
            />
          </div>
          <p>
-           Igor Arapov is an independent researcher in the psychology of investment decisions and
-           behavioral finance, a practicing trader since 2013, and author of 9 trading books with
-           ISBN (Bowker USA).
+           Igor Arapov is an independent researcher in investment decision-making and behavioral finance.
+           He has traded since 2013 and written 9 trading books with ISBNs (Bowker USA).
          </p>
        </div>
        <div class="footer-col">
          <h4>Links</h4>
          <ul>
            <li>
-            
+
              <a   href="/en/public-agreement-en"
                (click)="$event.preventDefault(); navigateTo('en/public-agreement-en')"
                >Public offer agreement</a
              >
            </li>
            <li>
-            
-              <a  href="/en/privacy-policy-en"
+
+             <a   href="/en/privacy-policy-en"
                (click)="$event.preventDefault(); navigateTo('en/privacy-policy-en')"
                >Privacy policy</a
              >
            </li>
            <li>
-            
-              <a  href="/en/disclaimer-en"
+
+             <a   href="/en/disclaimer-en"
                (click)="$event.preventDefault(); navigateTo('en/disclaimer-en')"
                >Disclaimer</a
              >
@@ -1162,10 +722,10 @@
              </a>
            </li>
          </ul>
-         <p>The training is educational in nature and does not constitute an investment recommendation or a guarantee of financial results.</p>
+         <p>The course is for educational purposes. It provides no investment advice or guarantee of financial results.</p>
          <div class="socials">
-          
-           <a  href="https://www.youtube.com/@ArapovTrade"
+
+            <a  href="https://www.youtube.com/@ArapovTrade"
              aria-label="Youtube"
              target="_blank"
              rel="noopener"
@@ -1183,8 +743,8 @@
            </a>
 
 
-          
-             <a href="https://telegram.me/ArapovTrader"
+
+           <a   href="https://telegram.me/ArapovTrader"
              aria-label="Telegram"
              target="_blank"
              rel="noopener"
@@ -1202,8 +762,8 @@
            </a>
 
 
-          
-            <a  href="https://wa.me/380506308200"
+
+           <a  href="https://wa.me/380506308200"
              aria-label="WhatsApp"
              target="_blank"
              rel="noopener"
@@ -1226,7 +786,7 @@
            </a>
 
 
-          
+
             <a  href="https://www.linkedin.com/in/arapovtrade"
              aria-label="LinkedIn"
              target="_blank"
@@ -1245,7 +805,7 @@
            </a>
 
 
-          
+
             <a href="https://www.facebook.com/ArapovTrade/"
              aria-label="Facebook"
              target="_blank"
@@ -1266,7 +826,7 @@
        </div>
      </div>
      <div class="footer-bottom">
-       © 2021-2026 arapov.education. All rights reserved. FLP Arapov I.V. TIN 3314507171
+       © 2021-2026 arapov.education. All rights reserved. Sole proprietor Igor Arapov. Tax ID 3314507171
      </div>
    </div>
  </footer>

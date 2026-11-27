@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, inject } from '@angular/core';
+import { afterNextRender, Component, HostListener, OnInit, inject } from '@angular/core';
 import { Seoserv } from '../../../core/services/seoserv';
 import { SEO_CONTENT } from '../../../core/config/seo-content';
 import { Router, NavigationEnd } from '@angular/router';
@@ -9,10 +9,81 @@ import { NgClass, NgStyle } from "../../../../../node_modules/@angular/common/ty
   selector: 'app-ru-course',
   imports: [LanguageSwitcher, ChatWidget],
   templateUrl: './ru-course.html',
-  styleUrl: './ru-course.css',
+  styleUrls: [
+    './ru-course.css',
+    '../course-base.css',
+    '../course-content.css',
+    '../course-pricing.css',
+    '../course-shell.css',
+    './ru-course-learning.css',
+    './ru-course-plans.css',
+    './ru-course-closing.css',
+  ],
 })
 export class RuCourse implements OnInit {
-  constructor(private router: Router) {}
+  activeVideo: string | null = null;
+  chartChoice: 'breakout' | 'retest' | null = null;
+
+  readonly recordedLessons = [
+    {
+      number: '01',
+      title: 'Биржа и участники рынка',
+      description: 'Как встречаются покупатели и продавцы, кто подаёт рыночные и лимитные заявки и как они исполняются.',
+    },
+    {
+      number: '02',
+      title: 'Ликвидность, стакан и объём',
+      description: 'Что показывают заявки в стакане и как меняется цена, когда доступной ликвидности не хватает.',
+    },
+    {
+      number: '03',
+      title: 'Точка входа: пробой и ретест',
+      description: 'Как отметить уровень и оценить реакцию цены при возврате после пробоя.',
+    },
+    {
+      number: '04',
+      title: 'Сигналы объёма, входы и ретесты',
+      description: 'Как различать накопление и распределение и пересматривать сценарий по реакции цены на ретесте.',
+    },
+    {
+      number: '05',
+      title: 'Защитный стоп и выход из сделки',
+      description: 'Где ставить защитный стоп относительно уровня и как объём помогает выбрать момент выхода.',
+    },
+    {
+      number: '06',
+      title: 'Практика на графиках и демосчёте',
+      description: 'Как проверять ретесты на разных таймфреймах и разбирать входы и выходы на учебных примерах.',
+    },
+  ];
+
+  constructor(private router: Router) {
+    afterNextRender(() => {
+      const hash = window.location.hash;
+      if (hash !== '#join' && hash !== '#author' && hash !== '#faq') return;
+
+      const alignSection = async () => {
+        await document.fonts.ready;
+        if (window.location.hash !== hash) return;
+
+        const section = document.getElementById(hash.slice(1));
+        const heading = section?.querySelector('h2');
+        if (!section || !heading) return;
+
+        const { top, bottom } = heading.getBoundingClientRect();
+        if (window.scrollY === 0 || (bottom > 0 && top < window.innerHeight)) {
+          section.scrollIntoView({ behavior: 'instant', block: 'start' });
+        }
+      };
+
+      // The initial fragment scroll can happen before the fonts change the sections above it.
+      if (document.readyState === 'complete') {
+        void alignSection();
+      } else {
+        window.addEventListener('load', alignSection, { once: true });
+      }
+    });
+  }
 
   private seo = inject(Seoserv);
 
@@ -25,42 +96,50 @@ export class RuCourse implements OnInit {
   }
 
    // ===== FAQ =====
-  activeFaqIndex: number | null = 0;
+  activeFaqIndex: number | null = null;
 
-faqItems = [
-  {
-    question: 'Подойдет ли курс, если я полный новичок?',
-    answer: 'Да, абсолютно. Программа курса построена «с нуля» — от самых основ устройства биржи до построения полноценной торговой системы.'
-  },
-  {
-    question: 'Когда и как я получу доступ к курсу?',
-    answer: 'Сразу после успешной оплаты с вами лично свяжется наставник, добавит вас в закрытую группу и согласует график занятий.'
-  },
-  {
-    question: 'В каком формате проходят уроки?',
-    answer: 'Все 10 занятий проходят вживую онлайн через Zoom в мини-группах до 6 человек. Это позволяет задавать вопросы и получать максимум внимания.'
-  },
-  {
-    question: 'Как составляется график обучения?',
-    answer: 'График составляется индивидуально и согласовывается со всеми участниками группы. Благодаря небольшому количеству учеников, мы можем подобрать максимально удобное для всех время.'
-  },
-  {
-    question: 'Нужен ли мне реальный счет для практики?',
-    answer: 'Нет. Вся практическая часть, включая финальный экзамен из 40 сделок, проходит на демо-счете. Это позволяет вам оттачивать навыки без риска для реального капитала.'
-  },
-  {
-    question: 'Что я получу в итоге, кроме знаний?',
-    answer: 'Вы получите структурированный подход к анализу рынка, правила работы с торговыми сценариями и практический опыт их применения на демо-счете.'
-  },
-  {
-    question: 'Могу ли я получить консультацию перед покупкой?',
-    answer: 'Да, конечно. Напишите нам в любой удобный мессенджер (ссылки внизу страницы), и наш менеджер организует для вас бесплатную консультацию.'
-  },
-  {
-    question: 'Как с вами связаться для поддержки?',
-    answer: 'Вы можете задать любые вопросы напрямую нашему специалисту в Telegram: @ArapovTrader'
-  }
-];
+  faqItems = [
+    {
+      question: 'Подойдёт ли мне курс, если я начинаю с нуля?',
+      answer:
+        'Да. Начнёте с устройства биржи, терминала, графика и заявок. Затем составите план первой сделки и отработаете его на демосчёте.',
+    },
+    {
+      question: 'Как я получу доступ к курсу в записи?',
+      answer:
+        'После оплаты команда пришлёт PDF-методичку и откроет доступ к закрытым видео на YouTube для вашего аккаунта Google.',
+    },
+    {
+      question: 'Есть ли расписание у самостоятельного курса?',
+      answer:
+        'Вы сами выбираете темп и время занятий. Методичка подскажет, в каком порядке читать главы, смотреть видео и выполнять задания.',
+    },
+    {
+      question: 'На каком языке можно учиться?',
+      answer:
+        'Записи доступны на русском, украинском и английском. Язык и расписание живых занятий команда подтвердит перед записью.',
+    },
+    {
+      question: 'Чем платный курс отличается от открытого?',
+      answer:
+        'На сайте доступен открытый курс из 32 разделов, который дополняют открытые видео YouTube. В курсе в записи методичка связывает разборы графиков с нужными фрагментами закрытых уроков, заданиями и контрольными точками. В группе и индивидуально вы получаете обратную связь наставника.',
+    },
+    {
+      question: 'Как проходит обучение с наставником?',
+      answer:
+        'Группа проходит 10 занятий в Zoom по согласованному расписанию. Индивидуальный формат включает программу группы, личные разборы ваших сделок с Игорем и год сопровождения после курса.',
+    },
+    {
+      question: 'Какой счёт нужен для практики?',
+      answer:
+        'Учебные сделки проходят на демосчёте с виртуальными средствами. На нём вы отработаете подачу заявок, установку стопов и ведение журнала. Практический экзамен в группе также проходит на демосчёте.',
+    },
+    {
+      question: 'Куда обратиться перед оплатой или с вопросом о доступе?',
+      answer:
+        'Напишите команде в Telegram @ArapovTrader. Там можно уточнить состав курса, язык занятий, расписание и порядок получения доступа.',
+    },
+  ];
 
 toggleFaq(index: number): void {
   this.activeFaqIndex = this.activeFaqIndex === index ? null : index;

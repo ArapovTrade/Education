@@ -15,10 +15,14 @@ const SITE_NAME = 'Arapov Education';
 
 // ---------- Курс (лендинг) ----------
 
-const courseRu: SeoConfig = {
-  title: 'Курсы трейдинга онлайн | Arapov Education',
+const courseRuMetadata = {
+  title: 'Курс трейдинга Игоря Арапова | Arapov Education',
   description:
-    'Курс в записи, групповые занятия и индивидуальное обучение с наставником. Теория, объёмный анализ и практика на демо-счёте.',
+    'Разметка тренда и уровней, пробой и ретест по объёму, расчёт риска и сделка на демо. Курс в записи с 7 видео и PDF, занятия в группе и с наставником.',
+};
+
+const courseRu: SeoConfig = {
+  ...courseRuMetadata,
   canonical: `${BASE_URL}/ru/course`,
   ogImage: OG_IMAGE,
   ogImageWidth: 782,
@@ -37,19 +41,22 @@ const courseRu: SeoConfig = {
   ],
   jsonLd: buildArticleJsonLd({
     url: `${BASE_URL}/ru/course`,
-    headline: 'Курс по трейдингу с наставником | Arapov Trade - Arapov Education',
-    description:
-      'Интенсивный курс из 10 занятий: освоите торговую систему, изучите основы анализа рынка и совершите первые сделки под руководством наставника.',
+    headline: courseRuMetadata.title,
+    description: courseRuMetadata.description,
     inLanguage: 'ru-RU',
     published: '2025-10-05T23:07:46+00:00',
     modified: '2026-04-24T14:27:37+00:00',
   }),
 };
 
-const courseEn: SeoConfig = {
-  title: 'Online Trading Courses | Arapov Education',
+const courseEnMetadata = {
+  title: 'Igor Arapov’s Trading Course | Arapov Education',
   description:
-    'Self-paced course, group training and one-to-one mentoring. Market analysis, volume analysis and demo-account practice.',
+    'Mark trends and levels, use volume to assess breakouts and retests, and practice a demo trade. Study with 7 videos and a PDF, in a group, or with a mentor.',
+};
+
+const courseEn: SeoConfig = {
+  ...courseEnMetadata,
   canonical: `${BASE_URL}/en/course-en`,
   ogImage: OG_IMAGE,
   ogImageWidth: 782,
@@ -68,9 +75,8 @@ const courseEn: SeoConfig = {
   ],
   jsonLd: buildArticleJsonLd({
     url: `${BASE_URL}/en/course-en`,
-    headline: 'Professional Trading Course With A Mentor | Arapov Trade - Arapov Education',
-    description:
-      'Comprehensive Trading Course by Igor Arapov. Get a ready-to-use trading system and start your professional journey',
+    headline: courseEnMetadata.title,
+    description: courseEnMetadata.description,
     inLanguage: 'en-US',
     published: '2025-10-07T23:19:47+00:00',
     modified: '2026-04-24T14:31:34+00:00',
@@ -78,10 +84,14 @@ const courseEn: SeoConfig = {
 };
 
 
-const courseUa: SeoConfig = {
-  title: 'Курси трейдингу онлайн | Arapov Education',
+const courseUaMetadata = {
+  title: 'Курс трейдингу Ігоря Арапова | Arapov Education',
   description:
-    'Самостійний курс у записі, групові заняття та індивідуальне навчання з наставником. Теорія, об’ємний аналіз і практика на демо-рахунку.',
+    'Розмітка тренду й рівнів, пробій та ретест за обсягом, розрахунок ризику й угода на демо. Курс у записі з 7 відео та PDF, заняття в групі й з наставником.',
+};
+
+const courseUa: SeoConfig = {
+  ...courseUaMetadata,
   canonical: `${BASE_URL}/course-ua`,
   ogImage: OG_IMAGE,
   ogImageWidth: 782,
@@ -100,9 +110,8 @@ const courseUa: SeoConfig = {
   ],
   jsonLd: buildArticleJsonLd({
     url: `${BASE_URL}/course-ua`,
-    headline: 'Професійний курс з трейдингу з наставником | Arapov Trade - Arapov Education',
-    description:
-      'Інтенсивний курс із 10 занять: опануєте торгову систему, вивчите основи аналізу ринку та зробите перші угоди під керівництвом наставника.',
+    headline: courseUaMetadata.title,
+    description: courseUaMetadata.description,
     inLanguage: 'uk-UA',
     published: '2025-10-16T15:57:17+00:00',
     modified: '2026-04-24T14:32:49+00:00',

@@ -34,8 +34,8 @@
         <li role="option" [attr.aria-selected]="false">
           <a
             [href]="lang.route"
-            [lang]="lang.code"
-            [hreflang]="lang.code"
+            [lang]="lang.code === 'ua' ? 'uk' : lang.code"
+            [hreflang]="lang.code === 'ua' ? 'uk' : lang.code"
             (click)="$event.preventDefault(); select(lang)"
           >
             {{ lang.label }}

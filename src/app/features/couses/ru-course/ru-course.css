@@ -1781,7 +1781,7 @@ text-transform: none;
 
 
 /* ========================================================================
-   ARAPOV EDUCATION — НОВЫЙ ДИЗАЙН
+   ARAPOV EDUCATION - НОВЫЙ ДИЗАЙН
    Гибридная палитра: почти чёрный → тёмно-синий + голубой + приглушённое золото
    Этот блок намеренно расположен в конце файла и переопределяет старые стили.
    ======================================================================== */
@@ -1805,9 +1805,9 @@ section { position: relative; overflow: hidden; }
  
 .btn:hover { transform: translateY(-2px); }
  
-.for-whom, .approach, .program, #author, .faq { background: transparent !important; }
+.for-whom, .program, #author, .faq { background: transparent !important; }
 
-.whom-card, .module-card, .price-card, .faq-item {
+.whom-card, .module-card, .faq-item {
    
   border: 1px solid var(--line) !important;
   box-shadow: 0 14px 42px rgba(0,0,0,.18);
@@ -1821,12 +1821,6 @@ section { position: relative; overflow: hidden; }
 .approach-num { 
   text-shadow: 0 8px 24px rgba(227,188,91,.18);
 } 
-
-.price-card.featured {
-  border-color: rgba(227,188,91,.65) !important;
-  box-shadow: 0 22px 55px rgba(0,0,0,.30), 0 0 0 1px rgba(227,188,91,.10);
-}
- 
 
 .image-wrapper {
   padding: 8px !important;
@@ -2021,4 +2015,494 @@ iframe{
   .number-item:last-child { border-bottom:0; }
   .eco-card { min-height:auto; }
   .youtube-head, .ecosystem-head { text-align:left; }
+}
+@media (min-width: 1150px) {
+  :host .body .hero > .wrap {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
+    gap: clamp(32px, 3.2vw, 48px);
+  }
+}
+
+/* Palette and layout for the Russian course. */
+:host .body {
+  --course-navy: #0c2034;
+  --course-white: #f7fafc;
+  --course-gold: #ffd10f;
+  --course-turquoise: #55c2c3;
+  --ed-ink: var(--course-navy);
+  --ed-muted: #435e73;
+  --ed-brand: #075e82;
+  --ed-line: #cfdfe9;
+  --ed-mist: #eaf4fa;
+  --ed-mint: #ddf2ef;
+  --ed-lilac: #eae8f8;
+  --ed-shadow: 0 18px 46px rgba(29, 72, 106, .13);
+}
+
+:host .body .hero {
+  border-bottom-color: var(--course-navy);
+  background: linear-gradient(105deg, var(--course-navy) 49%, #1e5665 81%, #3d9094);
+}
+
+:host .body .hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 0 52%;
+  background-image:
+    linear-gradient(#f7fafc14 1px, transparent 1px),
+    linear-gradient(90deg, #f7fafc14 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 80% 48%, #000 9%, transparent 82%);
+  pointer-events: none;
+  content: '';
+}
+
+:host .body .hero-copy :is(h1, p, .eyebrow),
+:host .body #youtube .youtube-head :is(h2, .lead, .eyebrow, .accent-gold) {
+  color: var(--course-white);
+}
+
+:host .body .hero-copy h1 {
+  font-weight: 850;
+}
+
+:host .body .hero-copy h1 > span:first-child {
+  display: block;
+  color: var(--course-gold);
+}
+
+:host .body .hero-copy .eyebrow::before,
+:host .body #youtube .youtube-head .eyebrow::before {
+  background: var(--course-gold);
+  box-shadow: 0 0 0 4px #ffd10f26;
+}
+
+:host .body .hero-cta .btn {
+  border-radius: 13px;
+}
+
+:host .body .hero-cta .btn-primary {
+  border-color: var(--course-gold);
+  background: var(--course-gold);
+  box-shadow: 0 8px 20px #06172766;
+  color: var(--course-navy);
+}
+
+:host .body .hero-cta .btn-primary:hover {
+  background: #ffdf59;
+}
+
+:host .body .hero-cta .btn-outline {
+  border-color: var(--course-turquoise);
+  background: var(--course-navy);
+  box-shadow: none;
+  color: var(--course-turquoise);
+}
+
+:host .body .hero-cta .btn-outline:hover {
+  background: #163650;
+}
+
+:host .body .hero-cta .btn:focus-visible {
+  outline-color: var(--course-white);
+}
+
+:host .body #join .price-card:first-child .btn {
+  border-color: #0b5c81;
+  background: linear-gradient(125deg, #073f66, #0a7295);
+  box-shadow: inset 0 1px 0 #ffffff38, 0 8px 19px #1a587d38;
+}
+
+:host .body .course-portrait {
+  padding: clamp(5px, .55vw, 8px);
+  border-color: #f7fafc70;
+  border-radius: 28px;
+  background: #f7fafc24;
+  box-shadow: 0 22px 54px #061727b3;
+}
+
+:host .body #youtube {
+  background: radial-gradient(ellipse at 95% 18%, #1e5274, transparent 68%), var(--course-navy);
+}
+
+:host .body .course-example {
+  padding: clamp(7px, 1.15vw, 14px);
+  border-color: #164764;
+  background: linear-gradient(140deg, #1c4e6c, #122f4a);
+  box-shadow: 0 19px 38px #214c6c35, inset 0 1px 0 #ffffff30;
+}
+
+:host .body .course-example figcaption {
+  color: #eef9ff;
+}
+
+:host .body #join {
+  background: radial-gradient(ellipse at 50% 0%, #cfe9f4, transparent 72%), linear-gradient(#e8f3fa, #f7fbfe);
+}
+
+:host .body #join .section-head {
+  align-self: stretch;
+  text-align: center;
+}
+
+:host .body #join .section-head h2 span {
+  color: var(--ed-brand);
+}
+
+:host .body #join .price-card {
+  --card-rim: #5a9bbc;
+  --price-top: #dfedf8;
+  border-color: #bcd4e3;
+  background: #fcfeff;
+  box-shadow: 0 7px 0 -4px #d0e2ee, 0 20px 33px #244f6f1c;
+}
+
+:host .body #join .price-card:first-child {
+  --card-rim: #26867f;
+  --price-top: #cbebe8;
+}
+
+:host .body #join .price-card.featured {
+  --card-rim: #8181b1;
+  --price-top: #e5e1f4;
+}
+
+:host .body #join .price-card .price-head {
+  box-sizing: border-box;
+  border-top: 3px solid var(--card-rim);
+  background: radial-gradient(ellipse at 96% 0%, #ffffffc4, transparent 56%), linear-gradient(150deg, var(--price-top), #f6fbfe);
+}
+
+:host .body .faq {
+  background: linear-gradient(145deg, #e3f1f9, #eeedf9) !important;
+}
+
+:host .body .faq .faq-item {
+  border-color: #c4dce9 !important;
+  box-shadow: 0 3px 0 #d5e5ef, 0 10px 25px #214c7010;
+}
+
+@media (max-width: 767px) {
+  :host .body .hero {
+    background: radial-gradient(ellipse at 96% 100%, #2b717a, transparent 62%), var(--course-navy);
+  }
+
+  :host .body .hero::before {
+    inset: 65% 0 0;
+    background-size: 32px 32px;
+  }
+
+  :host .body .course-portrait {
+    border-radius: 23px;
+  }
+}
+
+:host .body section:not(.hero) {
+  padding-block: clamp(48px, 6vw, 86px);
+}
+
+:host .body .section-head {
+  width: 100%;
+  margin: 0 0 clamp(24px, 3vw, 42px);
+  text-align: start;
+}
+
+:host .body .section-head :is(h2, .lead) {
+  width: auto;
+  margin-inline: 0;
+  text-align: start;
+}
+
+:host .body .section-head h2 {
+  text-wrap: balance;
+}
+
+:host .body .section-head .lead {
+  max-width: 68ch;
+}
+
+:host .body #author {
+  background: radial-gradient(ellipse at 17% 52%, #d6ebf8, transparent 65%), #f7fbfe !important;
+}
+
+:host .body #author .author h2 {
+  margin: 0 0 16px;
+  font: 850 clamp(2rem, 1.45rem + 2vw, 3.3rem) / 1.1 'Nunito Sans', system-ui, sans-serif;
+  letter-spacing: -.035em;
+  text-transform: none;
+}
+
+:host .body #author .author-credentials {
+  margin-block: 20px;
+  padding: 12px 16px;
+  border: 1px solid #c5deec;
+  border-radius: 13px;
+  background: #fff9;
+}
+
+:host .body #author .author-credentials summary {
+  padding-block: 3px;
+  color: var(--ed-brand);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+:host .body #author .author-credentials p:first-of-type {
+  margin-top: 12px;
+}
+
+:host .body #youtube .youtube-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+:host .body #youtube .video-card:hover {
+  transform: none;
+}
+
+:host .body #youtube > .wrap {
+  display: grid;
+  row-gap: clamp(24px, 3.2vw, 46px);
+}
+
+:host .body #youtube :is(.section-head, .youtube-channel-cta) {
+  margin-block: 0;
+}
+
+:host .body #youtube .section-head h2 {
+  text-align: center;
+}
+
+:host .body #youtube .youtube-channel-cta {
+  display: flex;
+  justify-content: center;
+}
+
+:host .body #youtube .youtube-channel-cta .btn {
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 10px 17px;
+  border: 1px solid #7cabbc;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--course-white);
+  box-shadow: none;
+  font: 800 .95rem / 1.35 'Nunito Sans', system-ui, sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:host .body #ecosystem {
+  background: radial-gradient(ellipse at 90% 10%, #dddff4, transparent 68%), #eaf4fa;
+}
+
+:host .body #ecosystem .eco-card {
+  border-color: #bfd8e8;
+}
+
+:host .body #ecosystem .numbers-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+:host .body .cta-outer .cta {
+  border-color: #bed8e8;
+  background: radial-gradient(ellipse at 95% 0%, #bce1ed, transparent 67%), linear-gradient(130deg, #f3faff, #e5f1f7);
+}
+
+@media (min-width: 1060px) {
+  :host .body #youtube {
+    --video-section-gap: clamp(42px, 3.9vw, 58px);
+    display: grid;
+    box-sizing: border-box;
+    min-block-size: calc(100svh - 104px);
+    padding-block: var(--video-section-gap);
+  }
+
+  :host .body #youtube > .wrap {
+    align-content: space-evenly;
+    width: min(100%, 1440px);
+    max-width: 1440px;
+    row-gap: var(--video-section-gap);
+    padding-inline: clamp(24px, 3vw, 40px);
+  }
+
+  :host .body #youtube .youtube-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(18px, 1.7vw, 24px);
+  }
+}
+
+@media (max-width: 650px) {
+  :host .body #youtube .youtube-grid,
+  :host .body #ecosystem .numbers-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+:host .body .section-head {
+  display: block;
+  max-width: none;
+  padding-inline: 0;
+}
+
+:host .body .section-head :is(h2, .lead) {
+  padding-inline: 0;
+}
+
+:host .body #join .section-head {
+  text-align: start;
+}
+
+:host .body #youtube .video-cover {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: #142e43;
+  cursor: pointer;
+}
+
+:host .body #youtube .video-cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keep the video's title and portrait within the visible crop. */
+:host .body #youtube .video-thumb--2 .video-cover img {
+  transform: scale(1.35);
+  transform-origin: 40% top;
+}
+
+:host .body #youtube .video-play-icon {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  width: clamp(39px, 3.4vw, 50px);
+  aspect-ratio: 1.45;
+  place-items: center;
+  border-radius: 8px;
+  background: #ff0033;
+  color: #fff;
+  box-shadow: 0 2px 9px #0007;
+}
+
+:host .body #youtube .video-play-icon::before {
+  margin-left: 2px;
+  border: 6px solid transparent;
+  border-right: 0;
+  border-left: 10px solid currentColor;
+  content: '';
+}
+
+:host .body #youtube .video-cover:is(:hover, :focus-visible) .video-play-icon {
+  background: #e5002d;
+}
+
+:host .body #youtube .video-cover:focus-visible {
+  outline-color: #fff;
+  outline-offset: -5px;
+}
+
+:host .body #author .stat-text strong,
+:host .body #ecosystem .number-item b {
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  font-weight: 850;
+  letter-spacing: -.025em;
+  text-transform: none;
+}
+
+:host .body #ecosystem .numbers-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+:host .body #ecosystem .number-item {
+  min-height: 0;
+  justify-content: flex-start;
+  padding-block: 8px;
+}
+
+@media (min-width: 1101px) {
+  :host .body #ecosystem .ecosystem-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  :host .body #ecosystem .eco-card {
+    grid-column: span 3;
+  }
+
+  :host .body #ecosystem .eco-card:nth-child(n+5) {
+    grid-column: span 4;
+  }
+}
+
+@media (min-width: 901px) {
+  :host .body #join .price-card .price-head {
+    min-height: 235px;
+  }
+}
+
+@media (max-width: 900px) {
+  :host .body #ecosystem .numbers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  :host .body #ecosystem .numbers-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+:host .body #youtube .course-example {
+  border-color: #f7fafc66;
+}
+
+:host .body #youtube .video-card {
+  border-color: #677985;
+  border-radius: 12px;
+  background: #132e43;
+  box-shadow: none;
+}
+
+:host .body #youtube .video-thumb {
+  box-sizing: border-box;
+  border-bottom: 1px solid #677985;
+}
+
+:host .body #youtube .video-meta {
+  padding: 12px 14px 14px;
+}
+
+:host .body #youtube .video-meta h3 {
+  margin: 0;
+  color: var(--course-white);
+  font: 750 .98rem / 1.35 'Nunito Sans', system-ui, sans-serif;
+}
+
+:host .body #youtube .video-meta h3 a {
+  text-decoration: none;
+}
+
+:host .body #youtube .video-meta h3 a:is(:hover, :focus-visible) {
+  color: #a6e5e4;
+  text-decoration: underline;
+}
+
+:host .body #youtube .youtube-channel-cta .btn:hover {
+  transform: none;
+  background: #23465a;
+  color: var(--course-white);
+}
+
+:host .body #youtube a:focus-visible {
+  outline-color: var(--course-white);
 }

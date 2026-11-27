@@ -1,0 +1,228 @@
+.body {
+  --ed-ink: #142c40;
+  --ed-muted: #506779;
+  --ed-brand: #075b79;
+  --ed-accent: #1e7b8e;
+  --ed-line: #dae7ed;
+  --ed-bg: #fcfdff;
+  --ed-mist: #eff6fa;
+  --ed-paper: #fff;
+  --ed-lilac: #f3eef9;
+  --ed-mint: #e8f6f2;
+  --ed-shadow: 0 22px 55px rgba(26, 67, 92, .09);
+  background: var(--ed-bg);
+  color: var(--ed-ink);
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+}
+
+.body .wrap {
+  box-sizing: border-box;
+  width: min(100%, 1280px);
+  padding-inline: clamp(20px, 4vw, 52px);
+}
+
+.body section {
+  padding-block: clamp(48px, 7vw, 94px);
+}
+
+.body .section-head h2 {
+  color: var(--ed-ink);
+  font: 850 clamp(2rem, 1.45rem + 2vw, 3.3rem) / 1.1 'Nunito Sans', system-ui, sans-serif;
+  letter-spacing: -.035em;
+  text-transform: none;
+}
+
+.body .section-head .lead {
+  color: var(--ed-muted);
+  font: 500 clamp(1rem, .92rem + .3vw, 1.2rem) / 1.6 'Nunito Sans', system-ui, sans-serif;
+}
+
+.body .eyebrow {
+  align-items: center;
+  gap: 9px;
+  padding: 0;
+  border: 0;
+  color: var(--ed-brand);
+  font: 800 .8rem / 1.4 'Nunito Sans', system-ui, sans-serif;
+  letter-spacing: .085em;
+  text-transform: uppercase;
+}
+
+.body .eyebrow::before {
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #338c9d;
+  box-shadow: 0 0 0 4px #c8e5eb;
+  content: '';
+}
+
+.body .hero {
+  isolation: isolate;
+  border-bottom: 1px solid var(--ed-line);
+  background:
+    radial-gradient(ellipse at 86% 30%, #d7ebf5, transparent 52%),
+    radial-gradient(ellipse at 99% 84%, #eeebfa, transparent 64%),
+    linear-gradient(115deg, #fbfdff 15%, #edf7f9);
+}
+
+.body .hero > .wrap {
+  grid-template-columns: minmax(0, 1fr) minmax(0, .93fr);
+  gap: clamp(32px, 5.5vw, 82px);
+}
+
+.body .hero-copy h1 {
+  margin: 0 0 22px;
+  color: var(--ed-ink);
+  font: 900 clamp(2.5rem, 1.42rem + 3.25vw, 4.75rem) / 1.01 'Nunito Sans', system-ui, sans-serif;
+  letter-spacing: -.058em;
+  text-transform: none;
+  text-wrap: balance;
+}
+
+.body .hero-copy h1 .accent-gold,
+.body .hero-copy p a {
+  color: var(--ed-brand);
+}
+
+.body .hero-copy p {
+  margin: 0 0 12px;
+  color: var(--ed-muted);
+  font: 550 clamp(1rem, .92rem + .3vw, 1.2rem) / 1.55 'Nunito Sans', system-ui, sans-serif;
+}
+
+.body .hero-copy p a {
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+
+.body .hero-cta {
+  flex-flow: row wrap;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.body .hero-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 10px 19px;
+  border: 1px solid var(--ed-brand);
+  border-radius: 12px;
+  font: 800 .96rem / 1.25 'Nunito Sans', system-ui, sans-serif;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: background-color .18s, transform .18s;
+}
+
+.body .hero-cta .btn-primary {
+  background: var(--ed-brand);
+  color: #fff;
+  box-shadow: 0 8px 20px #075b7926;
+}
+
+.body .hero-cta .btn-outline {
+  background: #ffffffa6;
+  color: var(--ed-brand);
+  box-shadow: none;
+}
+
+.body .hero-visual {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-width: 0;
+  margin: 0;
+}
+
+.body .course-portrait {
+  overflow: hidden;
+  padding: 6px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  background: #f9fdff;
+  box-shadow: 0 24px 44px #30597924;
+}
+
+.body .course-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 19px;
+}
+
+.body .course-example {
+  box-sizing: border-box;
+  width: min(100%, 850px);
+  margin: 0 auto clamp(25px, 4vw, 48px);
+  padding: clamp(7px, 1.4vw, 14px);
+  scroll-margin-top: 100px;
+  border: 1px solid var(--ed-line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--ed-shadow);
+}
+
+.body .course-example img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.body .course-example figcaption {
+  padding: 12px 7px 4px;
+  color: var(--ed-brand);
+  font-weight: 800;
+}
+
+.body :is(a, button):focus-visible {
+  outline: 2px solid #086982;
+  outline-offset: 4px;
+}
+
+.body .pulse-button,
+.body .pulse-button::before,
+.body .pulse-button::after {
+  animation: none !important;
+}
+
+.body .pulse-button::before,
+.body .pulse-button::after {
+  content: none;
+}
+
+@media (max-width: 767px) {
+  .body .hero > .wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .body .hero-copy h1 {
+    margin-bottom: 16px;
+    text-wrap: initial;
+  }
+
+  .body .hero-visual {
+    width: min(100%, 480px);
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .body .hero-cta .btn {
+    flex: 1 0 100%;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .body .hero .btn {
+    transition: none;
+  }
+}

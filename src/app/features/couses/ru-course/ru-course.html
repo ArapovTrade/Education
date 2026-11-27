@@ -1,4 +1,4 @@
- 
+
 <div class="body">
  <div class="header">
    <div class="wrap nav">
@@ -20,13 +20,11 @@
      </div>
 
 
-     <nav class="nav-links" [class.open]="isMenuOpen">
-       <a href="#for-whom" (click)="scrollTo($event, 'for-whom')">Для кого</a>
-       <a href="#ecosystem" (click)="scrollTo($event, 'ecosystem')">Экосистема</a>
-       <a href="#about" (click)="scrollTo($event, 'about')">Подход</a>
-       <a href="#program" (click)="scrollTo($event, 'program')">Программа</a>
-       <a href="#join" (click)="scrollTo($event, 'join')">Тарифы</a>
-       <a href="#author" (click)="scrollTo($event, 'author')">Об авторе</a>
+     <nav id="course-navigation" class="nav-links" [class.open]="isMenuOpen">
+       <a href="/ru/course#about" (click)="scrollTo($event, 'about')">Пример</a>
+       <a href="/ru/course#program" (click)="scrollTo($event, 'program')">Программа</a>
+       <a href="/ru/course#join" (click)="scrollTo($event, 'join')">Тарифы</a>
+       <a href="/ru/course#author" (click)="scrollTo($event, 'author')">Об авторе</a>
      </nav>
      <div class="nav-right">
        <app-language-switcher />
@@ -34,6 +32,10 @@
 
        <button
          id="burgerBtn"
+         type="button"
+         aria-label="Меню"
+         aria-controls="course-navigation"
+         [attr.aria-expanded]="isMenuOpen"
          class="burger"
          (click)="toggleMenu()"
          [class.open]="isMenuOpen"
@@ -45,635 +47,354 @@
 
  <section class="hero">
    <div class="wrap">
-     <div>
-       <div class="eyebrow on-dark">Онлайн-курс с наставником</div>
+     <div class="hero-copy">
+       <div class="eyebrow">Курс Игоря Арапова по структуре цены и объёму</div>
        <h1>
-         <span class="accent-gold">Быстрый старт</span>
-         <span style="color: #fff">в трейдинге</span>
+         <span>Быстрый старт</span>
+         <span>в трейдинге</span>
        </h1>
-       <p style="padding-top: 20px">
-         Интенсивный курс из 10 занятий: изучите основы анализа рынка, принципы построения торговой системы и отработаете их на демо-счете под руководством наставника.
+       <p>
+         Научитесь находить тренд, диапазон и ключевые уровни на графике. Сравнивайте движение
+         цены с объёмом, чтобы понять, где искать вход, где поставить стоп и когда пропустить сделку.
        </p>
        <p>
-         Курс с чёткой структурой: 5 занятий теории + 5 занятий практики. От основ биржи до
-         торговой системы на основе объёмного анализа.
+         Можно учиться самостоятельно в своём темпе, в мини-группе с проверкой заданий
+         или индивидуально.
        </p>
        <div class="hero-cta">
-         <a href="#for-whom" (click)="scrollTo($event, 'for-whom')" class="btn btn-outline"
-           >Узнать подробнее</a
+         <a href="/ru/course#join" (click)="scrollTo($event, 'join')" class="btn btn-primary"
+           >Сравнить форматы</a
          >
-         <a href="#join" (click)="scrollTo($event, 'join')" class="btn btn-primary pulse-button"
-           >Зарегистрироваться</a
+         <a href="/ru/course#program" (click)="scrollTo($event, 'program')" class="btn btn-outline"
+           >Посмотреть программу</a
          >
        </div>
      </div>
-     <div style="padding: 50px">
-       <div class="hero-photo">
-         <img
-           src="/assets/images/igor-arapov-first.jpg"
-           srcset="
-             /assets/images/igor-arapov-first-192x300.jpg  192w,
-             /assets/images/igor-arapov-first-656x1024.jpg 656w,
-             /assets/images/igor-arapov-first-768x1199.jpg 768w
-           "
-           sizes="(max-width: 656px) 100vw, 656px"
-           width="656"
-           height="1024"
-           alt="Игорь Арапов"
-           class="hero-photo__img"
-         />
+     <div class="hero-visual">
+       <div class="course-portrait">
+         <img src="/assets/images/course/igor-at-laptop-retouched.jpg" width="1536" height="1022"
+           alt="Игорь Арапов за ноутбуком" fetchpriority="high" />
        </div>
      </div>
    </div>
  </section>
 
 
- <section id="ecosystem" class="ecosystem">
+ <section id="about" class="course-workshop" aria-labelledby="course-workshop-title">
    <div class="wrap">
-     <div class="section-head ecosystem-head">
-       <div class="eyebrow">Открытая экосистема</div>
-       <h2>ARAPOV <span class="accent-teal">TRADE</span></h2>
-       <p class="lead">
-         Курс — часть большой публичной экосистемы. Изучайте книги, исследования, публичную
-         аналитику и образовательные материалы до и после обучения.
-       </p>
+     <div class="section-head">
+       <div class="eyebrow">Задача с графиком</div>
+       <h2 id="course-workshop-title">Цена пробила уровень. <span class="accent-teal">Что дальше?</span></h2>
+       <p class="lead">Слева цена выходит выше уровня, справа - ниже. В обоих случаях она возвращается к той же зоне.</p>
+     </div>
+     <div class="workshop-grid">
+       <figure id="course-example" class="course-example">
+         <img src="/assets/images/course/breakout-retest-ru.webp" width="2400" height="1200"
+           alt="Слева пробой вверх и возврат к поддержке. Справа пробой вниз и возврат к сопротивлению."
+           loading="lazy" />
+         <figcaption>
+           Одна зона может стать поддержкой после пробоя вверх и сопротивлением после пробоя вниз.
+         </figcaption>
+       </figure>
+
+       <div class="workshop-question">
+         <h3 id="workshop-question-title">Что сначала проверите?</h3>
+         <div class="workshop-options" role="group" aria-labelledby="workshop-question-title">
+           <button type="button" [attr.aria-pressed]="chartChoice === 'breakout'"
+             (click)="chartChoice = 'breakout'">Сам пробой</button>
+           <button type="button" [attr.aria-pressed]="chartChoice === 'retest'"
+             (click)="chartChoice = 'retest'">Возврат к уровню</button>
+         </div>
+         <div class="workshop-result" aria-live="polite" aria-atomic="true">
+           @switch (chartChoice) {
+             @case ('breakout') {
+               <p><strong>Пробой показывает, что цена вышла из зоны.</strong> Проверьте, удержалась ли она снаружи. Если цена сразу вернулась в диапазон, причина для входа по пробою ослабевает.</p>
+             }
+             @case ('retest') {
+               <p><strong>При возврате посмотрите на реакцию у зоны.</strong> Удержание уровня и возврат в диапазон - разные сценарии. Сравните объём при выходе с объёмом на возврате.</p>
+             }
+             @default {
+               <p>Выберите, с чего начнёте разбор, и посмотрите, что этот шаг даёт для оценки ситуации.</p>
+             }
+           }
+         </div>
+         <a class="workshop-link" href="/ru/course#program" (click)="scrollTo($event, 'program')">
+           Где это в программе <span aria-hidden="true">↓</span>
+         </a>
+       </div>
+     </div>
+   </div>
+ </section>
+
+ <section id="program" class="program" aria-labelledby="course-curriculum-title">
+   <div class="wrap">
+     <div class="section-head">
+       <h2 id="course-curriculum-title">Программа курса в записи</h2>
+       <p class="lead">6 ключевых тем в 7 видеоуроках. От устройства биржи до разбора входов и выходов на графике.</p>
+     </div>
+     <div class="curriculum-layout">
+       <ol class="curriculum-list" role="list">
+         @for (lesson of recordedLessons; track lesson.title) {
+           <li>
+             <details class="curriculum-lesson" name="recorded-course-lessons">
+               <summary>
+                 <span class="lesson-number" aria-hidden="true">{{ lesson.number }}</span>
+                 <span>{{ lesson.title }}</span>
+                 <span class="lesson-toggle" aria-hidden="true"></span>
+               </summary>
+               <p>{{ lesson.description }}</p>
+             </details>
+           </li>
+         }
+       </ol>
+       <aside class="course-kit" aria-labelledby="course-kit-title">
+         <img class="course-kit-art" src="/assets/images/course/course-guide-art.webp"
+           width="2048" height="768" alt="" loading="lazy" />
+         <div class="course-kit-content">
+           <h3 id="course-kit-title">Пособие с разборами графиков</h3>
+           <p>В пособии есть размеченные графики, задания и ответы для самопроверки. Ссылки ведут прямо к нужным фрагментам уроков.</p>
+           <dl>
+             <div><dt>главы</dt><dd>32</dd></div>
+             <div><dt>ссылки на фрагменты уроков</dt><dd>34</dd></div>
+             <div><dt>этапов с самопроверкой</dt><dd>7</dd></div>
+           </dl>
+         </div>
+       </aside>
+     </div>
+   </div>
+ </section>
+
+ <section id="youtube" class="youtube-section">
+   <div class="wrap">
+     <div class="section-head youtube-head">
+       <h2>Открытые видео Игоря Арапова</h2>
      </div>
 
 
-     <div class="ecosystem-grid">
-      
-       <a   class="eco-card"
+     <div class="youtube-grid">
+       <article class="video-card">
+         <div class="video-thumb video-thumb--2">
+           @if (activeVideo === 'tmiHem6NOZs') {
+             <iframe
+             width="560"
+             height="315"
+             src="https://www.youtube.com/embed/tmiHem6NOZs?autoplay=1&si=qutp77YHhyLwOpZp"
+             title="Как провести первую сделку на учебном счёте"
+             loading="lazy"
+             frameborder="0"
+             allow="
+               accelerometer;
+               autoplay;
+               clipboard-write;
+               encrypted-media;
+               gyroscope;
+               picture-in-picture;
+               web-share;
+             "
+             referrerpolicy="strict-origin-when-cross-origin"
+             allowfullscreen
+           ></iframe>
+           } @else {
+             <button type="button" class="video-cover" aria-label="Воспроизвести на YouTube. Как провести первую сделку на учебном счёте"
+               (click)="activeVideo = 'tmiHem6NOZs'">
+               <img src="/assets/images/course/video-tmiHem6NOZs.jpg" alt="" loading="lazy" />
+               <span class="video-play-icon" aria-hidden="true"></span>
+             </button>
+           }
+         </div>
+         <div class="video-meta">
+           <h3><a href="https://youtu.be/tmiHem6NOZs" target="_blank" rel="noopener">Первая сделка на учебном счёте</a></h3>
+         </div>
+       </article>
+
+       <article class="video-card">
+         <div class="video-thumb video-thumb--1">
+           @if (activeVideo === 'fcRKxFr-EW4') {
+             <iframe
+             width="560"
+             height="315"
+             src="https://www.youtube.com/embed/fcRKxFr-EW4?autoplay=1&si=G8_BaHgjkv7nou__"
+             title="Как ученик начал изучать трейдинг в 73 года"
+             loading="lazy"
+             frameborder="0"
+             allow="
+               accelerometer;
+               autoplay;
+               clipboard-write;
+               encrypted-media;
+               gyroscope;
+               picture-in-picture;
+               web-share;
+             "
+             referrerpolicy="strict-origin-when-cross-origin"
+             allowfullscreen
+           ></iframe>
+           } @else {
+             <button type="button" class="video-cover" aria-label="Воспроизвести на YouTube. Как ученик начал изучать трейдинг в 73 года"
+               (click)="activeVideo = 'fcRKxFr-EW4'">
+               <img src="/assets/images/course/video-fcRKxFr-EW4-hd.jpg" alt="" loading="lazy" />
+               <span class="video-play-icon" aria-hidden="true"></span>
+             </button>
+           }
+         </div>
+
+
+         <div class="video-meta">
+           <h3><a href="https://youtu.be/fcRKxFr-EW4" target="_blank" rel="noopener">Трейдинг в 73 года: история ученика</a></h3>
+         </div>
+       </article>
+
+       <article class="video-card">
+         <div class="video-thumb video-thumb--3">
+           @if (activeVideo === 'ZKM7erNi_xA') {
+             <iframe
+             width="560"
+             height="315"
+             src="https://www.youtube.com/embed/ZKM7erNi_xA?autoplay=1&si=hdHfkCk3yP0LJNqe"
+             title="Как устроена биржа: ордера, фьючерсы, шорт и торговые сессии"
+             loading="lazy"
+             frameborder="0"
+             allow="
+               accelerometer;
+               autoplay;
+               clipboard-write;
+               encrypted-media;
+               gyroscope;
+               picture-in-picture;
+               web-share;
+             "
+             referrerpolicy="strict-origin-when-cross-origin"
+             allowfullscreen
+           ></iframe>
+           } @else {
+             <button type="button" class="video-cover" aria-label="Воспроизвести на YouTube. Как устроена биржа: ордера, фьючерсы, шорт и торговые сессии"
+               (click)="activeVideo = 'ZKM7erNi_xA'">
+               <img src="/assets/images/course/video-ZKM7erNi_xA-hd.jpg" alt="" loading="lazy" />
+               <span class="video-play-icon" aria-hidden="true"></span>
+             </button>
+           }
+         </div>
+         <div class="video-meta">
+           <h3><a href="https://youtu.be/ZKM7erNi_xA" target="_blank" rel="noopener">Как устроена биржа</a></h3>
+         </div>
+       </article>
+
+       <article class="video-card">
+         <div class="video-thumb video-thumb--4">
+           @if (activeVideo === 'hch9D_3hVrg') {
+             <iframe
+             width="560"
+             height="315"
+             src="https://www.youtube.com/embed/hch9D_3hVrg?autoplay=1&si=VZHw41EvDH21hMIX"
+             title="Технический анализ с нуля: уровни, паттерны и ложный пробой"
+             loading="lazy"
+             frameborder="0"
+             allow="
+               accelerometer;
+               autoplay;
+               clipboard-write;
+               encrypted-media;
+               gyroscope;
+               picture-in-picture;
+               web-share;
+             "
+             referrerpolicy="strict-origin-when-cross-origin"
+             allowfullscreen
+           ></iframe>
+           } @else {
+             <button type="button" class="video-cover" aria-label="Воспроизвести на YouTube. Технический анализ с нуля: уровни, паттерны и ложный пробой"
+               (click)="activeVideo = 'hch9D_3hVrg'">
+               <img src="/assets/images/course/video-hch9D_3hVrg-hd.jpg" alt="" loading="lazy" />
+               <span class="video-play-icon" aria-hidden="true"></span>
+             </button>
+           }
+         </div>
+         <div class="video-meta">
+           <h3><a href="https://youtu.be/hch9D_3hVrg" target="_blank" rel="noopener">Технический анализ с нуля</a></h3>
+         </div>
+       </article>
+     </div>
+     <div class="youtube-channel-cta">
+
+        <a  class="btn btn-outline"
          href="https://www.youtube.com/@ArapovTrade"
          target="_blank"
          rel="noopener"
+         >Канал Arapov Trade на YouTube →</a
        >
-         <span class="eco-icon" sryle>
-           <svg viewBox="0 0 24 24">
-             <path
-               fill="red"
-               d="M22 8.5c0-1.9-1.4-3.4-3.2-3.6C16 4.6 12 4.6 12 4.6s-4 0-6.8.3C3.4 5.1 2 6.6 2 8.5v7c0 1.9 1.4 3.4 3.2 3.6 2.8.3 6.8.3 6.8.3s4 0 6.8-.3c1.8-.2 3.2-1.7 3.2-3.6v-7Z"
-             />
-             <path d="M10 9.5v5l4.5-2.5L10 9.5Z" fill="#fff" stroke="none" />
-           </svg>
-         </span>
-         <div>
-           <h3>YouTube</h3>
-           <p>Обучающие видео, разборы рынка и реальные истории учеников.</p>
-           <span class="eco-link">Смотреть →</span>
-         </div>
-       </a>
-
-
-      
-        <a  class="eco-card"
-         href="https://arapovtrade.com/ru/freestudying"
-         target="_blank"
-         rel="noopener"
-       >
-         <span class="eco-icon">
-           <svg viewBox="0 0 24 24">
-             <path
-               d="M12 6c-1.6-1.2-3.9-1.8-6.5-1.5C4.7 4.6 4 5.4 4 6.3v11.4c0 .7.7 1.2 1.5 1.1 2.4-.3 4.6.2 6.5 1.5"
-             />
-             <path
-               d="M12 6c1.6-1.2 3.9-1.8 6.5-1.5.8.1 1.5.9 1.5 1.8v11.4c0 .7-.7 1.2-1.5 1.1-2.4-.3-4.6.2-6.5 1.5V6Z"
-             />
-           </svg>
-         </span>
-         <div>
-           <h3>Библиотека</h3>
-           <p>Бесплатные учебные материалы, статьи и материалы по трейдингу.</p>
-           <span class="eco-link">Перейти →</span>
-         </div>
-       </a>
-
-
-      
-        <a  class="eco-card"
-         href="https://www.tradingview.com/u/Igor_Arapov/"
-         target="_blank"
-         rel="noopener"
-       >
-         <span class="eco-icon">
-           <svg width="42" height="34" viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
-             <path d="M14 22H7V11H0V4h14v18zM28 22h-8l7.5-18h8L28 22z" fill="currentColor"></path>
-             <circle cx="20" cy="8" r="4" fill="currentColor"></circle>
-           </svg>
-         </span>
-         <div>
-           <h3>TradingView</h3>
-           <p>Публичная аналитика, торговые идеи и обзоры рынка.</p>
-           <span class="eco-link">Смотреть →</span>
-         </div>
-       </a>
-
-
-       <a class="eco-card" href="https://telegram.me/ArapovTrader" target="_blank" rel="noopener">
-         <span class="eco-icon" style="padding-right: 5px">
-           <svg viewBox="0 0 24 24" width="44" height="44">
-             <path
-               d="M21.5 3.5 2.7 10.9c-1 .4-1 1.9.1 2.2l4.6 1.5 1.8 5.6c.3.9 1.4 1.1 2 .4l2.6-2.9 4.7 3.5c.9.6 2.1.1 2.3-.9l3-16.4c.2-1-.9-1.8-1.8-1.4Z"
-               style="fill: #0088cc; stroke: none"
-             />
-             <path
-               d="M8.5 15.2 18 7.3"
-               style="stroke: #fff; stroke-width: 1.3; stroke-linecap: round; fill: none"
-             />
-           </svg>
-         </span>
-         <div>
-           <h3>Telegram</h3>
-           <p>Группы и каналы для общения, новостей и материалов проекта.</p>
-           <span class="eco-link">Перейти →</span>
-         </div>
-       </a>
-
-
-      
-       <a   class="eco-card"
-         href="https://www.instagram.com/arapovtrade/"
-         target="_blank"
-         rel="noopener"
-       >
-         <span class="eco-icon">
-           <svg
-             viewBox="0 0 24 24"
-             fill="none"
-             stroke="currentColor"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <defs>
-               <radialGradient id="insta-bkg" cx="0.2" cy="0.8" r="0.9">
-                 <stop offset="0%" stop-color="#FFDD55" />
-                 <stop offset="30%" stop-color="#FF543E" />
-                 <stop offset="70%" stop-color="#C837AB" />
-                 <stop offset="100%" stop-color="#3770E0" />
-               </radialGradient>
-             </defs>
-
-
-             <rect
-               x="2"
-               y="2"
-               width="20"
-               height="20"
-               rx="5"
-               fill="url(#insta-bkg)"
-               stroke="none"
-             />
-
-
-             <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" fill="none" />
-             <circle cx="12" cy="12" r="4" stroke="white" fill="none" />
-             <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none" />
-           </svg>
-         </span>
-         <div>
-           <h3>Instagram</h3>
-           <p>Короткие идеи, новости проекта и фрагменты работы.</p>
-           <span class="eco-link">Перейти →</span>
-         </div>
-       </a>
-
-
-       <a class="eco-card" href="https://arapovtrade.com/ru/books" target="_blank" rel="noopener">
-         <span class="eco-icon">
-           <svg viewBox="0 0 24 24">
-             <path d="M4 4.5h5.5c1.1 0 2 .9 2 2V20c0-1.1-.9-2-2-2H4V4.5Z" fill="#B35C1E" />
-             <path d="M20 4.5h-5.5c-1.1 0-2 .9-2 2V20c0-1.1.9-2 2-2H20V4.5Z" fill="#B35C1E" />
-           </svg>
-         </span>
-         <div>
-           <h3>Книги</h3>
-           <p>Авторские книги и учебные материалы с международными ISBN.</p>
-           <span class="eco-link">Подробнее →</span>
-         </div>
-       </a>
-
-
-      
-        <a  class="eco-card"
-         href="https://scholar.google.com/citations?user=N440tWQAAAAJ&hl=ru"
-         target="_blank"
-         rel="noopener"
-       >
-         <span class="eco-icon">
-           <svg viewBox="0 0 24 24">
-             <path d="M9 3h6" />
-             <path
-               fill="#FF007F"
-               d="M10 3v6.5L4.8 18c-.6 1.1.2 2.5 1.5 2.5h11.4c1.3 0 2.1-1.4 1.5-2.5L14 9.5V3"
-             />
-             <path d="M7.5 15h9" />
-           </svg>
-         </span>
-         <div>
-           <h3>Исследования</h3>
-           <p>Научные работы в области финансов и поведения инвесторов.</p>
-           <span class="eco-link">Смотреть →</span>
-         </div>
-       </a>
-
-
-       <div class="eco-card eco-card--media">
-         <span class="eco-icon">
-           <svg viewBox="0 0 24 24">
-             <path
-               d="M4 5h13a2 2 0 0 1 2 2v11a1.5 1.5 0 0 1-1.5 1.5H6a2 2 0 0 1-2-2V5Z"
-               fill="green"
-             />
-             <path d="M19 8.5V17a1.5 1.5 0 0 0 3 0V9.5a1 1 0 0 0-1-1h-2Z" fill="green" />
-             <path d="M7 9h7M7 12h7M7 15h4" />
-           </svg>
-         </span>
-         <div>
-           <h3>О нас пишут</h3>
-           <p>Публикации и интервью об Игоре Арапове и ARAPOV TRADE.</p>
-           <div class="eco-media-links">
-            
-             <a   style="padding-bottom: 5px"
-               href="https://ua.news/ru/money/nezvazhaiuchi-na-viinu-ta-krizi-igor-arapov-poiasniuie-khto-zavzhdi-zarobliaie-na-fondovikh-rinkakh"
-               target="_blank"
-               rel="noopener"
-               >Публикация UA.NEWS →</a
-             >
-             <br />
-            
-              <a  href="https://ua.news/ru/all-news/bezkoshtovna-biblioteka-z-treidingu-interviu-z-avtorom-kursu-na-50-statei"
-               target="_blank"
-               rel="noopener"
-               >Интервью UA.NEWS →</a
-             >
-           </div>
-         </div>
-       </div>
-     </div>
-
-
-     <div class="numbers-panel">
-       <div class="numbers-title">ARAPOV TRADE <span>В ЦИФРАХ</span></div>
-       <div class="numbers-grid">
-         <div class="number-item">
-           <b>2013</b><span>в трейдинге</span
-           ><small>практика на реальных рынках более 10 лет</small>
-         </div>
-         <div class="number-item">
-           <b>9</b><span>книг с ISBN</span><small>изданных на темы трейдинга и финансов</small>
-         </div>
-         <div class="number-item">
-           <b>2021</b><span>TradingView</span
-           ><small>публичная аналитика, идеи и обзоры рынка</small>
-         </div>
-         <div class="number-item">
-           <b>НАУЧНЫЕ<br />ИССЛЕДОВАНИЯ</b><span>в области финансов</span
-           ><small>психология инвестиционных решений и поведенческие финансы</small>
-         </div>
-         <div class="number-item">
-           <b>ЛЕКЦИИ И <br />ВЫСТУПЛЕНИЯ</b><span>публичная работа</span
-           ><small>университеты и профильные мероприятия</small>
-         </div>
-       </div>
      </div>
    </div>
  </section>
 
-
- <section id="for-whom" class="for-whom">
+ <section class="approach" id="join" aria-labelledby="course-plans-title">
    <div class="wrap">
      <div class="section-head">
-       <div class="eyebrow">Поговорим о практике</div>
-       <h2>Этот курс <br /><span class="accent-teal">подойдёт, </span>если вы:</h2>
+       <h2 id="course-plans-title">Сравните <span>форматы обучения</span></h2>
      </div>
-     <div class="whom-grid">
-       <div class="whom-card">
-         <h3>Хотите начать с нуля, но правильно</h3>
-         <p>
-           Большинство новичков теряют деньги не из-за рынка, а из-за хаотичного старта:
-           обрывочные видео, противоречивые советы и торговля «на ощущениях». Курс даёт чёткую
-           структуру — от устройства биржи до готовой торговой системы, шаг за шагом, без пробелов
-           в знаниях.
-         </p>
-       </div>
-       <div class="whom-card">
-         <h3>Уже пробовали, но не видите результата</h3>
-         <p>
-           Если вы уже открывали сделки, изучали индикаторы и стратегии, но стабильного
-           результата нет — дело почти всегда не в отсутствии знаний, а в отсутствии системы. На
-           курсе мы разберём именно ваш подход и перестроим его на основе объёмного анализа и
-           логики крупного капитала.
-         </p>
-       </div>
-       <div class="whom-card">
-         <h3>Готовы перейти к системной торговле</h3>
-         <p>
-           Вы хотите не угадывать, а понимать: почему цена движется именно так и что делают крупные участники рынка. Курс помогает структурировать подход к торговле: от понимания устройства рынка до формирования четких правил анализа, входа, сопровождения и выхода из позиции. Практическая часть проходит на демо-счете.
-         </p>
-       </div>
-     </div>
-   </div>
- </section>
-
-
- <section class="approach" id="about">
-   <div class="wrap">
-     <div class="section-head">
-       <div class="eyebrow">Наш подход к обучению:</div>
-       <h2>Глубина, практика и <span class="accent-teal">персональное внимание</span></h2>
-     </div>
-     <div class="approach-list">
-       <div class="approach-item">
-         <div class="approach-num">01</div>
-         <div>
-           <h3>Курс состоит из 10 глубоких уроков</h3>
-           <p>
-             5 занятий — это концентрированная теория, которая закладывает прочный фундамент: без
-             воды и общих фраз, только то, что реально нужно для торговли. Следующие 5 занятий:
-             100% практики, где вы работаете с актуальными рыночными графиками вместе с наставником, отрабатываете поиск точек входа и анализируете торговые сценарии на демо-счете.
-           </p>
-         </div>
-       </div>
-       <div class="approach-item">
-         <div class="approach-num">02</div>
-         <div>
-           <h3>Вы не просто изучаете материал – вы закрепляете его на практике</h3>
-           <p>
-             Знания без проверки быстро забываются, поэтому после теоретического блока вы проходите проверку понимания материала, а после практической части выполняете серию сделок на демо-счете по правилам учебной системы. Это не формальность, а способ убедиться, что вы
-             действительно умеете применять систему, а не просто прослушали уроки. Курс
-             заканчивается не набором знаний в голове, а рабочим навыком в руках.
-           </p>
-         </div>
-       </div>
-       <div class="approach-item">
-         <div class="approach-num">03</div>
-         <div>
-           <h3>Персональная работа с Игорем Араповым</h3>
-           <p>
-             Обучение проходит в мини-группах до 6 человек — это осознанное ограничение, а не
-             маркетинговый ход. Именно такой размер группы позволяет мне лично вести каждый поток:
-             разбирать конкретные сделки каждого участника, отвечать на вопросы без задержек и
-             следить, чтобы никто не остался с непонятой темой. Здесь нет ощущения «одного из
-             тысячи»: есть работа с наставником, который видит вашу торговлю и помогает её
-             выстроить.
-           </p>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
-
-
- <section id="program" class="program">
-   <div class="wrap">
-     <div class="section-head">
-       <div class="eyebrow">А что в курсе?</div>
-       <h2>Программа <span class="accent-teal">курса</span></h2>
-       <p class="lead">
-         После каждого теоретического блока вы выполняете практические домашние задания по поиску
-         точек входа на реальных графиках
-       </p>
-     </div>
-
-
-     <div class="badges">
-       <div class="badge">
-         <div class="block-1">
-           <svg
-             class="badge-icon"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-             stroke="#f3c53c"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <rect x="3" y="3" width="18" height="18" rx="4" />
-             <path d="m9 12 2 2 4-4" />
-           </svg>
-         </div>
-         <div class="block-2"><span class="badge-text">10 часов обучения</span></div>
-       </div>
-
-
-       <div class="badge">
-         <div class="block-1">
-           <svg
-             class="badge-icon"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-             stroke="#f3c53c"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <rect x="3" y="3" width="18" height="18" rx="4" />
-             <path d="m9 12 2 2 4-4" />
-           </svg>
-         </div>
-
-
-         <div class="block-2"><span class="badge-text">Практика на демо-счёте</span></div>
-       </div>
-
-
-       <div class="badge">
-         <div class="block-1">
-           <svg
-             class="badge-icon"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-             stroke="#f3c53c"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <rect x="3" y="3" width="18" height="18" rx="4" />
-             <path d="m9 12 2 2 4-4" />
-           </svg>
-         </div>
-
-
-         <div class="block-2"><span class="badge-text">Чат участников с наставником</span></div>
-       </div>
-
-
-       <div class="badge">
-         <div class="block-1">
-           <svg
-             class="badge-icon"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-             stroke="#f3c53c"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <rect x="3" y="3" width="18" height="18" rx="4" />
-             <path d="m9 12 2 2 4-4" />
-           </svg>
-         </div>
-         <div class="block-2"><span class="badge-text">Онлайн уроки в Zoom</span></div>
-       </div>
-
-
-       <div class="badge">
-         <div class="block-1">
-           <svg
-             class="badge-icon"
-             viewBox="0 0 24 24"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg"
-             stroke="#f3c53c"
-             stroke-width="2"
-             stroke-linecap="round"
-             stroke-linejoin="round"
-           >
-             <rect x="3" y="3" width="18" height="18" rx="4" />
-             <path d="m9 12 2 2 4-4" />
-           </svg>
-         </div>
-         <div class="block-2"><span class="badge-text">Домашние задания</span></div>
-       </div>
-     </div>
-
-
-     <div class="module-grid">
-       <div class="module-card">
-         <div class="module-label">Модуль 1</div>
-         <h3>Фундамент: Как устроены рынки</h3>
-         <p>
-           Разбираем, как устроена биржа изнутри: кто выступает участником рынка (маркетмейкеры,
-           институциональные и розничные трейдеры), как формируется цена и почему движение
-           котировок — это не случайность, а результат столкновения ордеров. Вы получите базу, без
-           которой любой технический или объёмный анализ работает вслепую.
-         </p>
-       </div>
-       <div class="module-card">
-         <div class="module-label">Модуль 2</div>
-         <h3>Технический анализ: «Чтение» графика</h3>
-         <p>
-           Учимся читать график так, как это делают профессиональные трейдеры: определять
-           направление тренда, находить сильные уровни поддержки и сопротивления, распознавать
-           разворотные и продолжающие фигуры. Это язык рынка — после этого модуля вы перестанете
-           смотреть на график как на хаотичный набор свечей.
-         </p>
-       </div>
-       <div class="module-card">
-         <div class="module-label">Модуль 3</div>
-         <h3>Объёмный анализ: Механика рынка</h3>
-         <p>
-           Здесь начинается то, что отличает системного трейдера от новичка. Разбираем механику
-           сведения ордеров, кластерный анализ объёмов и логику работы крупных участников рынка.
-           Вы научитесь видеть на графике не просто цену, а реальный баланс спроса и предложения —
-           и замечать, где на самом деле стоит крупный капитал.
-         </p>
-       </div>
-       <div class="module-card">
-         <div class="module-label">Модуль 4</div>
-         <h3>Торговая система: Единый план действий</h3>
-         <p>
-           Собираем всё пройденное в единую торговую систему с чёткими правилами: когда входить в
-           сделку, как её вести и в какой момент выходить — без сомнений и эмоциональных решений.
-           Это не набор индикаторов, а учебная система с чёткими правилами входа, сопровождения и выхода из позиции.
-         </p>
-       </div>
-     </div>
-   </div>
- </section>
-
-
- <section class="approach" id="join">
-   <div class="wrap">
      <div class="pricing-grid">
        <div class="price-card">
          <div class="price-head">
-           <!-- <h3>Самостоятельный тариф</h3>
-             -->
-           <h3>Онлайн курс в записи</h3>
+           <h3>Курс в записи</h3>
 
-           <p>Для тех, кто хочет пройти программу в своём темпе без участия наставника</p>
            <div class="price">$200</div>
          </div>
          <div class="price-body">
-           <div class="whats-in">Что входит:</div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>Полная программа курса</strong
-               ><span>5 уроков теории + 5 практических занятий с разбором реальных графиков</span>
+               <strong>7 видеоуроков</strong
+               ><span>На русском, украинском или английском</span>
              </div>
            </div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>Торговая система</strong
-               ><span>Пошаговое объяснение торговой системы на основе объёмного анализа</span>
+               <strong>Пособие из 32 глав</strong
+               ><span>Графики, задания и ссылки на нужные моменты уроков</span>
              </div>
            </div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>Практические разборы</strong
-               ><span>Реальные вопросы учеников, типичные ошибки и объяснения</span>
+               <strong>7 этапов с самопроверкой</strong>
+               <span>Контрольные задания с образцами и критериями проверки</span>
              </div>
            </div>
-           <div class="feature-row">
-             <span class="check">✓</span>
-             <div>
-               <strong>Обучение в своём темпе</strong
-               ><span>Просматривайте уроки в удобное время  </span>
-             </div>
-           </div>
-           
 
             <a href="https://secure.wayforpay.com/button/b58be2e17c5a0"
              class="btn btn-primary pulse-button"
-             >Самостоятельное обучение</a
+             >Выбрать курс в записи</a
            >
          </div>
        </div>
        <div class="price-card">
          <div class="price-head">
-           <h3>Групповой тариф</h3>
-           <p>Для тех, кто хочет освоить систему в группе единомышленников</p>
+           <h3>Групповое обучение</h3>
            <div class="price">$750</div>
          </div>
          <div class="price-body">
-           <div class="whats-in">Что входит:</div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>10 онлайн-уроков</strong
-               ><span>5 уроков теории + 5 практики в мини-группе до 6 человек</span>
+               <strong>10 занятий в Zoom, до 6 человек</strong
+               ><span>5 по теории и 5 по практике</span>
              </div>
            </div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>Обратная связь</strong
-               ><span>Проверка домашних заданий и 2 финальных экзамена: теория + практика</span>
+               <strong>Проверка домашних заданий</strong>
+               <span>Наставник даёт обратную связь по вашей работе</span>
              </div>
            </div>
            <div class="feature-row">
              <span class="check">✓</span>
              <div>
-               <strong>Торговая система</strong
-               ><span>Обучающая система на основе объемного анализа</span>
+               <strong>Чат с участниками и наставником</strong>
+               <span>Закрытый чат для вопросов по урокам и заданиям</span>
              </div>
            </div>
-           <div class="feature-row">
-             <span class="check">✓</span>
-             <div>
-               <strong>Закрытый чат</strong
-               ><span>Доступ в закрытый чат группы для общения и поддержки</span>
-             </div>
-           </div>
-          
+
             <a  href="https://secure.wayforpay.com/button/b6c196ab80aaa"
              class="btn btn-primary pulse-button"
              >Выбрать групповой формат</a
@@ -683,50 +404,36 @@
 
 
        <div class="price-card featured">
-         <span class="badge-hot">Выгодно</span>
          <div class="price-head">
-           <h3>Индивидуальный тариф</h3>
-           <p>Для тех, кто хочет работать с наставником лично и разбирать свои сделки</p>
+           <h3>Индивидуальное обучение</h3>
            <div class="price">$1500</div>
          </div>
          <div class="price-body">
-           <div class="whats-in">Что входит:</div>
            <div class="feature-row">
              <span class="check">✓</span>
-             <div><strong>Все, что входит в групповой тариф</strong></div>
+             <div>
+               <strong>Всё, что входит в групповой формат</strong>
+               <span>Занятия в Zoom, проверка заданий и закрытый чат</span>
+             </div>
            </div>
-           <div class="plus-label">Плюс:</div>
            <div class="feature-row plus">
              <span class="check">+</span>
              <div>
-               <strong>Индивидуальная помощь</strong
-               ><span>Личная поддержка и ответы на ваши вопросы напрямую от наставника</span>
+               <strong>Личные разборы сделок с Игорем</strong>
+               <span>Обсуждайте свои решения и задавайте вопросы напрямую</span>
              </div>
            </div>
-           <!-- <div class="feature-row plus">
-             <span class="check">+</span>
-             <div>
-               <strong>Отладка торговой системы</strong
-               ><span
-                 >Помощь в адаптации торговой системы под ваш стиль и удобство пользования</span
-               >
-             </div>
-           </div> -->
            <div class="feature-row plus">
              <span class="check">+</span>
              <div>
-               <strong>Год сопровождения после курса</strong
-               ><span
-                 >Курс не заканчивается в день последнего урока — весь следующий год я лично
-                 остаюсь на связи с вами: разбираю сделки, указываю на ошибки и помогаю
-                 адаптировать систему под меняющийся рынок</span
-               >
+               <strong>Год сопровождения после курса</strong>
+               <span>Игорь на связи и помогает адаптироваться к рынку</span>
              </div>
            </div>
-          
+
             <a  href="https://secure.wayforpay.com/button/bcd6a985d0c30"
              class="btn btn-primary pulse-button"
-             > Выбрать персональный формат</a
+             >Выбрать индивидуальный формат</a
            >
          </div>
        </div>
@@ -735,7 +442,7 @@
  </section>
 
 
- <section id="author">
+ <section id="author" aria-labelledby="course-author-title">
    <div class="wrap author-grid author">
      <div class="image-wrapper">
        <div class="author-photo">
@@ -748,9 +455,7 @@
              /assets/images/fajl-38.jpg          1000w
            "
            sizes="(max-width: 1000px) 100vw, 1000px"
-           fetchpriority="high"
            loading="eager"
-           fetchpriority="high"
            alt="Игорь Арапов"
            style="width: 100%; height: 100%; object-fit: cover; object-position: center top"
          />
@@ -758,15 +463,19 @@
      </div>
 
 
-     <div>
+     <div class="author-profile">
+       <div class="author-intro">
        <div class="eyebrow">О наставнике и авторе курса</div>
-<h2>Игорь <span class="black">Арапов</span></h2>
+<h2 id="course-author-title">Игорь <span class="black">Арапов</span></h2>
 
 <p>
-  Игорь Арапов — специалист в области финансовых рынков, практикующий трейдер с 2013 года и
+  Игорь Арапов - специалист в области финансовых рынков, практикующий трейдер с 2013 года и
   независимый исследователь психологии инвестиционных решений и поведенческих финансов.
 </p>
+       </div>
 
+<details class="author-credentials">
+  <summary>Образование, книги и исследования</summary>
 <p>
   Прошёл профессиональную подготовку в Украинском институте развития фондового рынка по
   программе регулирования рынков капитала и управления активами институциональных инвесторов.
@@ -777,19 +486,19 @@
     target="_blank"
     rel="noopener"
   >Свидетельство ОЗ № 2026-018-УА</a>,
-  
+
   <a
     href="https://www.instagram.com/p/DdcLV5IjIAy/"
     target="_blank"
     rel="noopener"
-  >Свидетельство № 193/УА-3</a>, 
-  
+  >Свидетельство № 193/УА-3</a>,
+
   <a
     href="https://www.instagram.com/p/DduVT5jDKhM"
     target="_blank"
     rel="noopener"
   >Свидетельство СВК № 2026-030-Р/УА</a>,
-  
+
   <a
     href="https://www.instagram.com/p/Dd6WDiLDIoa/"
     target="_blank"
@@ -832,16 +541,14 @@
   >TradingView</a>
   с 2021 года.
 </p>
+</details>
 
+<div class="author-practice">
 <p>
   Торговля по его системе ведётся вручную, обеспечивая гибкость и постоянный человеческий
   контроль.
 </p>
 
-
-
-
-       <br />
        <div class="stats-row">
          <div class="stat">
            <div class="icon-boxx">
@@ -897,196 +604,45 @@
            <div class="stat-text"><strong>с 2013г.</strong><span>В трейдинге</span></div>
          </div>
        </div>
+       </div>
      </div>
    </div>
  </section>
 
 
- <section id="youtube" class="youtube-section">
-   <div class="wrap">
-     <div class="section-head youtube-head">
-       <div class="eyebrow">Публичная практика</div>
-       <h2>Популярное на <span class="accent-gold">YouTube</span></h2>
-       <p class="lead">
-         Четыре выбранных видео для знакомства с подходом ARAPOV TRADE: реальная история ученика,
-         первая сделка, устройство биржи и технический анализ.
-       </p>
-     </div>
-
-
-     <div class="youtube-grid youtube-grid--featured">
-       <a class="video-card" href="https://youtu.be/fcRKxFr-EW4" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--1">
-           <iframe
-             width="560"
-             height="315"
-             src="https://www.youtube.com/embed/fcRKxFr-EW4?si=G8_BaHgjkv7nou__"
-             title="YouTube video player"
-             frameborder="0"
-             allow="
-               accelerometer;
-               autoplay;
-               clipboard-write;
-               encrypted-media;
-               gyroscope;
-               picture-in-picture;
-               web-share;
-             "
-             referrerpolicy="strict-origin-when-cross-origin"
-             allowfullscreen
-           ></iframe>
-         </div>
-
-
-         <div class="video-meta">
-           <span>РЕАЛЬНАЯ ИСТОРИЯ УЧЕНИКА</span>
-           <h3>73 года — начал трейдинг с нуля! Реальная история — интервью с моим учеником</h3>
-         </div>
-       </a>
-
-
-       <a class="video-card" href="https://youtu.be/tmiHem6NOZs" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--2">
-           <iframe
-             width="560"
-             height="315"
-             src="https://www.youtube.com/embed/tmiHem6NOZs?si=qutp77YHhyLwOpZp"
-             title="YouTube video player"
-             frameborder="0"
-             allow="
-               accelerometer;
-               autoplay;
-               clipboard-write;
-               encrypted-media;
-               gyroscope;
-               picture-in-picture;
-               web-share;
-             "
-             referrerpolicy="strict-origin-when-cross-origin"
-             allowfullscreen
-           ></iframe>
-         </div>
-         <div class="video-meta">
-           <span>ПЕРВЫЙ ШАГ В ТРЕЙДИНГЕ</span>
-           <h3>Первая сделка в трейдинге: от TradingView до демосчёта за 45 минут</h3>
-         </div>
-       </a>
-
-
-       <a class="video-card" href="https://youtu.be/ZKM7erNi_xA" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--3">
-           <iframe
-             width="560"
-             height="315"
-             src="https://www.youtube.com/embed/ZKM7erNi_xA?si=hdHfkCk3yP0LJNqe"
-             title="YouTube video player"
-             frameborder="0"
-             allow="
-               accelerometer;
-               autoplay;
-               clipboard-write;
-               encrypted-media;
-               gyroscope;
-               picture-in-picture;
-               web-share;
-             "
-             referrerpolicy="strict-origin-when-cross-origin"
-             allowfullscreen
-           ></iframe>
-         </div>
-         <div class="video-meta">
-           <span>ОСНОВЫ РЫНКА</span>
-           <h3>Как устроена биржа: ордера, фьючерсы, шорт и торговые сессии</h3>
-         </div>
-       </a>
-
-
-       <a class="video-card" href="https://youtu.be/hch9D_3hVrg" target="_blank" rel="noopener">
-         <div class="video-thumb video-thumb--4">
-           <iframe
-             width="560"
-             height="315"
-             src="https://www.youtube.com/embed/hch9D_3hVrg?si=VZHw41EvDH21hMIX"
-             title="YouTube video player"
-             frameborder="0"
-             allow="
-               accelerometer;
-               autoplay;
-               clipboard-write;
-               encrypted-media;
-               gyroscope;
-               picture-in-picture;
-               web-share;
-             "
-             referrerpolicy="strict-origin-when-cross-origin"
-             allowfullscreen
-           ></iframe>
-         </div>
-         <div class="video-meta">
-           <span>ТЕХНИЧЕСКИЙ АНАЛИЗ</span>
-           <h3>Технический анализ с нуля: уровни, паттерны и ложный пробой</h3>
-         </div>
-       </a>
-     </div>
-     <br />
-     <br />
-     <div class="youtube-channel-cta">
-      
-        <a  class="btn btn-outline"
-         href="https://www.youtube.com/@ArapovTrade"
-         target="_blank"
-         rel="noopener"
-         >Все видео на YouTube →</a
-       >
-     </div>
-   </div>
- </section>
-
-
- <section class="faq">
+ <section id="faq" class="faq" aria-labelledby="course-faq-title">
    <div class="wrap">
      <div class="section-head">
-       <div class="eyebrow">F.A.Q.</div>
-       <h2>Ответы на <span class="accent-teal">ваши вопросы</span></h2>
+       <h2 id="course-faq-title">Ответы на <span class="accent-teal">ваши вопросы</span></h2>
      </div>
-
 
      <div class="faq-list">
        @for (item of faqItems; track $index; let i = $index) {
          <div class="faq-item" [class.active]="activeFaqIndex === i">
-           <button class="faq-q" type="button" (click)="toggleFaq(i)">
-             {{ item.question }}
-             <span class="chev">▾</span>
+           <button class="faq-q" type="button" (click)="toggleFaq(i)"
+             [attr.aria-expanded]="activeFaqIndex === i" [attr.aria-controls]="'course-faq-' + i">
+             <span>{{ item.question }}</span>
+             <span class="chev" aria-hidden="true"></span>
            </button>
 
-
-           <div class="faq-a" [style.max-height]="activeFaqIndex === i ? '400px' : '0px'">
+           <div class="faq-a" [id]="'course-faq-' + i" [hidden]="activeFaqIndex !== i">
              <p>{{ item.answer }}</p>
            </div>
          </div>
        }
      </div>
+
+     <div class="cta-outer">
+       <div class="cta">
+         <h2>Остались вопросы о курсе?</h2>
+         <p>Уточните язык и расписание занятий, состав курса или порядок получения доступа.</p>
+         <a href="https://t.me/ArapovTrader" target="_blank" rel="noopener" class="btn btn-primary">
+           Написать в Telegram
+         </a>
+       </div>
+     </div>
    </div>
  </section>
-
-
- <div class="cta-outer">
-   <div class="cta">
-     <div class="eyebrow on-dark">Хотите больше?</div>
-     <h2>Ваш путь в <span class="accent-gold">системный трейдинг</span> начинается здесь</h2>
-     <p>
-       Торговая система, поддержка наставника и практика на реальных графиках. Всё что нужно для
-       системного старта в трейдинге.
-     </p>
-     <div class="cta-highlight">
-       Системный подход, четкие правила и практика на демо-счете – основа ответственного обучения трейдингу.
-     </div>
-     <a href="#join" (click)="scrollTo($event, 'join')" class="btn btn-primary pulse-button"
-       >Записаться на курс</a
-     >
-   </div>
- </div>
-
 
  <footer>
    <div class="wrap">
@@ -1116,7 +672,7 @@
            />
          </div>
          <p>
-           Игорь Арапов — независимый исследователь в области психологии инвестиционных решений и
+           Игорь Арапов - независимый исследователь в области психологии инвестиционных решений и
            поведенческих финансов, практикующий трейдер с 2013 года, автор 9 книг по трейдингу с
            ISBN (Bowker USA).
          </p>
@@ -1125,21 +681,21 @@
          <h4>Ссылки</h4>
          <ul>
            <li>
-            
+
              <a   href="/ru/public-agreement"
                (click)="$event.preventDefault(); navigateTo('ru/public-agreement')"
                >Договор публичной оферты</a
              >
            </li>
            <li>
-            
+
              <a   href="/ru/privacy-policy"
                (click)="$event.preventDefault(); navigateTo('ru/privacy-policy')"
                >Политика конфиденциальности</a
              >
            </li>
            <li>
-            
+
              <a   href="/ru/disclaimer-ru"
                (click)="$event.preventDefault(); navigateTo('ru/disclaimer-ru')"
                >Отказ от ответственности</a
@@ -1172,7 +728,7 @@
          </ul>
          <p>Обучение носит образовательный характер и не является инвестиционной рекомендацией или гарантией финансового результата.</p>
          <div class="socials">
-          
+
             <a  href="https://www.youtube.com/@ArapovTrade"
              aria-label="Youtube"
              target="_blank"
@@ -1191,7 +747,7 @@
            </a>
 
 
-          
+
            <a   href="https://telegram.me/ArapovTrader"
              aria-label="Telegram"
              target="_blank"
@@ -1210,7 +766,7 @@
            </a>
 
 
-          
+
            <a  href="https://wa.me/380506308200"
              aria-label="WhatsApp"
              target="_blank"
@@ -1234,7 +790,7 @@
            </a>
 
 
-          
+
             <a  href="https://www.linkedin.com/in/arapovtrade"
              aria-label="LinkedIn"
              target="_blank"
@@ -1253,7 +809,7 @@
            </a>
 
 
-          
+
             <a href="https://www.facebook.com/ArapovTrade/"
              aria-label="Facebook"
              target="_blank"
@@ -1275,7 +831,7 @@
      </div>
      <div class="footer-bottom">
        © 2021-2026 arapov.education. Все права защищены. ФЛП Арапов И. В. ИНН 3314507171
-     </div> 
+     </div>
    </div>
  </footer>
 </div>

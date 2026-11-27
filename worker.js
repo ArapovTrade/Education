@@ -1,6 +1,22 @@
+// Existing WayForPay buttons link to these legacy PDF addresses.
+const offerRedirects = new Map([
+  [
+    '/wp-content/uploads/2025/10/dogovor_publichnoj_oferty_po_polzovaniyu_uslugami-arapov.pdf',
+    '/ru/public-agreement',
+  ],
+  ['/wp-content/uploads/2025/10/dpo-arapov-navchannya.pdf', '/public-agreement-ua'],
+  ['/wp-content/uploads/2025/10/public-offer-agreement-arapov-education.pdf', '/en/public-agreement-en'],
+]);
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    const offerPath = offerRedirects.get(url.pathname);
+    if (offerPath) {
+      url.pathname = offerPath;
+      return Response.redirect(url.toString(), 302);
+    }
 
     if (url.pathname === '/') {
       url.pathname = '/course-ua';
