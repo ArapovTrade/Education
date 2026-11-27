@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.section-head h2 {
+.section-head h1 {
  font-family: "Russo One", Sans-serif;
     font-size: 50px;
     font-weight: 500;
@@ -433,6 +433,11 @@ h1, h2, h3, h4 {
   background: #0c243c;
 }
 
+.contact-card .legal-body > h2 {
+  font-size: 1.17em;
+  margin-block: 1em;
+}
+
 .contact-card .legal-body p {
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
@@ -457,7 +462,7 @@ h1, h2, h3, h4 {
     .eyebrow{
         font-size: 16px;
     }
-    .section-head h2{
+    .section-head h1{
         font-size: 20px;
     }
     .section-head p{

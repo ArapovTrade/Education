@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.section-head h2 {
+.section-head h1 {
  font-family: "Russo One", Sans-serif;
     font-size: 50px;
     font-weight: 500;
@@ -374,6 +374,11 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid #ecedf1;
 }
 
+.legal-item h2 {
+  font-size: 1.17em;
+  margin-block: 1em;
+}
+
 .legal-item:last-child {
   border-bottom: none;
 }
@@ -457,7 +462,7 @@ h1, h2, h3, h4 {
     .eyebrow{
         font-size: 16px;
     }
-    .section-head h2{
+    .section-head h1{
         font-size: 20px;
     }
     .section-head p{
@@ -480,7 +485,7 @@ h1, h2, h3, h4 {
   .legal-head h2 {
     font-size: 20px;
   }
-.legal-item h3 {
+  .legal-item h2 {
     font-size: 18px;
   }
   .legal-item {

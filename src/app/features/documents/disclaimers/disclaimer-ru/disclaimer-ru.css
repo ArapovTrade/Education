@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.section-head h2 {
+.section-head h1 {
  font-family: "Russo One", Sans-serif;
     font-size: 50px;
     font-weight: 500;
@@ -454,7 +454,7 @@ h1, h2, h3, h4 {
 
 /* ========== MOBILE ========== */
 @media (max-width: 768px) {
-    .section-head h2{
+    .section-head h1{
         font-size: 24px;
     }
     .wrap{

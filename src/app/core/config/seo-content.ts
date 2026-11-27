@@ -257,9 +257,9 @@ const disclaimerUa: SeoConfig = {
 // public agreement
 
 const agreementRu: SeoConfig = {
-  title: 'Договор публичной офферты сайта Arapov Education',
+  title: 'Договор публичной оферты | Arapov Education',
   description:
-    'Договор публичной офферты определяет условия предоставления услуг и права пользователей. Ознакомьтесь с официальным документом перед использованием сайта.',
+    'Договор публичной оферты Arapov Education. Условия заказа и оплаты обучения, порядок получения доступа к курсу и правила возврата.',
   canonical: `${BASE_URL}/ru/public-agreement`,
   ogImage: OG_IMAGE,
   locale: 'ru_RU',
@@ -301,11 +301,9 @@ const agreementEN: SeoConfig = {
 
 
 const agreementUa: SeoConfig = {
-  // TODO: на оригинале нет отдельного украинского перевода этого документа —
-  // текст и title/description ниже дублируют русскую версию, как и на сайте.
-  title: 'Договор публичной офферты сайта Arapov Education',
+  title: 'Договір публічної оферти | Arapov Education',
   description:
-    'Договор публичной офферты определяет условия предоставления услуг и права пользователей. Ознакомьтесь с официальным документом перед использованием сайта.',
+    'Договір публічної оферти Arapov Education. Умови замовлення й оплати навчання, порядок отримання доступу до курсу та правила повернення коштів.',
   canonical: `${BASE_URL}/public-agreement-ua`,
   ogImage: OG_IMAGE,
   locale: 'uk_UA',
@@ -313,7 +311,7 @@ const agreementUa: SeoConfig = {
   siteName: SITE_NAME,
   publishedTime: '2026-02-15T04:21:34+00:00',
   modifiedTime: '2026-02-15T04:22:13+00:00',
-  readingTime: '9 minutes',
+  readingTime: '9 хвилин',
   alternates: [
     { hreflang: 'ru', href: `${BASE_URL}/ru/public-agreement` },
     { hreflang: 'en', href: `${BASE_URL}/en/public-agreement-en` },
